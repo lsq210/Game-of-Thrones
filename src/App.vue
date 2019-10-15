@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <img src="@/assets/logo.png" class="logo"/>
-    <map-component class=""/>
+    <img src="@/assets/logo.png" class="logo" :style="{top: logoTop + 'px'}"/>
+    <map-component/>
+    <nav-bar/>
+    <families/>
   </div>
 </template>
 
 <script>
 import MapComponent from '@/components/Map'
+import NavBar from '@/components/NavBar'
+import Families from '@/components/Families'
 
 export default {
   name: 'App',
   components: {
-    MapComponent
+    MapComponent,
+    NavBar,
+    Families
+  },
+  data () {
+    return {
+      logoTop: -80
+    }
+  },
+  mounted () {
+    setTimeout(() => { this.logoTop = 30 }, 1200)
   }
 }
 </script>
@@ -22,9 +36,10 @@ export default {
   .logo {
     position: fixed;
     z-index: 1;
-    width: 100vw;
-    padding: 20px 30vw 0 30vw;
+    width: 40vw;
+    margin: 0 30vw;
     filter: drop-shadow(2px 4px 6px black);
+    transition: top 1.5s cubic-bezier(0.19, 1, 0.22, 1);
   }
   .map {
     position: fixed;

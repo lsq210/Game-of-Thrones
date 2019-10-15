@@ -1,7 +1,5 @@
 <template>
-  <div class="wrapper">
-    <div id="map-container"></div>
-  </div>
+  <div id="map-container"></div>
 </template>
 
 <script>
@@ -25,12 +23,8 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.wrapper {
+#map-container {
   width: 100vw;
   height: 100vh;
-  #map-container {
-    width: 100vw;
-    height: 100vh;
-  }
 }
 </style>

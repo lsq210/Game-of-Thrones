@@ -7,3 +7,12 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	background-color: #9f997f;
+	&-thumb {
+		background-color: #707070;
+	}
+}
