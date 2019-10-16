@@ -2,7 +2,7 @@
   "name": "game-of-thrones",
   "version": "1.0.0",
   "description": "Winter is coming!",
-  "author": "CS-Tao <whucstao@qq.com>",
+  "author": "lsq210 <1135595767@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
