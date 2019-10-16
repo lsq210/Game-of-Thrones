@@ -9,7 +9,8 @@ const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1
 export default {
   data () {
     return {
-      map: null
+      map: null,
+      nav: null
     }
   },
   mounted () {
@@ -18,6 +19,8 @@ export default {
       container: 'map-container',
       style: 'mapbox://styles/cstao/ck1rer81f20gb1cp40pl6jnbg'
     })
+    this.nav = new mapboxgl.NavigationControl()
+    this.map.addControl(this.nav)
   }
 }
 </script>

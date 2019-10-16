@@ -90,7 +90,7 @@ $nav-height: 100px;
       .nav-title {
         margin-top: 6px;
         line-height: 20px;
-        color: #11274b;
+        color: $text-color;
         font-weight: bold;
         font-family: cursive;
       }
