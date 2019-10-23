@@ -21,6 +21,9 @@ export default {
     })
     this.nav = new mapboxgl.NavigationControl()
     this.map.addControl(this.nav)
+    this.map.on('click', (e) => {
+      console.log('打印的经纬度是', e.lngLat)
+    })
   }
 }
 </script>
