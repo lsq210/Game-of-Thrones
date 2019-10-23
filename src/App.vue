@@ -2,8 +2,8 @@
   <div id="app">
     <img src="@/assets/logo.png" class="logo" :style="{top: logoTop + 'px'}"/>
     <map-component/>
-    <!-- <nav-bar/> -->
-    <!-- <families/> -->
+    <nav-bar/>
+    <families/>
     <time-line/>
   </div>
 </template>

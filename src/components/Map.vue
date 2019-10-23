@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import Events from '@/data/events.js'
 import mapboxgl from 'mapbox-gl'
 const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1biJ9.vT96vIXE74LTVV4xXrv0Zw'
 
@@ -10,7 +11,8 @@ export default {
   data () {
     return {
       map: null,
-      nav: null
+      nav: null,
+      allEvents: Events
     }
   },
   mounted () {
@@ -24,6 +26,13 @@ export default {
     this.map.on('click', (e) => {
       console.log('打印的经纬度是', e.lngLat)
     })
+  },
+  computed: {
+    selectedEvent: function () {
+      return this.allEvents.filter(event => {
+        return event.beginTime <= this.$store.event.time && event.endTime >= this.$store.event.beginTime
+      })
+    }
   }
 }
 </script>

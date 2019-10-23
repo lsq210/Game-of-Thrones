@@ -4,7 +4,8 @@
       <div
         v-for="(navItem, index) in navList"
         :key="'nav-item-' + index"
-        class="nav-item">
+        class="nav-item"
+        @click="navShow(navItem.title)">
         <img class="nav-img" :src="navItem.img"/>
         <span class="nav-title">{{ navItem.title }}</span>
       </div>
@@ -39,6 +40,35 @@ export default {
           img: '/static/wars/ConquestOfDorne.webp'
         }
       ]
+    }
+  },
+  methods: {
+    navShow: function (item) {
+      switch (item) {
+        case 'Families':
+          this.$store.commit('changeNavShow', {
+            familiesShow: true,
+            charactersShow: false,
+            eventsShow: false
+          })
+          break
+        case 'Characters':
+          this.$store.commit('changeNavShow', {
+            familiesShow: false,
+            charactersShow: true,
+            eventsShow: false
+          })
+          break
+        case 'Events':
+          this.$store.commit('changeNavShow', {
+            familiesShow: false,
+            charactersShow: false,
+            eventsShow: true
+          })
+          break
+        default:
+          break
+      }
     }
   },
   mounted () {

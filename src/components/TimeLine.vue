@@ -1,6 +1,10 @@
 <template>
-  <div class="timeline">
-    <vue-slider v-model="time" v-bind="options" style="width: 90vw"/>
+  <div class="timeline" v-if="$store.state.eventsShow">
+    <vue-slider
+    v-model="time"
+    v-bind="options"
+    v-on:change="$store.commit('changeTime', time)"
+    style="width: 90vw"/>
   </div>
 </template>
 
