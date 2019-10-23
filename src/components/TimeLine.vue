@@ -1,0 +1,38 @@
+<template>
+  <div class="timeline">
+    <vue-slider v-model="time" v-bind="options" style="width: 90vw"/>
+  </div>
+</template>
+
+<script>
+import VueSlider from 'vue-slider-component'
+import 'vue-slider-component/theme/antd.css'
+
+export default {
+  components: {
+    VueSlider
+  },
+  data () {
+    return {
+      time: 0,
+      options: {
+        min: 0,
+        max: 100
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import '@/styles/var.scss';
+.timeline {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100vw;
+  height: 8vh;
+  margin:0 auto;
+}
+</style>

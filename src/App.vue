@@ -2,8 +2,9 @@
   <div id="app">
     <img src="@/assets/logo.png" class="logo" :style="{top: logoTop + 'px'}"/>
     <map-component/>
-    <nav-bar/>
-    <families/>
+    <!-- <nav-bar/> -->
+    <!-- <families/> -->
+    <time-line/>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import MapComponent from '@/components/Map'
 import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
+import TimeLine from '@/components/TimeLine'
 
 export default {
   name: 'App',
   components: {
     MapComponent,
     NavBar,
-    Families
+    Families,
+    TimeLine
   },
   data () {
     return {
