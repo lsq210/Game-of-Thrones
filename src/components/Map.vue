@@ -26,6 +26,55 @@ export default {
     this.map.on('click', (e) => {
       console.log('打印的经纬度是', e.lngLat)
     })
+    this.map.on('load', () => {
+      this.allEvents.forEach(event => {
+        console.log('allEvents', this.allEvents)
+        console.log('event', event)
+        this.map.loadImage(event.img, (error, image) => {
+          if (error) throw error
+          this.map.addImage(event.id, image)
+        })
+      })
+      this.map.addSource('events', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: [{
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [12, -2]
+            },
+            properties: {
+              title: 'Stark',
+              id: 0
+            }
+          }, {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [16, -2]
+            },
+            properties: {
+              title: 'Lannister',
+              id: 1
+            }
+          }]
+        }
+      })
+      this.map.addLayer({
+        id: 'event-points',
+        type: 'symbol',
+        source: 'events',
+        layout: {
+          'icon-image': '{id}',
+          'text-field': '{title}',
+          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+          'text-offset': [0, 0.6],
+          'text-anchor': 'top'
+        }
+      })
+    })
   },
   computed: {
     selectedEvent: function () {
