@@ -28,47 +28,21 @@ export default {
     })
     this.map.on('load', () => {
       this.allEvents.forEach(event => {
-        console.log('allEvents', this.allEvents)
-        console.log('event', event)
         this.map.loadImage(event.img, (error, image) => {
           if (error) throw error
           this.map.addImage(event.id, image)
         })
       })
-      this.map.addSource('events', {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: [{
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: [12, -2]
-            },
-            properties: {
-              title: 'Stark',
-              id: 0
-            }
-          }, {
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: [16, -2]
-            },
-            properties: {
-              title: 'Lannister',
-              id: 1
-            }
-          }]
-        }
-      })
+      var GeoJson = this.getGeoJSON(this.allEvents)
+      console.log(GeoJson)
+      this.map.addSource('events', GeoJson)
       this.map.addLayer({
         id: 'event-points',
         type: 'symbol',
         source: 'events',
         layout: {
           'icon-image': '{id}',
-          'text-field': '{title}',
+          'text-field': '{name}',
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
           'text-offset': [0, 0.6],
           'text-anchor': 'top'
@@ -81,6 +55,31 @@ export default {
       return this.allEvents.filter(event => {
         return event.beginTime <= this.$store.event.time && event.endTime >= this.$store.event.beginTime
       })
+    }
+  },
+  methods: {
+    getGeoJSON: function () {
+      var featureList = []
+      this.allEvents.forEach(event => {
+        featureList.push({
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: event.position
+          },
+          properties: {
+            id: event.id,
+            name: event.name
+          }
+        })
+      })
+      return {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: featureList
+        }
+      }
     }
   }
 }

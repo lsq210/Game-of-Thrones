@@ -1,11 +1,11 @@
 const events = [
   {
     id: 0,
-    name: '',
+    name: 'Stark',
     source: '',
     description: '',
     img: '@/../static/houses/Stark.webp',
-    postion: '',
+    position: [12, -2],
     beginTime: null,
     endTime: null,
     families: null,
@@ -15,11 +15,11 @@ const events = [
   },
   {
     id: 1,
-    name: '',
+    name: 'Lannister',
     source: '',
     description: '',
     img: '@/../static/houses/Lannister.webp',
-    postion: '',
+    position: [12, 0],
     beginTime: null,
     endTime: null,
     families: null,
