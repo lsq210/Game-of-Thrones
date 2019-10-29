@@ -81,12 +81,12 @@ export default {
         .setHTML(description)
         .addTo(this.map)
     })
-    // this.map.on('mouseenter', 'event-points', () => {
-    //   this.map.getCanvas().style.cursor = 'pointer'
-    // })
-    // this.map.on('mouseleave', 'event-points', () => {
-    //   this.map.getCanvas().style.cursor = ''
-    // })
+    this.map.on('mouseenter', 'event-points', () => {
+      this.map.getCanvas().style.cursor = 'pointer'
+    })
+    this.map.on('mouseleave', 'event-points', () => {
+      this.map.getCanvas().style.cursor = ''
+    })
   },
   computed: {
     ...mapState({
