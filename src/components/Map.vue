@@ -7,6 +7,7 @@ import Events from '@/data/events.js'
 import Politcal from '@/data/got_politcal.json'
 import { mapState } from 'vuex'
 import mapboxgl from 'mapbox-gl'
+import drawRoundImgToMap from '@/utils/generateRoundImg'
 const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1biJ9.vT96vIXE74LTVV4xXrv0Zw'
 
 export default {
@@ -30,16 +31,10 @@ export default {
     })
     this.map.on('load', () => {
       this.allEvents.forEach(event => {
-        this.map.loadImage(event.img, (error, image) => {
-          if (error) throw error
-          else if (this.map.hasImage(`event-${event.id}`)) {
-            this.map.updateImage(`event-${event.id}`, event.img)
-            console.log('1')
-          } else {
-            this.map.addImage(`event-${event.id}`, image)
-            console.log('2')
-          }
-        })
+        let img = new Image()
+        img.src = event.img
+        img.alt = event.name
+        drawRoundImgToMap(this.map, `event-${event.id}`, img, 10)
       })
       var GeoJson = this.getGeoJSON(this.selectedEvent)
       console.log('GeoJson', GeoJson)
