@@ -31,21 +31,20 @@ export default {
       this.allEvents.forEach(event => {
         this.map.loadImage(event.img, (error, image) => {
           if (error) throw error
-          this.map.addImage(event.id, image)
+          this.map.addImage(`img-${event.id}`, image)
         })
       })
       console.log('selectedEvent', this.selectedEvent)
       var GeoJson = this.getGeoJSON(this.selectedEvent)
       console.log(GeoJson)
       this.map.addSource('events', GeoJson)
-      console.log(this.$store.state.event.visibility)
       this.map.addLayer({
         id: 'event-points',
         type: 'symbol',
         source: 'events',
         layout: {
-          'visibility': 'visible',
-          'icon-image': '{id}',
+          'visibility': 'none',
+          'icon-image': 'img-{id}',
           'text-field': '{name}',
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
           'text-offset': [0, 0.6],
@@ -56,7 +55,8 @@ export default {
   },
   computed: {
     ...mapState({
-      eventState: 'event'
+      eventState: 'event',
+      eventsShow: 'eventsShow'
     }),
     selectedEvent () {
       return this.allEvents.filter(event => {
@@ -69,6 +69,10 @@ export default {
       console.log('selectedEvent', this.selectedEvent)
       var GeoJson = this.getGeoJSON(this.selectedEvent)
       this.map.getSource('events').setData(GeoJson.data)
+    },
+    eventsShow: function () {
+      console.log(this.eventState.visibility)
+      this.map.setLayoutProperty('event-points', 'visibility', this.eventState.visibility)
     }
   },
   methods: {

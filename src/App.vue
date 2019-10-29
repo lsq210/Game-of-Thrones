@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <img src="@/assets/logo.png" class="logo" :style="{top: logoTop + 'px'}"/>
+    <img
+    src="@/assets/logo.png"
+    class="logo"
+    :style="{top: logoTop + 'px'}"
+    @click="returnHome"/>
     <map-component/>
     <nav-bar/>
     <families/>
@@ -29,6 +33,19 @@ export default {
   },
   mounted () {
     setTimeout(() => { this.logoTop = 30 }, 1200)
+  },
+  methods: {
+    returnHome: function () {
+      this.$store.commit('changeNavShow', {
+        familiesShow: false,
+        charactersShow: false,
+        eventsShow: false,
+        navBarShow: true
+      })
+      this.$store.commit('changeEventLayer', {
+        visibility: 'none'
+      })
+    }
   }
 }
 </script>
@@ -43,6 +60,7 @@ export default {
     margin: 0 30vw;
     filter: drop-shadow(2px 4px 6px black);
     transition: top 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
   }
   .map {
     position: fixed;

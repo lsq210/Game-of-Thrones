@@ -5,7 +5,7 @@
         v-for="(navItem, index) in navList"
         :key="'nav-item-' + index"
         class="nav-item"
-        @click="navShow(navItem.title)">
+        @click="changeNav(navItem.title)">
         <img class="nav-img" :src="navItem.img"/>
         <span class="nav-title">{{ navItem.title }}</span>
       </div>
@@ -27,10 +27,10 @@ export default {
           title: 'Characters',
           img: '/static/characters/JonSnow.webp'
         },
-        {
-          title: 'Cities',
-          img: '/static/cities/Braavos.webp'
-        },
+        // {
+        //   title: 'Cities',
+        //   img: '/static/cities/Braavos.webp'
+        // },
         {
           title: 'Events',
           img: '/static/events/RedWedding.webp'
@@ -43,7 +43,7 @@ export default {
     }
   },
   methods: {
-    navShow: function (item) {
+    changeNav: function (item) {
       switch (item) {
         case 'Families':
           this.$store.commit('changeNavShow', {
