@@ -67,20 +67,7 @@ export default {
   watch: {
     selectedEvent: function () {
       console.log('selectedEvent', this.selectedEvent)
-      // if (this.map.getLayer('event-points')) {
-      //   this.map.removeLayer('event-points')
-      // }
-      // if (this.map.isSourceLoaded('events')) {
-      //   this.map.removeSource('events')
-      // }
-      // this.selectedEvent.forEach(event => {
-      //   this.map.loadImage(event.img, (error, image) => {
-      //     if (error) throw error
-      //     this.map.addImage(event.id, image)
-      //   })
-      // })
       var GeoJson = this.getGeoJSON(this.selectedEvent)
-      console.log(GeoJson)
       this.map.getSource('events').setData(GeoJson.data)
     }
   },
