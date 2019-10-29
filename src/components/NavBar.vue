@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-wrapper" :style="{bottom: bottom + 'px'}">
+  <div class="nav-wrapper" :style="{bottom: bottom + 'px'}" v-if="$store.state.navBarShow">
     <div class="nav-bar">
       <div
         v-for="(navItem, index) in navList"
@@ -49,21 +49,27 @@ export default {
           this.$store.commit('changeNavShow', {
             familiesShow: true,
             charactersShow: false,
-            eventsShow: false
+            eventsShow: false,
+            navBarShow: true
           })
           break
         case 'Characters':
           this.$store.commit('changeNavShow', {
             familiesShow: false,
             charactersShow: true,
-            eventsShow: false
+            eventsShow: false,
+            navBarShow: true
           })
           break
         case 'Events':
           this.$store.commit('changeNavShow', {
             familiesShow: false,
             charactersShow: false,
-            eventsShow: true
+            eventsShow: true,
+            navBarShow: false
+          })
+          this.$store.commit('changeEventLayer', {
+            visibility: 'visible'
           })
           break
         default:

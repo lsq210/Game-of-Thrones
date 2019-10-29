@@ -4,6 +4,7 @@
 
 <script>
 import Events from '@/data/events.js'
+import { mapState } from 'vuex'
 import mapboxgl from 'mapbox-gl'
 const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1biJ9.vT96vIXE74LTVV4xXrv0Zw'
 
@@ -26,41 +27,85 @@ export default {
     this.map.on('click', (e) => {
       console.log('打印的经纬度是', e.lngLat)
     })
-    this.map.on('load', () => {
-      this.allEvents.forEach(event => {
-        this.map.loadImage(event.img, (error, image) => {
-          if (error) throw error
-          this.map.addImage(event.id, image)
-        })
-      })
-      var GeoJson = this.getGeoJSON(this.allEvents)
-      console.log(GeoJson)
-      this.map.addSource('events', GeoJson)
-      this.map.addLayer({
-        id: 'event-points',
-        type: 'symbol',
-        source: 'events',
-        layout: {
-          'icon-image': '{id}',
-          'text-field': '{name}',
-          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-          'text-offset': [0, 0.6],
-          'text-anchor': 'top'
-        }
-      })
-    })
+    // this.map.on('load', () => {
+    //   this.selectedEvent.forEach(event => {
+    //     this.map.loadImage(event.img, (error, image) => {
+    //       if (error) throw error
+    //       this.map.addImage(event.id, image)
+    //     })
+    //   })
+    //   console.log('selectedEvent', this.selectedEvent)
+    //   var GeoJson = this.getGeoJSON(this.selectedEvent)
+    //   console.log(GeoJson)
+    //   this.map.addSource('events', GeoJson)
+    //   console.log(this.$store.state.event.visibility)
+    //   this.map.addLayer({
+    //     id: 'event-points',
+    //     type: 'symbol',
+    //     source: 'events',
+    //     layout: {
+    //       'visibility': 'visible',
+    //       'icon-image': '{id}',
+    //       'text-field': '{name}',
+    //       'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+    //       'text-offset': [0, 0.6],
+    //       'text-anchor': 'top'
+    //     }
+    //   })
+    // })
   },
   computed: {
-    selectedEvent: function () {
+    ...mapState({
+      eventState: 'event'
+    }),
+    selectedEvent () {
       return this.allEvents.filter(event => {
-        return event.beginTime <= this.$store.event.time && event.endTime >= this.$store.event.beginTime
+        return event.beginTime <= this.eventState.time && event.endTime >= this.eventState.time
+      })
+    }
+  },
+  watch: {
+    selectedEvent: function () {
+      console.log('selectedEvent', this.selectedEvent)
+      // if (this.map.getLayer('event-points')) {
+      //   this.map.removeLayer('event-points')
+      // }
+      // if (this.map.isSourceLoaded('events')) {
+      //   this.map.removeSource('events')
+      // }
+      this.map.on('load', () => {
+        console.log('load')
+        this.selectedEvent.forEach(event => {
+          this.map.loadImage(event.img, (error, image) => {
+            if (error) throw error
+            this.map.addImage(event.id, image)
+          })
+        })
+        var GeoJson = this.getGeoJSON(this.selectedEvent)
+        console.log(GeoJson)
+        this.map.addSource('events', GeoJson)
+        console.log(this.$store.state.event.visibility)
+        this.map.addLayer({
+          id: 'event-points',
+          type: 'symbol',
+          source: 'events',
+          layout: {
+            'visibility': 'visible',
+            'icon-image': '{id}',
+            'text-field': '{name}',
+            'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top'
+          }
+        })
       })
     }
   },
   methods: {
-    getGeoJSON: function () {
+    // 转换成 GeoJSON 格式
+    getGeoJSON: function (events) {
       var featureList = []
-      this.allEvents.forEach(event => {
+      events.forEach(event => {
         featureList.push({
           type: 'Feature',
           geometry: {
@@ -73,6 +118,7 @@ export default {
           }
         })
       })
+      console.log('featureList', featureList)
       return {
         type: 'geojson',
         data: {

@@ -3,7 +3,7 @@
     <vue-slider
     v-model="time"
     v-bind="options"
-    v-on:change="$store.commit('changeTime', time)"
+    v-on:change="changeTime(time)"
     style="width: 90vw"/>
   </div>
 </template>
@@ -18,11 +18,17 @@ export default {
   },
   data () {
     return {
-      time: 0,
+      time: 298,
       options: {
-        min: 0,
-        max: 100
+        min: 298,
+        max: 320
       }
+    }
+  },
+  methods: {
+    changeTime: function (time) {
+      this.$store.commit('changeTime', time)
+      // console.log('time', this.time)
     }
   }
 }
