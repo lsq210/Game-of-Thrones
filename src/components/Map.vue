@@ -26,18 +26,23 @@ export default {
     this.nav = new mapboxgl.NavigationControl()
     this.map.addControl(this.nav)
     this.map.on('click', (e) => {
-      console.log('打印的经纬度是', e.lngLat)
+      console.log('经纬度是', e.lngLat)
     })
     this.map.on('load', () => {
       this.allEvents.forEach(event => {
         this.map.loadImage(event.img, (error, image) => {
           if (error) throw error
-          this.map.addImage(`img-${event.id}`, image)
+          else if (this.map.hasImage(`event-${event.id}`)) {
+            this.map.updateImage(`event-${event.id}`, event.img)
+            console.log('1')
+          } else {
+            this.map.addImage(`event-${event.id}`, image)
+            console.log('2')
+          }
         })
       })
-      console.log('selectedEvent', this.selectedEvent)
       var GeoJson = this.getGeoJSON(this.selectedEvent)
-      console.log(GeoJson)
+      console.log('GeoJson', GeoJson)
       this.map.addSource('events', GeoJson)
       this.map.addLayer({
         id: 'event-points',
@@ -45,7 +50,7 @@ export default {
         source: 'events',
         layout: {
           'visibility': 'none',
-          'icon-image': 'img-{id}',
+          'icon-image': 'event-{id}',
           'text-field': '{name}',
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
           'text-offset': [0, 0.6],
