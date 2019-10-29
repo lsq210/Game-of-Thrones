@@ -28,7 +28,7 @@ export default {
       console.log('打印的经纬度是', e.lngLat)
     })
     this.map.on('load', () => {
-      this.selectedEvent.forEach(event => {
+      this.allEvents.forEach(event => {
         this.map.loadImage(event.img, (error, image) => {
           if (error) throw error
           this.map.addImage(event.id, image)
