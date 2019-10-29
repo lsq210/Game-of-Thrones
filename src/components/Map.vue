@@ -27,32 +27,32 @@ export default {
     this.map.on('click', (e) => {
       console.log('打印的经纬度是', e.lngLat)
     })
-    // this.map.on('load', () => {
-    //   this.selectedEvent.forEach(event => {
-    //     this.map.loadImage(event.img, (error, image) => {
-    //       if (error) throw error
-    //       this.map.addImage(event.id, image)
-    //     })
-    //   })
-    //   console.log('selectedEvent', this.selectedEvent)
-    //   var GeoJson = this.getGeoJSON(this.selectedEvent)
-    //   console.log(GeoJson)
-    //   this.map.addSource('events', GeoJson)
-    //   console.log(this.$store.state.event.visibility)
-    //   this.map.addLayer({
-    //     id: 'event-points',
-    //     type: 'symbol',
-    //     source: 'events',
-    //     layout: {
-    //       'visibility': 'visible',
-    //       'icon-image': '{id}',
-    //       'text-field': '{name}',
-    //       'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-    //       'text-offset': [0, 0.6],
-    //       'text-anchor': 'top'
-    //     }
-    //   })
-    // })
+    this.map.on('load', () => {
+      this.selectedEvent.forEach(event => {
+        this.map.loadImage(event.img, (error, image) => {
+          if (error) throw error
+          this.map.addImage(event.id, image)
+        })
+      })
+      console.log('selectedEvent', this.selectedEvent)
+      var GeoJson = this.getGeoJSON(this.selectedEvent)
+      console.log(GeoJson)
+      this.map.addSource('events', GeoJson)
+      console.log(this.$store.state.event.visibility)
+      this.map.addLayer({
+        id: 'event-points',
+        type: 'symbol',
+        source: 'events',
+        layout: {
+          'visibility': 'visible',
+          'icon-image': '{id}',
+          'text-field': '{name}',
+          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+          'text-offset': [0, 0.6],
+          'text-anchor': 'top'
+        }
+      })
+    })
   },
   computed: {
     ...mapState({
@@ -73,32 +73,15 @@ export default {
       // if (this.map.isSourceLoaded('events')) {
       //   this.map.removeSource('events')
       // }
-      this.map.on('load', () => {
-        console.log('load')
-        this.selectedEvent.forEach(event => {
-          this.map.loadImage(event.img, (error, image) => {
-            if (error) throw error
-            this.map.addImage(event.id, image)
-          })
-        })
-        var GeoJson = this.getGeoJSON(this.selectedEvent)
-        console.log(GeoJson)
-        this.map.addSource('events', GeoJson)
-        console.log(this.$store.state.event.visibility)
-        this.map.addLayer({
-          id: 'event-points',
-          type: 'symbol',
-          source: 'events',
-          layout: {
-            'visibility': 'visible',
-            'icon-image': '{id}',
-            'text-field': '{name}',
-            'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top'
-          }
-        })
-      })
+      // this.selectedEvent.forEach(event => {
+      //   this.map.loadImage(event.img, (error, image) => {
+      //     if (error) throw error
+      //     this.map.addImage(event.id, image)
+      //   })
+      // })
+      var GeoJson = this.getGeoJSON(this.selectedEvent)
+      console.log(GeoJson)
+      this.map.getSource('events').setData(GeoJson.data)
     }
   },
   methods: {
