@@ -52,20 +52,19 @@ export default {
           'text-anchor': 'top'
         }
       })
-      // this.map.addSource('politcal', Politcal)
       this.map.addLayer({
-        id: 'politcal_shape',
+        id: 'politcal-shape',
         type: 'fill',
         source: {
           type: 'geojson',
           data: Politcal
         },
         layout: {
-          'visibility': 'visible'
+          'visibility': 'none'
         },
         paint: {
           'fill-color': ['get', 'color'],
-          'fill-opacity': 0.5
+          'fill-opacity': 0.4
         }
       })
     })
@@ -73,6 +72,7 @@ export default {
   computed: {
     ...mapState({
       eventState: 'event',
+      familiesShow: 'familiesShow',
       eventsShow: 'eventsShow',
       layersState: 'layersShow'
     }),
@@ -88,10 +88,13 @@ export default {
       var GeoJson = this.getGeoJSON(this.selectedEvent)
       this.map.getSource('events').setData(GeoJson.data)
     },
-    eventsShow: function () {
-      console.log(this.eventState.visibility)
-      this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
-      this.map.setLayoutProperty('politcal_shape', 'visibility', this.layersState.politcalLayer)
+    layersState: {
+      handler: function () {
+        console.log('layerchange')
+        this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
+        this.map.setLayoutProperty('politcal-shape', 'visibility', this.layersState.politcalLayer)
+      },
+      deep: true
     }
   },
   methods: {

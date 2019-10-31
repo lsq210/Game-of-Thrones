@@ -11,7 +11,7 @@ const store = new Vuex.Store({
     navBarShow: true,
     layersShow: {
       eventLayer: 'none',
-      politcalLayer: 'visible'
+      politcalLayer: 'none'
     },
     event: {
       time: 298

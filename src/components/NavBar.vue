@@ -36,7 +36,7 @@ export default {
           img: '/static/events/RedWedding.webp'
         },
         {
-          title: 'Wars',
+          title: 'Statistics',
           img: '/static/wars/ConquestOfDorne.webp'
         }
       ]
@@ -52,6 +52,10 @@ export default {
             eventsShow: false,
             navBarShow: true
           })
+          this.$store.commit('changeLayer', {
+            eventLayer: 'none',
+            politcalLayer: 'visible'
+          })
           break
         case 'Characters':
           this.$store.commit('changeNavShow', {
@@ -59,6 +63,10 @@ export default {
             charactersShow: true,
             eventsShow: false,
             navBarShow: true
+          })
+          this.$store.commit('changeLayer', {
+            eventLayer: 'none',
+            politcalLayer: 'none'
           })
           break
         case 'Events':
