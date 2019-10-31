@@ -61,16 +61,11 @@ export default {
           data: Politcal
         },
         layout: {
-          'visibility': 'visible',
-          // 'icon-image': 'img-{id}',
-          // 'text-field': '{name}',
-          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-          'text-offset': [0, 0.6],
-          'text-anchor': 'top'
+          'visibility': 'visible'
         },
         paint: {
-          'fill-color': '#088',
-          'fill-opacity': 1
+          'fill-color': ['get', 'color'],
+          'fill-opacity': 0.5
         }
       })
     })
