@@ -7,6 +7,7 @@ import Events from '@/data/events.js'
 import Politcal from '@/data/got_politcal.json'
 import { mapState } from 'vuex'
 import mapboxgl from 'mapbox-gl'
+import drawRoundImgToMap from '@/utils/generateRoundImg'
 const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1biJ9.vT96vIXE74LTVV4xXrv0Zw'
 
 export default {
@@ -26,18 +27,17 @@ export default {
     this.nav = new mapboxgl.NavigationControl()
     this.map.addControl(this.nav)
     this.map.on('click', (e) => {
-      console.log('打印的经纬度是', e.lngLat)
+      console.log('经纬度是', e.lngLat)
     })
     this.map.on('load', () => {
       this.allEvents.forEach(event => {
-        this.map.loadImage(event.img, (error, image) => {
-          if (error) throw error
-          this.map.addImage(`img-${event.id}`, image)
-        })
+        let img = new Image()
+        img.src = event.img
+        img.alt = event.name
+        drawRoundImgToMap(this.map, `event-${event.id}`, img, 10)
       })
-      console.log('selectedEvent', this.selectedEvent)
       var GeoJson = this.getGeoJSON(this.selectedEvent)
-      console.log(GeoJson)
+      console.log('GeoJson', GeoJson)
       this.map.addSource('events', GeoJson)
       this.map.addLayer({
         id: 'event-points',
@@ -45,7 +45,7 @@ export default {
         source: 'events',
         layout: {
           'visibility': 'none',
-          'icon-image': 'img-{id}',
+          'icon-image': 'event-{id}',
           'text-field': '{name}',
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
           'text-offset': [0, 0.6],
@@ -67,6 +67,25 @@ export default {
           'fill-opacity': 0.4
         }
       })
+    })
+    this.map.on('click', 'event-points', e => {
+      var coordinates = e.features[0].geometry.coordinates.slice()
+      var description = e.features[0].properties.description
+      console.log('coordinates', coordinates)
+      console.log('description', description)
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
+      }
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(this.map)
+    })
+    this.map.on('mouseenter', 'event-points', () => {
+      this.map.getCanvas().style.cursor = 'pointer'
+    })
+    this.map.on('mouseleave', 'event-points', () => {
+      this.map.getCanvas().style.cursor = ''
     })
   },
   computed: {
@@ -110,7 +129,8 @@ export default {
           },
           properties: {
             id: event.id,
-            name: event.name
+            name: event.name,
+            description: event.description
           }
         })
       })
