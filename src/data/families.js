@@ -1,29 +1,33 @@
 const families = [
   {
+    ID: 0,
     name: 'House Stark',
     img: '/static/houses/Stark.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    position: 'Winterfell',
+    words: 'Winter is coming',
+    membersID: '0',
+    region: 'The North',
+    allegiance: [4, 23],
+    vassals: [9, 1, 18, 17]
   },
   {
+    ID: 1,
     name: 'House Tully',
     img: '/static/houses/Tully.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    words: 'Family,Duty,Honor',
+    seat: 'Riverrun',
+    region: 'The Riverlands',
+    allegiance: [0, 4, 23],
+    vassals: []
   },
   {
+    ID: 2,
     name: 'House Lannister',
     img: '/static/houses/Lannister.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    words: 'Hear Me Roar!'
   },
   {
+    ID: 3,
     name: 'House Tyrell',
     img: '/static/houses/Tyrell.webp',
     location: {
@@ -32,14 +36,13 @@ const families = [
     }
   },
   {
+    ID: 4,
     name: 'House Targaryen',
     img: '/static/houses/Targaryen.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    words: 'Fire and Blood'
   },
   {
+    ID: 5,
     name: 'House Bolton',
     img: '/static/houses/Bolton.webp',
     location: {
@@ -48,6 +51,7 @@ const families = [
     }
   },
   {
+    ID: 6,
     name: 'House Frey',
     img: '/static/houses/Frey.webp',
     location: {
@@ -56,6 +60,7 @@ const families = [
     }
   },
   {
+    ID: 7,
     name: 'House Greyjoy',
     img: '/static/houses/Greyjoy.webp',
     location: {
@@ -64,6 +69,7 @@ const families = [
     }
   },
   {
+    ID: 8,
     name: 'House Martell',
     img: '/static/houses/Martell.webp',
     location: {
@@ -72,6 +78,7 @@ const families = [
     }
   },
   {
+    ID: 9,
     name: 'House Arryn',
     img: '/static/houses/Arryn.webp',
     location: {
@@ -80,6 +87,7 @@ const families = [
     }
   },
   {
+    ID: 10,
     name: 'House Baratheon',
     img: '/static/houses/Baratheon.webp',
     location: {
@@ -88,6 +96,7 @@ const families = [
     }
   },
   {
+    ID: 11,
     name: 'House Tarly',
     img: '/static/houses/Tarly.webp',
     location: {
@@ -96,6 +105,7 @@ const families = [
     }
   },
   {
+    ID: 12,
     name: 'House Florent',
     img: '/static/houses/Florent.webp',
     location: {
@@ -104,6 +114,7 @@ const families = [
     }
   },
   {
+    ID: 13,
     name: 'House Karstark',
     img: '/static/houses/Karstark.webp',
     location: {
@@ -112,6 +123,7 @@ const families = [
     }
   },
   {
+    ID: 14,
     name: 'House Umber',
     img: '/static/houses/Umber.webp',
     location: {
@@ -120,6 +132,7 @@ const families = [
     }
   },
   {
+    ID: 15,
     name: 'House Manderly',
     img: '/static/houses/Manderly.webp',
     location: {
@@ -128,6 +141,7 @@ const families = [
     }
   },
   {
+    ID: 16,
     name: 'House Reed',
     img: '/static/houses/Reed.webp',
     location: {
@@ -136,6 +150,7 @@ const families = [
     }
   },
   {
+    ID: 17,
     name: 'House Mormont',
     img: '/static/houses/Mormont.webp',
     location: {
@@ -144,6 +159,7 @@ const families = [
     }
   },
   {
+    ID: 18,
     name: 'House Glover',
     img: '/static/houses/Glover.webp',
     location: {
@@ -152,6 +168,7 @@ const families = [
     }
   },
   {
+    ID: 19,
     name: 'House Forrester',
     img: '/static/houses/Forrester.webp',
     location: {
@@ -160,6 +177,7 @@ const families = [
     }
   },
   {
+    ID: 20,
     name: 'House Whitehill',
     img: '/static/houses/Whitehill.webp',
     location: {
@@ -168,6 +186,7 @@ const families = [
     }
   },
   {
+    ID: 21,
     name: 'House Royce',
     img: '/static/houses/Royce.webp',
     location: {
@@ -176,6 +195,7 @@ const families = [
     }
   },
   {
+    ID: 22,
     name: 'House Blackfyre',
     img: '/static/houses/Blackfyre.webp',
     location: {
@@ -184,6 +204,7 @@ const families = [
     }
   },
   {
+    ID: 23,
     name: 'House Baratheon of King\'s Landing',
     img: '/static/houses/Baratheon of King\'s Landing.webp',
     location: {
@@ -192,6 +213,7 @@ const families = [
     }
   },
   {
+    ID: 24,
     name: 'House Baratheon of Dragonstone',
     img: '/static/houses/Baratheon of Dragonstone.webp',
     location: {

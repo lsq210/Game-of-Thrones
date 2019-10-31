@@ -4,7 +4,8 @@
       <div
         v-for="(navItem, index) in navList"
         :key="'nav-item-' + index"
-        class="nav-item">
+        class="nav-item"
+        >
         <img class="nav-img" :src="navItem.img"/>
         <span class="nav-title">{{ navItem.title }}</span>
       </div>

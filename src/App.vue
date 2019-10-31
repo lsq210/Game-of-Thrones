@@ -4,6 +4,7 @@
     <map-component/>
     <nav-bar/>
     <families/>
+    <family-info/>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import MapComponent from '@/components/Map'
 import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
+import FamilyInfo from '@/components/Family'
 
 export default {
   name: 'App',
   components: {
     MapComponent,
     NavBar,
-    Families
+    Families,
+    FamilyInfo
   },
   data () {
     return {

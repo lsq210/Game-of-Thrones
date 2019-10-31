@@ -5,7 +5,7 @@
         v-for="(family, index) in families"
         :key="'family-' + family.name + index"
         class="family">
-        <img class="family-img" :src="family.img"/>
+        <img class="family-img" :src="family.img" v-on:click="buttonclick(family.name)" />
         <span class="family-name">{{ family.name }}</span>
       </div>
     </div>
@@ -14,11 +14,17 @@
 
 <script>
 import families from '@/data/families'
+import Utils from '@/utils.js'
 
 export default {
   data () {
     return {
       families: families
+    }
+  },
+  methods: {
+    buttonclick: function (family) {
+      Utils.$emit('event', family)
     }
   }
 }
