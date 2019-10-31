@@ -3,6 +3,8 @@
   color: #e7d9ce;
   opacity: 0.9;
   border-radius: 10px;
+  max-height: 150px;
+  overflow-y: auto;
   &::-webkit-scrollbar {
     width: 0
   }
