@@ -9,9 +9,12 @@ const store = new Vuex.Store({
     charatersShow: false,
     eventsShow: false,
     navBarShow: true,
+    layersShow: {
+      eventLayer: 'none',
+      politcalLayer: 'visible'
+    },
     event: {
-      time: 298,
-      visibility: 'none'
+      time: 298
     }
   },
   mutations: {
@@ -24,8 +27,9 @@ const store = new Vuex.Store({
     changeTime (state, time) {
       state.event.time = time
     },
-    changeEventLayer (state, payload) {
-      state.event.visibility = payload.visibility
+    changeLayer (state, visibility) {
+      state.layersShow.eventLayer = visibility.eventLayer
+      state.layersShow.politcalLayer = visibility.politcalLayer
     }
   }
 })

@@ -73,7 +73,8 @@ export default {
   computed: {
     ...mapState({
       eventState: 'event',
-      eventsShow: 'eventsShow'
+      eventsShow: 'eventsShow',
+      layersState: 'layersShow'
     }),
     selectedEvent () {
       return this.allEvents.filter(event => {
@@ -89,7 +90,8 @@ export default {
     },
     eventsShow: function () {
       console.log(this.eventState.visibility)
-      this.map.setLayoutProperty('event-points', 'visibility', this.eventState.visibility)
+      this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
+      this.map.setLayoutProperty('politcal_shape', 'visibility', this.layersState.politcalLayer)
     }
   },
   methods: {

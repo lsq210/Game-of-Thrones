@@ -68,8 +68,9 @@ export default {
             eventsShow: true,
             navBarShow: false
           })
-          this.$store.commit('changeEventLayer', {
-            visibility: 'visible'
+          this.$store.commit('changeLayer', {
+            eventLayer: 'visible',
+            politcalLayer: 'none'
           })
           break
         default:
