@@ -6,8 +6,9 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     familiesShow: false,
-    charatersShow: false,
+    charatersShow: false, // characterFamilyTree
     eventsShow: false,
+    characterCardShow: false, // characterInfo
     navBarShow: true,
     event: {
       time: 298,
