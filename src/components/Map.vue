@@ -4,6 +4,7 @@
 
 <script>
 import Events from '@/data/events.js'
+import Politcal from '@/data/got_politcal.json'
 import { mapState } from 'vuex'
 import mapboxgl from 'mapbox-gl'
 const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1biJ9.vT96vIXE74LTVV4xXrv0Zw'
@@ -49,6 +50,22 @@ export default {
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
           'text-offset': [0, 0.6],
           'text-anchor': 'top'
+        }
+      })
+      // this.map.addSource('politcal', Politcal)
+      this.map.addLayer({
+        id: 'politcal_shape',
+        type: 'fill',
+        source: {
+          type: 'geojson',
+          data: Politcal
+        },
+        layout: {
+          'visibility': 'visible'
+        },
+        paint: {
+          'fill-color': ['get', 'color'],
+          'fill-opacity': 0.5
         }
       })
     })
