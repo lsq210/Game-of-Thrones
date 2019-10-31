@@ -6,7 +6,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     familiesShow: false,
-    charatersShow: false, // characterFamilyTree
+    charactersShow: false, // characterFamilyTree
     eventsShow: false,
     characterCardShow: false, // characterInfo
     navBarShow: true,
@@ -18,7 +18,7 @@ const store = new Vuex.Store({
   mutations: {
     changeNavShow (state, payload) {
       state.familiesShow = payload.familiesShow
-      state.charatersShow = payload.charatersShow
+      state.charactersShow = payload.charactersShow
       state.eventsShow = payload.eventsShow
       state.navBarShow = payload.navBarShow
     },

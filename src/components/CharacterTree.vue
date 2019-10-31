@@ -22,10 +22,10 @@ export default {
 
 .CharacterTree-wrapper {
   position: fixed;
-  top: 10;
-  left: 10;
-  height: 100vh;
-  width: 300vh;
+  top: 10px;
+  left: 10px;
+  height: 80vh;
+  width: 30vh;
   border: 3px;
   background-color: #9f997f;
 }
