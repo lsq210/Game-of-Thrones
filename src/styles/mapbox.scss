@@ -1,0 +1,15 @@
+.mapboxgl-popup-content {
+  background-color: #650000;
+  color: #e7d9ce;
+  opacity: 0.9;
+  border-radius: 10px;
+  &::-webkit-scrollbar {
+    width: 0
+  }
+}
+.mapboxgl-popup-anchor-bottom {
+  .mapboxgl-popup-tip{
+    border-top-color: #650000;
+    opacity: 0.9;
+  }
+}
