@@ -26,8 +26,7 @@ export default {
     MapComponent,
     NavBar,
     Families,
-    FamilyInfo
-    Families,
+    FamilyInfo,
     TimeLine
   },
   data () {
