@@ -1,11 +1,11 @@
 <template>
-  <div class="nav-wrapper" :style="{bottom: bottom + 'px'}">
+  <div class="nav-wrapper" :style="{bottom: bottom + 'px'}" v-if="$store.state.navBarShow">
     <div class="nav-bar">
       <div
         v-for="(navItem, index) in navList"
         :key="'nav-item-' + index"
         class="nav-item"
-        >
+        @click="changeNav(navItem.title)">
         <img class="nav-img" :src="navItem.img"/>
         <span class="nav-title">{{ navItem.title }}</span>
       </div>
@@ -27,19 +27,63 @@ export default {
           title: 'Characters',
           img: '/static/characters/JonSnow.webp'
         },
-        {
-          title: 'Cities',
-          img: '/static/cities/Braavos.webp'
-        },
+        // {
+        //   title: 'Cities',
+        //   img: '/static/cities/Braavos.webp'
+        // },
         {
           title: 'Events',
           img: '/static/events/RedWedding.webp'
         },
         {
-          title: 'Wars',
+          title: 'Statistics',
           img: '/static/wars/ConquestOfDorne.webp'
         }
       ]
+    }
+  },
+  methods: {
+    changeNav: function (item) {
+      switch (item) {
+        case 'Families':
+          this.$store.commit('changeNavShow', {
+            familiesShow: true,
+            charactersShow: false,
+            eventsShow: false,
+            navBarShow: true
+          })
+          this.$store.commit('changeLayer', {
+            eventLayer: 'none',
+            politcalLayer: 'visible'
+          })
+          break
+        case 'Characters':
+          this.$store.commit('changeNavShow', {
+            familiesShow: false,
+            charactersShow: true,
+            eventsShow: false,
+            navBarShow: true
+          })
+          this.$store.commit('changeLayer', {
+            eventLayer: 'none',
+            politcalLayer: 'none'
+          })
+          break
+        case 'Events':
+          this.$store.commit('changeNavShow', {
+            familiesShow: false,
+            charactersShow: false,
+            eventsShow: true,
+            navBarShow: false
+          })
+          this.$store.commit('changeLayer', {
+            eventLayer: 'visible',
+            politcalLayer: 'none'
+          })
+          break
+        default:
+          break
+      }
     }
   },
   mounted () {

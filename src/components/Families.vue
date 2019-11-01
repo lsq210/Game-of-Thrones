@@ -1,6 +1,6 @@
 <template>
   <div class="families-wrapper">
-    <div class="families">
+    <div class="families" v-if="$store.state.familiesShow">
       <div
         v-for="(family, index) in families"
         :key="'family-' + family.name + index"

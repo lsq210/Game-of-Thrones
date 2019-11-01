@@ -1,10 +1,15 @@
 <template>
   <div id="app">
-    <img src="@/assets/logo.png" class="logo" :style="{top: logoTop + 'px'}"/>
+    <img
+    src="@/assets/logo.png"
+    class="logo"
+    :style="{top: logoTop + 'px'}"
+    @click="returnHome"/>
     <map-component/>
     <nav-bar/>
     <families/>
     <family-info/>
+    <time-line/>
   </div>
 </template>
 
@@ -13,6 +18,7 @@ import MapComponent from '@/components/Map'
 import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
 import FamilyInfo from '@/components/Family'
+import TimeLine from '@/components/TimeLine'
 
 export default {
   name: 'App',
@@ -20,7 +26,8 @@ export default {
     MapComponent,
     NavBar,
     Families,
-    FamilyInfo
+    FamilyInfo,
+    TimeLine
   },
   data () {
     return {
@@ -29,6 +36,20 @@ export default {
   },
   mounted () {
     setTimeout(() => { this.logoTop = 30 }, 1200)
+  },
+  methods: {
+    returnHome: function () {
+      this.$store.commit('changeNavShow', {
+        familiesShow: false,
+        charactersShow: false,
+        eventsShow: false,
+        navBarShow: true
+      })
+      this.$store.commit('changeLayer', {
+        eventLayer: 'none',
+        politcalLayer: 'none'
+      })
+    }
   }
 }
 </script>
@@ -43,6 +64,7 @@ export default {
     margin: 0 30vw;
     filter: drop-shadow(2px 4px 6px black);
     transition: top 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
   }
   .map {
     position: fixed;
