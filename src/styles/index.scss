@@ -1,6 +1,7 @@
 @import './var.scss';
 @import './mapbox.scss';
 @import url('https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css');
+@import "vue-select/src/scss/vue-select.scss";
 
 html, body {
   margin: 0;
