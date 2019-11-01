@@ -1,5 +1,5 @@
 <template>
-  <div class="CharacterTree-wrapper" v-if="$store.state.charactersShow">
+  <div class="CharacterTree-wrapper" id=treeContainer v-if="$store.state.charactersShow">
     <div class="CharacterTree">
     </div>
   </div>
@@ -7,6 +7,8 @@
 
 <script>
 import characters from '@/data/characters'
+import echarts from 'echarts'
+import option from '@/data/option'
 
 export default {
   data () {
@@ -14,6 +16,11 @@ export default {
       characters: characters
     }
   }
+}
+var self = this
+if (self.$store.state.charactersShow) {
+  var myChart = echarts.init(document.getElementById('treeContainer'))
+  myChart.setOption(option)
 }
 </script>
 
@@ -23,10 +30,11 @@ export default {
 .CharacterTree-wrapper {
   position: fixed;
   top: 10px;
-  left: 10px;
-  height: 80vh;
-  width: 30vh;
-  border: 3px;
-  background-color: #9f997f;
+  left: 65px;
+  height: 800px;
+  width: 1800px;
+  border: 5px solid #d8ba7e;
+  border-radius: 25px;
+  background-color: #f7deab;
 }
 </style>

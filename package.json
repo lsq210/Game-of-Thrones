@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "echarts": "^4.4.0",
     "mapbox-gl": "^1.4.1",
     "vue": "^2.5.2",
     "vue-slider-component": "^3.0.41",
