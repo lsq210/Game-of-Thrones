@@ -1,7 +1,11 @@
 <template>
   <div class="events-wrapper" v-if="$store.state.eventsShow">
     <div class="title">Select Events!</div>
-    <div class="events-select">
+    <div>
+      <div class="select-way" @click="chooseWay(0)">Series</div>
+      <div class="select-way" @click="chooseWay(1)">Timeline</div>
+    </div>
+    <div class="events-select" v-if="$store.state.waysShow.seriesShow">
       <div>seasons</div>
       <v-select :options="seasons" style="width: 30%" v-model="season"></v-select>
       <div>episodes</div>
@@ -18,6 +22,7 @@
       <div class="item" v-for="(item, index) in itemList" :key="`itemList-${index}`">
         {{ item }} : {{ eventDetails[index] }}
       </div>
+      <button @click="fly">Fly to</button>
     </div>
   </div>
 </template>
@@ -31,7 +36,7 @@ export default {
       allEvents: Events,
       season: 1,
       episode: 1,
-      itemList: ['Name', 'Place', 'Begin', 'End', 'Families', 'Organizations', 'Characters', 'Death'],
+      itemList: ['Name', 'Place', 'Position', 'Begin', 'End', 'Families', 'Organizations', 'Characters', 'Death'],
       eventDetails: []
     }
   },
@@ -50,6 +55,7 @@ export default {
       })
       this.eventDetails.push(event[0].name)
       this.eventDetails.push(event[0].place)
+      this.eventDetails.push(event[0].position)
       this.eventDetails.push(event[0].beginTime)
       this.eventDetails.push(event[0].endTime)
       this.eventDetails.push(event[0].families)
@@ -57,6 +63,28 @@ export default {
       this.eventDetails.push(event[0].characters)
       this.eventDetails.push(event[0].death)
       console.log(this.eventDetails)
+    },
+    fly: function () {
+      var center = this.eventDetails[2]
+      this.$store.commit('fly', center)
+    },
+    chooseWay: function (way) {
+      switch (way) {
+        case 0:
+          this.$store.commit('changeEventWay', {
+            series: true,
+            timeLine: false
+          })
+          break
+        case 1:
+          this.$store.commit('changeEventWay', {
+            series: false,
+            timeLine: true
+          })
+          break
+        default:
+          break
+      }
     }
   }
 }
@@ -82,11 +110,17 @@ export default {
     width: 18vw;
     background-color: $primer-color;
   }
+  .select-way {
+    color: $primer-color;
+    line-height: 2.4rem;
+    cursor: pointer;
+  }
   .events-list {
     background-color: $primer-color;
     cursor: pointer;
   }
   .event-details {
+    margin-top: 24px;
     height: 30vh;
     background-color: $primer-color;
     max-width: 18vw;

@@ -93,7 +93,8 @@ export default {
       eventState: 'event',
       familiesShow: 'familiesShow',
       eventsShow: 'eventsShow',
-      layersState: 'layersShow'
+      layersState: 'layersShow',
+      flyCenter: 'center'
     }),
     selectedEvent () {
       return this.allEvents.filter(event => {
@@ -114,6 +115,13 @@ export default {
         this.map.setLayoutProperty('politcal-shape', 'visibility', this.layersState.politcalLayer)
       },
       deep: true
+    },
+    flyCenter: function () {
+      this.map.flyTo({
+        center: this.flyCenter,
+        speed: 0.5,
+        zoom: 7
+      })
     }
   },
   methods: {
