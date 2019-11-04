@@ -1,10 +1,6 @@
 <template>
   <div class="events-wrapper" v-if="$store.state.eventsShow">
     <div class="title">Select Events!</div>
-    <div>
-      <div class="select-way" @click="chooseWay(0)">Series</div>
-      <div class="select-way" @click="chooseWay(1)">Timeline</div>
-    </div>
     <div class="events-select" v-if="$store.state.waysShow.seriesShow">
       <div>seasons</div>
       <v-select :options="seasons" style="width: 30%" v-model="season"></v-select>
@@ -34,8 +30,8 @@ export default {
       seasons: [1, 2, 3, 4, 5, 6, 7],
       episodes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       allEvents: Events,
-      season: 1,
-      episode: 1,
+      season: null,
+      episode: null,
       itemList: ['Name', 'Place', 'Position', 'Begin', 'End', 'Families', 'Organizations', 'Characters', 'Death'],
       eventDetails: []
     }
@@ -45,6 +41,11 @@ export default {
       return this.allEvents.filter(event => {
         return event.source_season === this.season & event.source_episode === this.episode
       })
+    }
+  },
+  watch: {
+    selectedEvents: function () {
+      this.$store.commit('selectBySeries', this.selectedEvents)
     }
   },
   methods: {
@@ -67,24 +68,6 @@ export default {
     fly: function () {
       var center = this.eventDetails[2]
       this.$store.commit('fly', center)
-    },
-    chooseWay: function (way) {
-      switch (way) {
-        case 0:
-          this.$store.commit('changeEventWay', {
-            series: true,
-            timeLine: false
-          })
-          break
-        case 1:
-          this.$store.commit('changeEventWay', {
-            series: false,
-            timeLine: true
-          })
-          break
-        default:
-          break
-      }
     }
   }
 }

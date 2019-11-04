@@ -20,7 +20,8 @@ const store = new Vuex.Store({
     event: {
       time: 298
     },
-    center: null
+    center: null,
+    selectedEvents: []
   },
   mutations: {
     changeNavShow (state, payload) {
@@ -28,7 +29,6 @@ const store = new Vuex.Store({
       state.charatersShow = payload.charatersShow
       state.eventsShow = payload.eventsShow
       state.navBarShow = payload.navBarShow
-      state.waysShow.timeLineShow = payload.eventsShow
       state.waysShow.seriesShow = payload.eventsShow
     },
     changeTime (state, time) {
@@ -41,9 +41,8 @@ const store = new Vuex.Store({
     fly (state, center) {
       state.center = center
     },
-    changeEventWay (state, way) {
-      state.waysShow.seriesShow = way.series
-      state.waysShow.timeLineShow = way.timeLine
+    selectBySeries (state, selectedEvents) {
+      state.selectedEvents = selectedEvents
     }
   }
 })

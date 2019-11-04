@@ -36,7 +36,7 @@ export default {
         img.alt = event.name
         drawRoundImgToMap(this.map, `event-${event.id}`, img, 10)
       })
-      var GeoJson = this.getGeoJSON(this.selectedEvent)
+      var GeoJson = this.getGeoJSON(this.selectedEvents)
       console.log('GeoJson', GeoJson)
       this.map.addSource('events', GeoJson)
       this.map.addLayer({
@@ -94,18 +94,19 @@ export default {
       familiesShow: 'familiesShow',
       eventsShow: 'eventsShow',
       layersState: 'layersShow',
-      flyCenter: 'center'
-    }),
-    selectedEvent () {
-      return this.allEvents.filter(event => {
-        return event.beginTime <= this.eventState.time && event.endTime >= this.eventState.time
-      })
-    }
+      flyCenter: 'center',
+      selectedEvents: 'selectedEvents'
+    })
+    // selectedEvents () {
+    //   return this.allEvents.filter(event => {
+    //     return event.beginTime <= this.eventState.time && event.endTime >= this.eventState.time
+    //   })
+    // }
   },
   watch: {
-    selectedEvent: function () {
-      console.log('selectedEvent', this.selectedEvent)
-      var GeoJson = this.getGeoJSON(this.selectedEvent)
+    selectedEvents: function () {
+      console.log('selectedEvents', this.selectedEvents)
+      var GeoJson = this.getGeoJSON(this.selectedEvents)
       this.map.getSource('events').setData(GeoJson.data)
     },
     layersState: {
