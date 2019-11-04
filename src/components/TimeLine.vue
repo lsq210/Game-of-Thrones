@@ -1,5 +1,5 @@
 <template>
-  <div class="timeline" v-if="$store.state.eventsShow">
+  <div class="timeline" v-if="$store.state.waysShow.timeLineShow">
     <vue-slider
     v-model="time"
     v-bind="options"
