@@ -3,9 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import store from './store'
+import vSelect from 'vue-select'
 import './styles/index.scss'
 
 Vue.config.productionTip = false
+Vue.component('v-select', vSelect)
 
 /* eslint-disable no-new */
 new Vue({

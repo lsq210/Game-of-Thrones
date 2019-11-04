@@ -8,6 +8,7 @@
     <map-component/>
     <nav-bar/>
     <families/>
+    <events/>
     <time-line/>
   </div>
 </template>
@@ -16,6 +17,7 @@
 import MapComponent from '@/components/Map'
 import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
+import Events from '@/components/Events'
 import TimeLine from '@/components/TimeLine'
 
 export default {
@@ -24,7 +26,8 @@ export default {
     MapComponent,
     NavBar,
     Families,
-    TimeLine
+    TimeLine,
+    Events
   },
   data () {
     return {
