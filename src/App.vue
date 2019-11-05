@@ -9,7 +9,6 @@
     <nav-bar/>
     <families/>
     <events/>
-    <time-line/>
   </div>
 </template>
 
@@ -18,7 +17,6 @@ import MapComponent from '@/components/Map'
 import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
 import Events from '@/components/Events'
-import TimeLine from '@/components/TimeLine'
 
 export default {
   name: 'App',
@@ -26,7 +24,6 @@ export default {
     MapComponent,
     NavBar,
     Families,
-    TimeLine,
     Events
   },
   data () {
@@ -39,12 +36,7 @@ export default {
   },
   methods: {
     returnHome: function () {
-      this.$store.commit('changeNavShow', {
-        familiesShow: false,
-        charactersShow: false,
-        eventsShow: false,
-        navBarShow: true
-      })
+      this.$store.commit('changeNav', null)
       this.$store.commit('changeLayer', {
         eventLayer: 'none',
         politcalLayer: 'none'

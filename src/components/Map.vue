@@ -90,18 +90,17 @@ export default {
   },
   computed: {
     ...mapState({
-      eventState: 'event',
-      familiesShow: 'familiesShow',
-      eventsShow: 'eventsShow',
-      layersState: 'layersShow',
-      flyCenter: 'center',
-      selectedEvents: 'selectedEvents'
-    })
-    // selectedEvents () {
-    //   return this.allEvents.filter(event => {
-    //     return event.beginTime <= this.eventState.time && event.endTime >= this.eventState.time
-    //   })
-    // }
+      eventState: 'events',
+      familiesState: 'families',
+      charatersState: 'charaters',
+      layersState: 'layersState'
+    }),
+    selectedEvents () {
+      return this.eventState.selectedEvents
+    },
+    flyCenter () {
+      return this.eventState.center
+    }
   },
   watch: {
     selectedEvents: function () {

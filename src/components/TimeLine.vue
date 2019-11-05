@@ -1,10 +1,13 @@
 <template>
-  <div class="timeline" v-if="$store.state.waysShow.timeLineShow">
-    <vue-slider
-    v-model="time"
-    v-bind="options"
-    v-on:change="changeTime(time)"
-    style="width: 90vw"/>
+  <div class="timeline-wrapper">
+    <button @click="changeSelectWay">三眼乌鸦</button>
+    <div class="timeline" v-if="timeLineState">
+      <vue-slider
+      v-model="time"
+      v-bind="options"
+      v-on:change="changeTime(time)"
+      style="width: 90vw"/>
+  </div>
   </div>
 </template>
 
@@ -13,22 +16,36 @@ import VueSlider from 'vue-slider-component'
 import 'vue-slider-component/theme/antd.css'
 
 export default {
-  components: {
-    VueSlider
-  },
   data () {
     return {
       time: 298,
       options: {
         min: 298,
         max: 320
-      }
+      },
+      timeLineState: false
+    }
+  },
+  components: {
+    VueSlider
+  },
+  watch: {
+    timeLineState: function () {
+      console.log('statechange')
+      this.$emit('changeSelectWay', this.timeLineState)
     }
   },
   methods: {
     changeTime: function (time) {
-      this.$store.commit('changeTime', time)
+      this.$emit('changeTime', time)
       // console.log('time', this.time)
+    },
+    changeSelectWay: function () {
+      if (this.timeLineState) {
+        this.timeLineState = false
+      } else {
+        this.timeLineState = true
+      }
     }
   }
 }
@@ -36,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/var.scss';
-.timeline {
+.timeline-wrapper {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -44,5 +61,9 @@ export default {
   width: 100vw;
   height: 8vh;
   margin:0 auto;
+  button {
+    width: 40x;
+    height: 40px;
+  }
 }
 </style>

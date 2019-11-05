@@ -1,6 +1,6 @@
 <template>
   <div class="families-wrapper">
-    <div class="families" v-if="$store.state.familiesShow">
+    <div class="families" v-if="familiesState">
       <div
         v-for="(family, index) in families"
         :key="'family-' + family.name + index"
@@ -13,12 +13,25 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import families from '@/data/families'
 
 export default {
   data () {
     return {
       families: families
+    }
+  },
+  computed: {
+    ...mapState({
+      navName: 'navName'
+    }),
+    familiesState () {
+      if (this.navName === 'Families') {
+        return true
+      } else {
+        return false
+      }
     }
   }
 }

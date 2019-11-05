@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-wrapper" :style="{bottom: bottom + 'px'}" v-if="$store.state.navBarShow">
+  <div class="nav-wrapper" :style="{bottom: bottom + 'px'}" v-if="navBarState">
     <div class="nav-bar">
       <div
         v-for="(navItem, index) in navList"
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data () {
     return {
@@ -42,40 +43,46 @@ export default {
       ]
     }
   },
+  computed: {
+    ...mapState({
+      navName: 'navName'
+    }),
+    navBarState: function () {
+      switch (this.navName) {
+        case 'Families':
+          return true
+        case 'Characters':
+          return true
+        case 'Events':
+          return false
+        case 'Statistics':
+          return false
+        case null:
+          return true
+        default:
+          break
+      }
+    }
+  },
   methods: {
     changeNav: function (item) {
       switch (item) {
         case 'Families':
-          this.$store.commit('changeNavShow', {
-            familiesShow: true,
-            charactersShow: false,
-            eventsShow: false,
-            navBarShow: true
-          })
+          this.$store.commit('changeNav', 'Families')
           this.$store.commit('changeLayer', {
             eventLayer: 'none',
             politcalLayer: 'visible'
           })
           break
         case 'Characters':
-          this.$store.commit('changeNavShow', {
-            familiesShow: false,
-            charactersShow: true,
-            eventsShow: false,
-            navBarShow: true
-          })
+          this.$store.commit('changeNav', 'Characters')
           this.$store.commit('changeLayer', {
             eventLayer: 'none',
             politcalLayer: 'none'
           })
           break
         case 'Events':
-          this.$store.commit('changeNavShow', {
-            familiesShow: false,
-            charactersShow: false,
-            eventsShow: true,
-            navBarShow: false
-          })
+          this.$store.commit('changeNav', 'Events')
           this.$store.commit('changeLayer', {
             eventLayer: 'visible',
             politcalLayer: 'none'
