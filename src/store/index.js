@@ -32,8 +32,8 @@ const store = new Vuex.Store({
     fly (state, center) {
       state.center = center
     },
-    selectBySeries (state, selectedEvents) {
-      state.selectedEvents = selectedEvents
+    changeEvents (state, selectedEvents) {
+      state.events.selectedEvents = selectedEvents
     }
   }
 })

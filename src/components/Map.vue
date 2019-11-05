@@ -104,14 +104,14 @@ export default {
       var GeoJson = this.getGeoJSON(this.selectedEvents)
       this.map.getSource('events').setData(GeoJson.data)
     },
-    layersState: {
-      handler: function () {
-        console.log('layerchange')
-        this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
-        this.map.setLayoutProperty('politcal-shape', 'visibility', this.layersState.politcalLayer)
-      },
-      deep: true
-    },
+    // layersState: {
+    //   handler: function () {
+    //     console.log('layerchange')
+    //     this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
+    //     this.map.setLayoutProperty('politcal-shape', 'visibility', this.layersState.politcalLayer)
+    //   },
+    //   deep: true
+    // },
     flyCenter: function () {
       this.map.flyTo({
         center: this.flyCenter,

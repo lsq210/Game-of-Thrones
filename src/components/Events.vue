@@ -7,7 +7,7 @@
       <div>episodes</div>
       <v-select :options="episodes" style="width: 30%" v-model="episode"></v-select>
     </div>
-    <time-line @changeSelectWay="changeSelectWay"/>
+    <time-line @changeSelectWay="changeSelectWay" @changeTime="changeTime"/>
     <div class="events-list">
       <div v-for="(event, index) in selectedEvents"
         :key="`selectedEvents-${index}`"
@@ -69,7 +69,7 @@ export default {
   },
   watch: {
     selectedEvents: function () {
-      console.log('selectBySeries', this.selectedEvents)
+      this.$store.commit('changeEvents', this.selectedEvents)
     }
   },
   methods: {
@@ -98,6 +98,7 @@ export default {
       console.log(this.time)
     },
     changeSelectWay: function (timeLineState) {
+      console.log('timelineState', timeLineState)
       if (timeLineState) {
         this.selectWay = 'timeLine'
       } else {

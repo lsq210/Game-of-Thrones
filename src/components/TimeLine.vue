@@ -31,6 +31,7 @@ export default {
   },
   watch: {
     timeLineState: function () {
+      console.log('statechange')
       this.$emit('changeSelectWay', this.timeLineState)
     }
   },
