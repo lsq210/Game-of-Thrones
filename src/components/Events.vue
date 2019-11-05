@@ -1,12 +1,13 @@
 <template>
-  <div class="events-wrapper" v-if="$store.state.eventsShow">
+  <div class="events-wrapper" v-if="eventsState">
     <div class="title">Select Events!</div>
-    <div class="events-select" v-if="$store.state.waysShow.seriesShow">
+    <div class="series-select">
       <div>seasons</div>
       <v-select :options="seasons" style="width: 30%" v-model="season"></v-select>
       <div>episodes</div>
       <v-select :options="episodes" style="width: 30%" v-model="episode"></v-select>
     </div>
+    <time-line @changeSelectWay="changeSelectWay"/>
     <div class="events-list">
       <div v-for="(event, index) in selectedEvents"
         :key="`selectedEvents-${index}`"
@@ -23,7 +24,9 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 import Events from '@/data/events.js'
+import TimeLine from '@/components/TimeLine'
 export default {
   data: function () {
     return {
@@ -33,19 +36,40 @@ export default {
       season: null,
       episode: null,
       itemList: ['Name', 'Place', 'Position', 'Begin', 'End', 'Families', 'Organizations', 'Characters', 'Death'],
-      eventDetails: []
+      eventDetails: [],
+      time: null,
+      selectWay: 'series'
     }
   },
+  components: {
+    TimeLine
+  },
   computed: {
+    ...mapState({
+      navName: 'navName'
+    }),
     selectedEvents () {
-      return this.allEvents.filter(event => {
-        return event.source_season === this.season & event.source_episode === this.episode
-      })
+      if (this.selectWay === 'series') {
+        return this.allEvents.filter(event => {
+          return event.source_season === this.season & event.source_episode === this.episode
+        })
+      } else {
+        return this.allEvents.filter(event => {
+          return event.beginTime <= this.time && event.endTime >= this.time
+        })
+      }
+    },
+    eventsState () {
+      if (this.navName === 'Events') {
+        return true
+      } else {
+        return false
+      }
     }
   },
   watch: {
     selectedEvents: function () {
-      this.$store.commit('selectBySeries', this.selectedEvents)
+      console.log('selectBySeries', this.selectedEvents)
     }
   },
   methods: {
@@ -68,6 +92,17 @@ export default {
     fly: function () {
       var center = this.eventDetails[2]
       this.$store.commit('fly', center)
+    },
+    changeTime: function (time) {
+      this.time = time
+      console.log(this.time)
+    },
+    changeSelectWay: function (timeLineState) {
+      if (timeLineState) {
+        this.selectWay = 'timeLine'
+      } else {
+        this.selectWay = 'series'
+      }
     }
   }
 }
@@ -88,15 +123,10 @@ export default {
     color: $primer-color;
     margin-bottom: 10px;
   }
-  .events-select {
+  .series-select {
     display: flex;
     width: 18vw;
     background-color: $primer-color;
-  }
-  .select-way {
-    color: $primer-color;
-    line-height: 2.4rem;
-    cursor: pointer;
   }
   .events-list {
     background-color: $primer-color;

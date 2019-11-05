@@ -5,31 +5,22 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    familiesShow: false,
-    charatersShow: false,
-    eventsShow: false,
-    navBarShow: true,
-    layersShow: {
-      eventLayer: 'none',
-      politcalLayer: 'none'
+    navName: null,
+    families: {
+      layers: ['politcalLayer']
     },
-    waysShow: {
-      timeLineShow: false,
-      seriesShow: false
+    charaters: {
+      selectedEvents: []
     },
-    event: {
-      time: 298
-    },
-    center: null,
-    selectedEvents: []
+    events: {
+      selectedEvents: [],
+      layers: ['eventLayer'],
+      center: null
+    }
   },
   mutations: {
-    changeNavShow (state, payload) {
-      state.familiesShow = payload.familiesShow
-      state.charatersShow = payload.charatersShow
-      state.eventsShow = payload.eventsShow
-      state.navBarShow = payload.navBarShow
-      state.waysShow.seriesShow = payload.eventsShow
+    changeNav (state, navName) {
+      state.navName = navName
     },
     changeTime (state, time) {
       state.event.time = time

@@ -97,11 +97,6 @@ export default {
       flyCenter: 'center',
       selectedEvents: 'selectedEvents'
     })
-    // selectedEvents () {
-    //   return this.allEvents.filter(event => {
-    //     return event.beginTime <= this.eventState.time && event.endTime >= this.eventState.time
-    //   })
-    // }
   },
   watch: {
     selectedEvents: function () {
