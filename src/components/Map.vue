@@ -44,7 +44,7 @@ export default {
         type: 'symbol',
         source: 'events',
         layout: {
-          'visibility': 'visible',
+          'visibility': 'none',
           'icon-image': 'event-{id}',
           'text-field': '{name}',
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
@@ -93,7 +93,7 @@ export default {
       eventState: 'events',
       familiesState: 'families',
       charatersState: 'charaters',
-      layersState: 'layersStata'
+      layersState: 'layersState'
     }),
     selectedEvents () {
       return this.eventState.selectedEvents
