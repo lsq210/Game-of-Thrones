@@ -1,7 +1,7 @@
 <template>
   <div class="events-wrapper" v-if="eventsState">
     <div class="title">Select Events!</div>
-    <div class="series-select">
+    <div class="series-select" v-if="seriesState">
       <div>seasons</div>
       <v-select :options="seasons" style="width: 30%" v-model="season"></v-select>
       <div>episodes</div>
@@ -38,7 +38,7 @@ export default {
       itemList: ['Name', 'Place', 'Position', 'Begin', 'End', 'Families', 'Organizations', 'Characters', 'Death'],
       eventDetails: [],
       time: null,
-      selectWay: 'series'
+      seriesState: true
     }
   },
   components: {
@@ -49,7 +49,7 @@ export default {
       navName: 'navName'
     }),
     selectedEvents () {
-      if (this.selectWay === 'series') {
+      if (this.seriesState) {
         return this.allEvents.filter(event => {
           return event.source_season === this.season & event.source_episode === this.episode
         })
@@ -69,6 +69,7 @@ export default {
   },
   watch: {
     selectedEvents: function () {
+      console.log('changeEvents', this.selectedEvents)
       this.$store.commit('changeEvents', this.selectedEvents)
     }
   },
@@ -100,9 +101,9 @@ export default {
     changeSelectWay: function (timeLineState) {
       console.log('timelineState', timeLineState)
       if (timeLineState) {
-        this.selectWay = 'timeLine'
+        this.seriesState = false
       } else {
-        this.selectWay = 'series'
+        this.seriesState = true
       }
     }
   }
@@ -130,6 +131,7 @@ export default {
     background-color: $primer-color;
   }
   .events-list {
+    margin-top: 24px;
     background-color: $primer-color;
     cursor: pointer;
   }

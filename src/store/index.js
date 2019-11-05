@@ -16,21 +16,22 @@ const store = new Vuex.Store({
       selectedEvents: [],
       layers: ['eventLayer'],
       center: null
+    },
+    layersState: {
+      eventLayer: false,
+      politcalLayer: false
     }
   },
   mutations: {
     changeNav (state, navName) {
       state.navName = navName
     },
-    changeTime (state, time) {
-      state.event.time = time
-    },
     changeLayer (state, visibility) {
-      state.layersShow.eventLayer = visibility.eventLayer
-      state.layersShow.politcalLayer = visibility.politcalLayer
+      state.layersState.eventLayer = visibility.eventLayer
+      state.layersState.politcalLayer = visibility.politcalLayer
     },
     fly (state, center) {
-      state.center = center
+      state.events.center = center
     },
     changeEvents (state, selectedEvents) {
       state.events.selectedEvents = selectedEvents

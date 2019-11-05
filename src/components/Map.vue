@@ -44,7 +44,7 @@ export default {
         type: 'symbol',
         source: 'events',
         layout: {
-          'visibility': 'none',
+          'visibility': 'visible',
           'icon-image': 'event-{id}',
           'text-field': '{name}',
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
@@ -90,13 +90,17 @@ export default {
   },
   computed: {
     ...mapState({
-      eventState: 'event',
-      familiesShow: 'familiesShow',
-      eventsShow: 'eventsShow',
-      layersState: 'layersShow',
-      flyCenter: 'center',
-      selectedEvents: 'selectedEvents'
-    })
+      eventState: 'events',
+      familiesState: 'families',
+      charatersState: 'charaters',
+      layersState: 'layersStata'
+    }),
+    selectedEvents () {
+      return this.eventState.selectedEvents
+    },
+    flyCenter () {
+      return this.eventState.center
+    }
   },
   watch: {
     selectedEvents: function () {
@@ -104,14 +108,14 @@ export default {
       var GeoJson = this.getGeoJSON(this.selectedEvents)
       this.map.getSource('events').setData(GeoJson.data)
     },
-    // layersState: {
-    //   handler: function () {
-    //     console.log('layerchange')
-    //     this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
-    //     this.map.setLayoutProperty('politcal-shape', 'visibility', this.layersState.politcalLayer)
-    //   },
-    //   deep: true
-    // },
+    layersState: {
+      handler: function () {
+        console.log('layerchange')
+        this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
+        this.map.setLayoutProperty('politcal-shape', 'visibility', this.layersState.politcalLayer)
+      },
+      deep: true
+    },
     flyCenter: function () {
       this.map.flyTo({
         center: this.flyCenter,
