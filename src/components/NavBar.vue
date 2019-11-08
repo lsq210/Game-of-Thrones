@@ -60,7 +60,7 @@ export default {
         case null:
           return true
         default:
-          break
+          return true
       }
     }
   },

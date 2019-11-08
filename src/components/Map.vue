@@ -7,10 +7,12 @@ import Events from '@/data/events.js'
 import Politcal from '@/data/got_politcal.json'
 import { mapState } from 'vuex'
 import mapboxgl from 'mapbox-gl'
-import drawRoundImgToMap from '@/utils/generateRoundImg'
+import Mixins from './Map/Mixins'
+import dataConverter from '@/utils/dataConverter'
 const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1biJ9.vT96vIXE74LTVV4xXrv0Zw'
 
 export default {
+  mixins: [Mixins],
   data () {
     return {
       map: null,
@@ -18,33 +20,44 @@ export default {
       allEvents: Events
     }
   },
+  computed: {
+    ...mapState({
+      familiesState: 'families',
+      charatersState: 'charaters',
+      layersState: 'layersState',
+      navName: 'navName'
+    })
+  },
   mounted () {
-    mapboxgl.accessToken = mapboxToken
-    this.map = new mapboxgl.Map({
-      container: 'map-container',
-      style: 'mapbox://styles/cstao/ck1rer81f20gb1cp40pl6jnbg'
-    })
-    this.nav = new mapboxgl.NavigationControl()
-    this.map.addControl(this.nav)
-    this.map.on('click', (e) => {
-      console.log('经纬度是', e.lngLat)
-    })
+    this.initMap()
+    console.log('this.selectedEvents', this.selectedEvents)
     this.map.on('load', () => {
-      this.allEvents.forEach(event => {
-        let img = new Image()
-        img.src = event.img
-        img.alt = event.name
-        drawRoundImgToMap(this.map, `event-${event.id}`, img, 10)
-      })
-      var GeoJson = this.getGeoJSON(this.selectedEvents)
-      console.log('GeoJson', GeoJson)
-      this.map.addSource('events', GeoJson)
+      return
+      var routesSource = dataConverter.getLineSource(this.allEvents)
+      var charactersSource = dataConverter.getPointsSource(this.allEvents)
+      this.map.addSource('character-routes', routesSource)
+      this.map.addSource('character-points', charactersSource)
+      // 添加人物轨迹图层
       this.map.addLayer({
-        id: 'event-points',
-        type: 'symbol',
-        source: 'events',
+        id: 'character-routes',
+        type: 'line',
+        source: 'character-routes',
         layout: {
-          'visibility': 'none',
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        paint: {
+          'line-color': '#650000',
+          'line-width': 8
+        }
+      })
+      // 添加人物事件点图层
+      this.map.addLayer({
+        id: 'character-points',
+        type: 'symbol',
+        source: 'character-points',
+        layout: {
+          // 'visibility': 'visible',
           'icon-image': 'event-{id}',
           'text-field': '{name}',
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
@@ -52,6 +65,7 @@ export default {
           'text-anchor': 'top'
         }
       })
+      // 添加政治领土图层
       this.map.addLayer({
         id: 'politcal-shape',
         type: 'fill',
@@ -68,88 +82,44 @@ export default {
         }
       })
     })
-    this.map.on('click', 'event-points', e => {
-      var coordinates = e.features[0].geometry.coordinates.slice()
-      var description = e.features[0].properties.description
-      console.log('coordinates', coordinates)
-      console.log('description', description)
-      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
-      }
-      new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(description)
-        .addTo(this.map)
-    })
-    this.map.on('mouseenter', 'event-points', () => {
-      this.map.getCanvas().style.cursor = 'pointer'
-    })
-    this.map.on('mouseleave', 'event-points', () => {
-      this.map.getCanvas().style.cursor = ''
-    })
-  },
-  computed: {
-    ...mapState({
-      eventState: 'events',
-      familiesState: 'families',
-      charatersState: 'charaters',
-      layersState: 'layersState'
-    }),
-    selectedEvents () {
-      return this.eventState.selectedEvents
-    },
-    flyCenter () {
-      return this.eventState.center
-    }
   },
   watch: {
-    selectedEvents: function () {
-      console.log('selectedEvents', this.selectedEvents)
-      var GeoJson = this.getGeoJSON(this.selectedEvents)
-      this.map.getSource('events').setData(GeoJson.data)
+    navName: function (newValue, oldValue) {
+      if (oldValue) {
+        let leaveKey = 'leave' + oldValue
+        this[leaveKey]()
+      }
+      if (newValue) {
+        let enterKey = 'enter' + newValue
+        this[enterKey]()
+      }
     },
     layersState: {
       handler: function () {
         console.log('layerchange')
-        this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
-        this.map.setLayoutProperty('politcal-shape', 'visibility', this.layersState.politcalLayer)
+        if (this.map.getLayer('event-points')) {
+          this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
+        }
+        if (this.map.getLayer('politcal-shape')) {
+          this.map.setLayoutProperty('politcal-shape', 'visibility', this.layersState.politcalLayer)
+        }
       },
       deep: true
-    },
-    flyCenter: function () {
-      this.map.flyTo({
-        center: this.flyCenter,
-        speed: 0.5,
-        zoom: 7
-      })
     }
   },
   methods: {
-    // 转换成 GeoJSON 格式
-    getGeoJSON: function (events) {
-      var featureList = []
-      events.forEach(event => {
-        featureList.push({
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: event.position
-          },
-          properties: {
-            id: event.id,
-            name: event.name,
-            description: event.description
-          }
-        })
+    initMap: function () {
+      mapboxgl.accessToken = mapboxToken
+      this.map = new mapboxgl.Map({
+        container: 'map-container',
+        style: 'mapbox://styles/cstao/ck1rer81f20gb1cp40pl6jnbg'
       })
-      console.log('featureList', featureList)
-      return {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: featureList
-        }
-      }
+      this.nav = new mapboxgl.NavigationControl()
+      this.map.addControl(this.nav)
+      this.map.on('click', this.mapClickEvent)
+    },
+    mapClickEvent: function (e) {
+      console.log('经纬度是', e.lngLat)
     }
   }
 }
