@@ -49,6 +49,7 @@ export default {
         eventLayer: 'none',
         politcalLayer: 'none'
       })
+      this.$store.state.familyInfoShow = false
     }
   }
 }

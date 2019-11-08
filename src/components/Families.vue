@@ -5,7 +5,7 @@
         v-for="(family, index) in families"
         :key="'family-' + family.name + index"
         class="family">
-        <img class="family-img" :src="family.img" v-on:click="buttonclick(family.name)" />
+        <img class="family-img" :src="family.img" v-on:click="changefamily(family.ID)" />
         <span class="family-name">{{ family.name }}</span>
       </div>
     </div>
@@ -25,6 +25,12 @@ export default {
   methods: {
     buttonclick: function (family) {
       Utils.$emit('event', family)
+    },
+    changefamily: function (item) {
+      this.$store.state.familyInfoID = item
+      this.$store.state.familyInfoShow = true
+      if (families[this.$store.state.familyInfoID].allegiance.length > 0) { this.$store.state.familyAllegiance = true } else { this.$store.state.familyAllegiance = false }
+      if (families[this.$store.state.familyInfoID].vassals.length > 0) { this.$store.state.familyVassals = true } else { this.$store.state.familyVassals = false }
     }
   }
 }

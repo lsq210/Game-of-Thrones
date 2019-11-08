@@ -9,13 +9,17 @@ const store = new Vuex.Store({
     charatersShow: false,
     eventsShow: false,
     navBarShow: true,
+    familyInfoShow: false,
     layersShow: {
       eventLayer: 'none',
       politcalLayer: 'none'
     },
     event: {
       time: 298
-    }
+    },
+    familyInfoID: 0,
+    familyAllegiance: false,
+    familyVassals: false
   },
   mutations: {
     changeNavShow (state, payload) {
