@@ -10,6 +10,7 @@
     <families/>
     <time-line/>
     <character-tree/>
+    <character-card/>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
 import TimeLine from '@/components/TimeLine'
 import CharacterTree from '@/components/CharacterTree'
+import CharacterCard from '@/components/CharacterCard'
 
 export default {
   name: 'App',
@@ -27,7 +29,8 @@ export default {
     NavBar,
     Families,
     TimeLine,
-    CharacterTree
+    CharacterTree,
+    CharacterCard
   },
   data () {
     return {
@@ -43,6 +46,7 @@ export default {
         familiesShow: false,
         charactersShow: false,
         eventsShow: false,
+        CharacterCardShow: false,
         navBarShow: true
       })
       this.$store.commit('changeEventLayer', {

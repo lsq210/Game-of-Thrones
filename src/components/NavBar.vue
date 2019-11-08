@@ -51,7 +51,8 @@ export default {
             familiesShow: true,
             charactersShow: false,
             eventsShow: false,
-            navBarShow: true
+            navBarShow: true,
+            characterCardShow: false
           })
           break
         case 'Characters':
@@ -59,7 +60,8 @@ export default {
             familiesShow: false,
             charactersShow: true,
             eventsShow: false,
-            navBarShow: true
+            navBarShow: false,
+            characterCardShow: true
           })
           break
         case 'Events':
@@ -67,7 +69,8 @@ export default {
             familiesShow: false,
             charactersShow: false,
             eventsShow: true,
-            navBarShow: false
+            navBarShow: false,
+            characterCardShow: false
           })
           this.$store.commit('changeEventLayer', {
             visibility: 'visible'
