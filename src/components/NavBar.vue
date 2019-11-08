@@ -48,7 +48,7 @@ export default {
         case 'Families':
           return true
         case 'Characters':
-          return true
+          return false
         case 'Events':
           return false
         case 'Statistics':

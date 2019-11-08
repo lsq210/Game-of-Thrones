@@ -1,20 +1,42 @@
 import { mapState } from 'vuex'
-import Events from '@/data/events.js'
 import dataConverter from '@/utils/dataConverter'
 import getPulsingDot from '@/utils/pulsingDot'
+
+function getNextPoint (from, to, speed, duration) {
+  var D = Math.sqrt((to[0] - from[0]) * (to[0] - from[0]) + (to[1] - from[1]) * (to[1] - from[1]))
+  var d = speed * duration
+  if (d >= D) {
+    return {
+      position: to,
+      done: true
+    }
+  }
+  var lng = (to[0] - from[0]) * d / D + from[0]
+  var lat = (to[1] - from[1]) * d / D + from[1]
+  return {
+    position: [lng, lat],
+    done: false
+  }
+}
 
 export default {
   computed: {
     ...mapState({
       charatersState: 'charaters'
-    })
+    }),
+    characterEvents () {
+      return this.charatersState.selectedEvents
+    }
   },
   watch: {
+    characterEvents: function () {
+      this.renderCharacterRoutes(this.characterEvents.map(event => event.position))
+    }
   },
   enter: function () {
     var pulsingDot = getPulsingDot(this.map, 200)
-    var routesSource = dataConverter.getLineSource(Events)
-    var charactersSource = dataConverter.getPointsSource(Events)
+    var routesSource = dataConverter.getEventLineSource([])
+    var charactersSource = dataConverter.getEventPointsSource(this.characterEvents)
     if (this.map.hasImage('pulsing-dot')) {
       this.map.updateImage('pulsing-dot', pulsingDot, { pixelRatio: 2 })
     } else {
@@ -68,5 +90,36 @@ export default {
     }
   },
   methods: {
+    renderCharacterRoutes: function (routes) {
+      var mapInstance = this.map
+      const speed = 1 / 30
+      var pointIndex = 0
+      var startTime = performance.now()
+      var animation = null
+      var renderedRoutes = [routes[0]]
+      this.map.getSource('character-points')
+        .setData(dataConverter.getPointsSource(renderedRoutes).data)
+      this.map.getSource('character-routes')
+        .setData(dataConverter.getLineSource(renderedRoutes).data)
+      animate()
+      function animate () {
+        var duration = performance.now() - startTime
+        var nextPoint = getNextPoint(routes[pointIndex], routes[pointIndex + 1], speed, duration)
+        if (nextPoint.done) {
+          mapInstance.getSource('character-points')
+            .setData(dataConverter.getPointsSource(routes.filter((_, index) => index <= pointIndex + 1)).data)
+          if (pointIndex >= routes.length - 2) {
+            window.cancelAnimationFrame(animation)
+          } else {
+            pointIndex++
+            startTime = performance.now()
+          }
+        }
+        renderedRoutes.push(nextPoint.position)
+        mapInstance.getSource('character-routes')
+          .setData(dataConverter.getLineSource(renderedRoutes).data)
+        animation = window.requestAnimationFrame(animate)
+      }
+    }
   }
 }

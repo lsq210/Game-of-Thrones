@@ -1,4 +1,4 @@
-export default function (map, size) {
+function getPulsingDot (map, size) {
   return {
     width: size,
     height: size,
@@ -38,3 +38,5 @@ export default function (map, size) {
     }
   }
 }
+
+export default getPulsingDot
