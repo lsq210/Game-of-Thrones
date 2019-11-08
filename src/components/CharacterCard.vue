@@ -155,8 +155,8 @@ export default {
   }
   .info {
     margin: 40px;
-    line-hight: 110%;
-    font-faimly: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 110%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 2em;
     height: 45vh;
     text-align: left;
