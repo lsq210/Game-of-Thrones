@@ -28,10 +28,6 @@ export default {
           title: 'Characters',
           img: '/static/characters/JonSnow.webp'
         },
-        // {
-        //   title: 'Cities',
-        //   img: '/static/cities/Braavos.webp'
-        // },
         {
           title: 'Events',
           img: '/static/events/RedWedding.webp'
@@ -69,24 +65,12 @@ export default {
       switch (item) {
         case 'Families':
           this.$store.commit('changeNav', 'Families')
-          this.$store.commit('changeLayer', {
-            eventLayer: 'none',
-            politcalLayer: 'visible'
-          })
           break
         case 'Characters':
           this.$store.commit('changeNav', 'Characters')
-          this.$store.commit('changeLayer', {
-            eventLayer: 'none',
-            politcalLayer: 'none'
-          })
           break
         case 'Events':
           this.$store.commit('changeNav', 'Events')
-          this.$store.commit('changeLayer', {
-            eventLayer: 'visible',
-            politcalLayer: 'none'
-          })
           break
         default:
           break

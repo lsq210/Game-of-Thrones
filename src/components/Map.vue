@@ -18,7 +18,6 @@ export default {
   },
   computed: {
     ...mapState({
-      layersState: 'layersState',
       navName: 'navName'
     })
   },
@@ -35,18 +34,6 @@ export default {
         let enterKey = 'enter' + newValue
         this[enterKey]()
       }
-    },
-    layersState: {
-      handler: function () {
-        console.log('layerchange')
-        if (this.map.getLayer('event-points')) {
-          this.map.setLayoutProperty('event-points', 'visibility', this.layersState.eventLayer)
-        }
-        if (this.map.getLayer('politcal-shape')) {
-          this.map.setLayoutProperty('politcal-shape', 'visibility', this.layersState.politcalLayer)
-        }
-      },
-      deep: true
     }
   },
   methods: {

@@ -37,7 +37,6 @@ export default {
       drawRoundImgToMap(this.map, `event-${event.id}`, img, 10)
     })
     var eventsSource = dataConverter.getPointsSource(this.selectedEvents)
-    console.log('eventsSource', eventsSource)
     this.map.addSource('events', eventsSource)
     // 添加事件图层
     this.map.addLayer({
@@ -45,7 +44,7 @@ export default {
       type: 'symbol',
       source: 'events',
       layout: {
-        'visibility': 'none',
+        'visibility': 'visible',
         'icon-image': 'event-{id}',
         'text-field': '{name}',
         'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
@@ -53,11 +52,30 @@ export default {
         'text-anchor': 'top'
       }
     })
-    this.map.on('click', 'event-points', e => {
+    this.map.on('click', 'event-points', this.eventClickListener)
+    this.map.on('mouseenter', 'event-points', this.eventMouseenterListener)
+    this.map.on('mouseleave', 'event-points', this.eventMouseleaveListener)
+  },
+  leave: function () {
+    this.map.off('click', 'event-points', this.eventClickListener)
+    this.map.off('mouseenter', 'event-points', this.eventMouseenterListener)
+    this.map.off('mouseleave', 'event-points', this.eventMouseleaveListener)
+    if (this.map.getLayer('event-points')) {
+      this.map.removeLayer('event-points')
+    }
+    if (this.map.getSource('events')) {
+      this.map.removeSource('events')
+    }
+    Events.forEach(event => {
+      if (this.map.hasImage(`event-${event.id}`)) {
+        this.map.removeImage(`event-${event.id}`)
+      }
+    })
+  },
+  methods: {
+    eventClickListener: function (e) {
       var coordinates = e.features[0].geometry.coordinates.slice()
       var description = e.features[0].properties.description
-      console.log('coordinates', coordinates)
-      console.log('description', description)
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
       }
@@ -65,16 +83,12 @@ export default {
         .setLngLat(coordinates)
         .setHTML(description)
         .addTo(this.map)
-    })
-    this.map.on('mouseenter', 'event-points', () => {
+    },
+    eventMouseenterListener: function () {
       this.map.getCanvas().style.cursor = 'pointer'
-    })
-    this.map.on('mouseleave', 'event-points', () => {
+    },
+    eventMouseleaveListener: function () {
       this.map.getCanvas().style.cursor = ''
-    })
-  },
-  leave: function () {
-  },
-  methods: {
+    }
   }
 }

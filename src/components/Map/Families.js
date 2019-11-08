@@ -1,4 +1,3 @@
-// import mapboxgl from 'mapbox-gl'
 import Politcal from '@/data/got_politcal.json'
 import { mapState } from 'vuex'
 
@@ -11,16 +10,18 @@ export default {
   watch: {
   },
   enter: function () {
+    var politcalSource = {
+      type: 'geojson',
+      data: Politcal
+    }
+    this.map.addSource('politcal-shape', politcalSource)
     // 添加政治领土图层
     this.map.addLayer({
       id: 'politcal-shape',
       type: 'fill',
-      source: {
-        type: 'geojson',
-        data: Politcal
-      },
+      source: 'politcal-shape',
       layout: {
-        'visibility': 'none'
+        'visibility': 'visible'
       },
       paint: {
         'fill-color': ['get', 'color'],
@@ -29,6 +30,12 @@ export default {
     })
   },
   leave: function () {
+    if (this.map.getLayer('politcal-shape')) {
+      this.map.removeLayer('politcal-shape')
+    }
+    if (this.map.getSource('politcal-shape')) {
+      this.map.removeSource('politcal-shape')
+    }
   },
   methods: {
   }
