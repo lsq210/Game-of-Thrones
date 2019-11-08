@@ -3,12 +3,9 @@
 </template>
 
 <script>
-import Events from '@/data/events.js'
-import Politcal from '@/data/got_politcal.json'
 import { mapState } from 'vuex'
 import mapboxgl from 'mapbox-gl'
 import Mixins from './Map/Mixins'
-import dataConverter from '@/utils/dataConverter'
 const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1biJ9.vT96vIXE74LTVV4xXrv0Zw'
 
 export default {
@@ -16,72 +13,17 @@ export default {
   data () {
     return {
       map: null,
-      nav: null,
-      allEvents: Events
+      nav: null
     }
   },
   computed: {
     ...mapState({
-      familiesState: 'families',
-      charatersState: 'charaters',
       layersState: 'layersState',
       navName: 'navName'
     })
   },
   mounted () {
     this.initMap()
-    console.log('this.selectedEvents', this.selectedEvents)
-    this.map.on('load', () => {
-      return
-      var routesSource = dataConverter.getLineSource(this.allEvents)
-      var charactersSource = dataConverter.getPointsSource(this.allEvents)
-      this.map.addSource('character-routes', routesSource)
-      this.map.addSource('character-points', charactersSource)
-      // 添加人物轨迹图层
-      this.map.addLayer({
-        id: 'character-routes',
-        type: 'line',
-        source: 'character-routes',
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round'
-        },
-        paint: {
-          'line-color': '#650000',
-          'line-width': 8
-        }
-      })
-      // 添加人物事件点图层
-      this.map.addLayer({
-        id: 'character-points',
-        type: 'symbol',
-        source: 'character-points',
-        layout: {
-          // 'visibility': 'visible',
-          'icon-image': 'event-{id}',
-          'text-field': '{name}',
-          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-          'text-offset': [0, 0.6],
-          'text-anchor': 'top'
-        }
-      })
-      // 添加政治领土图层
-      this.map.addLayer({
-        id: 'politcal-shape',
-        type: 'fill',
-        source: {
-          type: 'geojson',
-          data: Politcal
-        },
-        layout: {
-          'visibility': 'none'
-        },
-        paint: {
-          'fill-color': ['get', 'color'],
-          'fill-opacity': 0.4
-        }
-      })
-    })
   },
   watch: {
     navName: function (newValue, oldValue) {
