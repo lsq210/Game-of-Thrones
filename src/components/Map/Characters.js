@@ -20,6 +20,11 @@ function getNextPoint (from, to, speed, duration) {
 }
 
 export default {
+  data () {
+    return {
+      charaterLineAnimation: null
+    }
+  },
   computed: {
     ...mapState({
       charatersState: 'charaters'
@@ -34,7 +39,7 @@ export default {
     }
   },
   enter: function () {
-    var pulsingDot = getPulsingDot(this.map, 200)
+    var pulsingDot = getPulsingDot(this.map, 100)
     var routesSource = dataConverter.getEventLineSource([])
     var charactersSource = dataConverter.getEventPointsSource(this.characterEvents)
     if (this.map.hasImage('pulsing-dot')) {
@@ -91,34 +96,38 @@ export default {
   },
   methods: {
     renderCharacterRoutes: function (routes) {
-      var mapInstance = this.map
-      const speed = 1 / 30
+      window.cancelAnimationFrame(this.charaterLineAnimation)
+      this.charaterLineAnimation = null
+      var vm = this
+      const speed = 1 / 40
       var pointIndex = 0
       var startTime = performance.now()
-      var animation = null
       var renderedRoutes = [routes[0]]
       this.map.getSource('character-points')
         .setData(dataConverter.getPointsSource(renderedRoutes).data)
       this.map.getSource('character-routes')
         .setData(dataConverter.getLineSource(renderedRoutes).data)
-      animate()
+      this.$nextTick(animate)
       function animate () {
         var duration = performance.now() - startTime
         var nextPoint = getNextPoint(routes[pointIndex], routes[pointIndex + 1], speed, duration)
         if (nextPoint.done) {
-          mapInstance.getSource('character-points')
+          vm.map.getSource('character-points')
             .setData(dataConverter.getPointsSource(routes.filter((_, index) => index <= pointIndex + 1)).data)
           if (pointIndex >= routes.length - 2) {
-            window.cancelAnimationFrame(animation)
+            if (vm.charaterLineAnimation) {
+              window.cancelAnimationFrame(vm.charaterLineAnimation)
+              vm.charaterLineAnimation = null
+            }
           } else {
             pointIndex++
             startTime = performance.now()
           }
         }
         renderedRoutes.push(nextPoint.position)
-        mapInstance.getSource('character-routes')
+        vm.map.getSource('character-routes')
           .setData(dataConverter.getLineSource(renderedRoutes).data)
-        animation = window.requestAnimationFrame(animate)
+        vm.charaterLineAnimation = window.requestAnimationFrame(animate)
       }
     }
   }
