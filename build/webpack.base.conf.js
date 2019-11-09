@@ -74,6 +74,14 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: require.resolve("three/examples/js/loaders/GLTFLoader"),
+        use: "imports-loader?THREE=three"
+      },
+      {
+        test: require.resolve("three/examples/js/loaders/GLTFLoader"),
+        use: "exports-loader?THREE.GLTFLoader"
       }
     ]
   },
