@@ -5,7 +5,7 @@
         v-for="(family, index) in families"
         :key="'family-' + family.name + index"
         class="family">
-        <img class="family-img" :src="family.img"/>
+        <img class="family-img" :src="family.img" v-on:click="changefamily(family.ID)" />
         <span class="family-name">{{ family.name }}</span>
       </div>
     </div>
@@ -15,6 +15,7 @@
 <script>
 import { mapState } from 'vuex'
 import families from '@/data/families'
+import Utils from '@/utils.js'
 
 export default {
   data () {
@@ -32,6 +33,17 @@ export default {
       } else {
         return false
       }
+    }
+  },
+  methods: {
+    buttonclick: function (family) {
+      Utils.$emit('event', family)
+    },
+    changefamily: function (item) {
+      this.$store.state.familyInfoID = item
+      this.$store.state.familyInfoShow = true
+      if (families[this.$store.state.familyInfoID].allegiance.length > 0) { this.$store.state.familyAllegiance = true } else { this.$store.state.familyAllegiance = false }
+      if (families[this.$store.state.familyInfoID].vassals.length > 0) { this.$store.state.familyVassals = true } else { this.$store.state.familyVassals = false }
     }
   }
 }
