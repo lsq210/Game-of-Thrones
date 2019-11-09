@@ -132,12 +132,15 @@ export default {
     margin-top: 0;
     display: flex;
     flex-direction: row;
+    &::-webkit-scrollbar {
+      background-color: transparent;
+    }
     .avatar {
       width: 10vh;
       height: 10vh;
       border-radius: 50%;
       border: 3px solid #333;
-      margin: 50px;
+      margin: 20px;
     }
     .nameand {
       width: 35vh;
@@ -146,7 +149,7 @@ export default {
       text-align: center;
       font-family: "Times New Roman", Times, serif;
       .name {
-        font-size: 5em;
+        font-size: 40px;
         color: #ffff00;
         text-shadow: 2px 2px #ffcc00;
         font-style: italic;
@@ -154,10 +157,11 @@ export default {
     }
   }
   .info {
-    margin: 40px;
+    margin-top: 20px;
+    padding: 0 20px 20px 20px;
     line-height: 110%;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-size: 2em;
+    font-size: 20px;
     height: 45vh;
     text-align: left;
     overflow: auto;

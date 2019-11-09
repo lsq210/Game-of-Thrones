@@ -48,8 +48,8 @@ export default {
 @import '@/styles/var.scss';
 
 .CharacterTree-wrapper {
-  right: 0px;
-  bottom: 60px;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   display: flex;
   align-items: flex-end;
@@ -63,24 +63,23 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2px 20px 2px 20px;
-    min-width: 120px;
+    margin: 2px 10px 2px 10px;
     cursor: pointer;
     float: left;
     .character-avatar {
-      width: 150px;
-      height: 150px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       border: 3px solid #333;
       transition: 0.2s;
     }
     .character-avatar:hover {
-      width: 170px;
-      height: 170px;
+      width: 100px;
+      height: 100px;
     }
     .character-name {
-      margin-top: 10px;
-      line-height: 50px;
+      // margin-top: 10px;
+      line-height: 20px;
       color: #f7deab;
       font-weight: bold;
       font-family: cursive;
