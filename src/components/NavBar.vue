@@ -64,13 +64,31 @@ export default {
     changeNav: function (item) {
       switch (item) {
         case 'Families':
-          this.$store.commit('changeNav', 'Families')
+          this.$store.commit('changeNavShow', {
+            familiesShow: true,
+            charactersShow: false,
+            eventsShow: false,
+            navBarShow: true
+          })
           break
         case 'Characters':
-          this.$store.commit('changeNav', 'Characters')
+          this.$store.commit('changeNavShow', {
+            familiesShow: false,
+            charactersShow: true,
+            eventsShow: false,
+            navBarShow: true
+          })
           break
         case 'Events':
-          this.$store.commit('changeNav', 'Events')
+          this.$store.commit('changeNavShow', {
+            familiesShow: false,
+            charactersShow: false,
+            eventsShow: true,
+            navBarShow: false
+          })
+          this.$store.commit('changeEventLayer', {
+            visibility: 'visible'
+          })
           break
         default:
           break
