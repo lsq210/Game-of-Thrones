@@ -9,6 +9,7 @@
     <nav-bar/>
     <families/>
     <events/>
+    <characters/>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import MapComponent from '@/components/Map'
 import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
 import Events from '@/components/Events'
+import Characters from '@/components/Characters'
 
 export default {
   name: 'App',
@@ -24,7 +26,8 @@ export default {
     MapComponent,
     NavBar,
     Families,
-    Events
+    Events,
+    Characters
   },
   data () {
     return {
@@ -37,7 +40,6 @@ export default {
   methods: {
     returnHome: function () {
       this.$store.commit('changeNav', null)
-    }
   }
 }
 </script>
