@@ -25,6 +25,9 @@ const store = new Vuex.Store({
     },
     changeEvents (state, selectedEvents) {
       state.events.selectedEvents = selectedEvents
+    },
+    changeCharacter (state, selectedEvents) {
+      state.charaters.selectedEvents = selectedEvents
     }
   }
 })

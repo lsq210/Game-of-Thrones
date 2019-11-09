@@ -1,39 +1,51 @@
 <template>
 <!--滚动条-->
-  <div class="characters-wrapper" v-if="$store.state.charactersShow">
-    <character-card v-bind:characterId="tempID"/>
+  <div class="characters-wrapper" v-if="charactersState">
+    <character-card v-bind:characterId="tempID" v-bind:cardState="charactersState"/>
     <div
-        v-for="(character, index) in characters"
+        v-for="(character, index) in Characters"
         :key="'character-' + character.name + index"
         class="character">
         <img class="character-avatar" :src="character.avatar"
-        v-on:mouseenter="tempInfo(character.id)" v-on:mouseleave="restoreInfo(character.id)"
-        v-on:click="showInfo(character.id)"/>
+        @mouseenter="tempInfo(character.id)" @mouseleave="restoreInfo(character.id)"
+        @click="selectCharacter(character.id)"/>
         <span class="character-name">{{ character.name }}</span>
       </div>
   </div>
 </template>
 
 <script>
-import characters from '@/data/characters'
 import CharacterCard from './CharacterCard'
+import { mapState } from 'vuex'
+import Characters from '@/data/characters.js'
+import Events from '@/data/events.js'
 
 export default {
   data () {
     return {
-      characters: characters,
       tempID: 0,
-      stage: true
+      stage: true,
+      Characters,
+      Events,
+      selectedCharacterEvents: []
     }
   },
   components: {
     CharacterCard
   },
+  computed: {
+    ...mapState({
+      navName: 'navName'
+    }),
+    charactersState () {
+      if (this.navName === 'Characters') {
+        return true
+      } else {
+        return false
+      }
+    }
+  },
   methods: {
-    showInfo: function (id) {
-      this.tempID = id
-      this.stage = false
-    },
     tempInfo: function (id) {
       this.stage = true
       this.tempID = id
@@ -42,6 +54,15 @@ export default {
       if (this.stage) {
         this.tempID = id
       }
+    },
+    selectCharacter: function (selectedId) {
+      var selectedCharacter = Characters[selectedId]
+      this.selectedCharacterEvents = []
+      for (let eventId in selectedCharacter.events) {
+        this.selectedCharacterEvents.push(Events[eventId])
+      }
+      console.log('changeCharacter', this.selectedCharacterEvents)
+      this.$store.commit('changeCharacter', this.selectedCharacterEvents)
     }
   }
 }

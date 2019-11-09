@@ -1,58 +1,47 @@
 import { mapState } from 'vuex'
-import Events from '@/data/events.js'
 import dataConverter from '@/utils/dataConverter'
+import getPulsingDot from '@/utils/pulsingDot'
+
+function getNextPoint (from, to, speed, duration) {
+  var D = Math.sqrt((to[0] - from[0]) * (to[0] - from[0]) + (to[1] - from[1]) * (to[1] - from[1]))
+  var d = speed * duration
+  if (d >= D) {
+    return {
+      position: to,
+      done: true
+    }
+  }
+  var lng = (to[0] - from[0]) * d / D + from[0]
+  var lat = (to[1] - from[1]) * d / D + from[1]
+  return {
+    position: [lng, lat],
+    done: false
+  }
+}
 
 export default {
+  data () {
+    return {
+      charaterLineAnimation: null
+    }
+  },
   computed: {
     ...mapState({
       charatersState: 'charaters'
-    })
+    }),
+    characterEvents () {
+      return this.charatersState.selectedEvents
+    }
   },
   watch: {
+    characterEvents: function () {
+      this.renderCharacterRoutes(this.characterEvents.map(event => event.position))
+    }
   },
   enter: function () {
-    var mapInstance = this.map
-    // 点样式
-    var pulsingDot = {
-      width: 200,
-      height: 200,
-      data: new Uint8Array(200 * 200 * 4),
-      onAdd: function () {
-        var canvas = document.createElement('canvas')
-        canvas.width = 200
-        canvas.height = 200
-        this.context = canvas.getContext('2d')
-      },
-      render: function () {
-        var duration = 1000
-        var t = (performance.now() % duration) / duration
-        var radius = 200 / 2 * 0.3
-        var outerRadius = 200 / 2 * 0.7 * t + radius
-        var context = this.context
-        // draw outer circle
-        context.clearRect(0, 0, 200, 200)
-        context.beginPath()
-        context.arc(200 / 2, 200 / 2, outerRadius, 0, Math.PI * 2)
-        context.fillStyle = 'rgba(255, 200, 200,' + (1 - t) + ')'
-        context.fill()
-        // draw inner circle
-        context.beginPath()
-        context.arc(200 / 2, 200 / 2, radius, 0, Math.PI * 2)
-        context.fillStyle = 'rgba(255, 50, 50, 1)'
-        context.strokeStyle = 'white'
-        context.lineWidth = 2 + 4 * (1 - t)
-        context.fill()
-        context.stroke()
-        // update this image's data with data from the canvas
-        this.data = context.getImageData(0, 0, 200, 200).data
-        // keep the map repainting
-        mapInstance.triggerRepaint()
-        // return `true` to let the map know that the image was updated
-        return true
-      }
-    }
-    var routesSource = dataConverter.getLineSource(Events)
-    var charactersSource = dataConverter.getPointsSource(Events)
+    var pulsingDot = getPulsingDot(this.map, 100)
+    var routesSource = dataConverter.getEventLineSource([])
+    var charactersSource = dataConverter.getEventPointsSource(this.characterEvents)
     if (this.map.hasImage('pulsing-dot')) {
       this.map.updateImage('pulsing-dot', pulsingDot, { pixelRatio: 2 })
     } else {
@@ -106,5 +95,42 @@ export default {
     }
   },
   methods: {
+    renderCharacterRoutes: function (routes) {
+      window.cancelAnimationFrame(this.charaterLineAnimation)
+      this.charaterLineAnimation = null
+      var vm = this
+      const speed = 1 / 100
+      var pointIndex = 0
+      var startTime = performance.now()
+      var renderedRoutes = [routes[0]]
+      this.map.getSource('character-points')
+        .setData(dataConverter.getPointsSource(renderedRoutes).data)
+      this.map.getSource('character-routes')
+        .setData(dataConverter.getLineSource(renderedRoutes).data)
+      vm.charaterLineAnimation = window.requestAnimationFrame(animate)
+      function animate () {
+        var duration = performance.now() - startTime
+        var nextPoint = getNextPoint(routes[pointIndex], routes[pointIndex + 1], speed, duration)
+        if (nextPoint.done) {
+          vm.map.getSource('character-points')
+            .setData(dataConverter.getPointsSource(routes.filter((_, index) => index <= pointIndex + 1)).data)
+          if (pointIndex >= routes.length - 2) {
+            return
+          } else {
+            pointIndex++
+            startTime = performance.now()
+          }
+        }
+        if (pointIndex === renderedRoutes.length - 1) {
+          renderedRoutes.push(nextPoint.position)
+        } else {
+          renderedRoutes[renderedRoutes.length - 1] = nextPoint.position
+        }
+        console.log('pointIndex', pointIndex)
+        vm.map.getSource('character-routes')
+          .setData(dataConverter.getLineSource(renderedRoutes).data)
+        vm.charaterLineAnimation = window.requestAnimationFrame(animate)
+      }
+    }
   }
 }

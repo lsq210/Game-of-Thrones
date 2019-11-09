@@ -1,5 +1,5 @@
 <template>
-  <div class="CharacterCard" v-if="$store.state.characterCardShow">
+  <div class="CharacterCard" v-if="cardState">
     <div class="basicinfo">
       <img class="avatar" :src="characters[characterId].avatar"/>
       <div class="nameand">
@@ -92,6 +92,10 @@ export default {
     characterId: {
       default: 0,
       type: Number
+    },
+    cardState: {
+      default: false,
+      type: Boolean
     }
   },
   computed: {

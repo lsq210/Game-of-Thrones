@@ -18,7 +18,7 @@ export default {
   },
   watch: {
     selectedEvents: function () {
-      var GeoJson = dataConverter.getPointsSource(this.selectedEvents)
+      var GeoJson = dataConverter.getEventPointsSource(this.selectedEvents)
       this.map.getSource('events').setData(GeoJson.data)
     },
     flyEventCenter: function () {
@@ -36,7 +36,7 @@ export default {
       img.alt = event.name
       drawRoundImgToMap(this.map, `event-${event.id}`, img, 10)
     })
-    var eventsSource = dataConverter.getPointsSource(this.selectedEvents)
+    var eventsSource = dataConverter.getEventPointsSource(this.selectedEvents)
     this.map.addSource('events', eventsSource)
     // 添加事件图层
     this.map.addLayer({
