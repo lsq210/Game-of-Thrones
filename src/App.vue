@@ -40,6 +40,7 @@ export default {
   methods: {
     returnHome: function () {
       this.$store.commit('changeNav', null)
+    }
   }
 }
 </script>

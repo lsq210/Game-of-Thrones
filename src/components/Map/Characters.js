@@ -22,7 +22,6 @@ export default {
         canvas.width = 200
         canvas.height = 200
         this.context = canvas.getContext('2d')
-        console.log(this)
       },
       render: function () {
         var duration = 1000

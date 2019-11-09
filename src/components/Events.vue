@@ -69,7 +69,6 @@ export default {
   },
   watch: {
     selectedEvents: function () {
-      console.log('changeEvents', this.selectedEvents)
       this.$store.commit('changeEvents', this.selectedEvents)
     }
   },
@@ -88,7 +87,6 @@ export default {
       this.eventDetails.push(event[0].organizations)
       this.eventDetails.push(event[0].characters)
       this.eventDetails.push(event[0].death)
-      console.log(this.eventDetails)
     },
     fly: function () {
       var center = this.eventDetails[2]
@@ -96,10 +94,8 @@ export default {
     },
     changeTime: function (time) {
       this.time = time
-      console.log(this.time)
     },
     changeSelectWay: function (timeLineState) {
-      console.log('timelineState', timeLineState)
       if (timeLineState) {
         this.seriesState = false
       } else {

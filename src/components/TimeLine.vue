@@ -31,14 +31,12 @@ export default {
   },
   watch: {
     timeLineState: function () {
-      console.log('statechange')
       this.$emit('changeSelectWay', this.timeLineState)
     }
   },
   methods: {
     changeTime: function (time) {
       this.$emit('changeTime', time)
-      // console.log('time', this.time)
     },
     changeSelectWay: function () {
       if (this.timeLineState) {
