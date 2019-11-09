@@ -96,8 +96,10 @@ export default {
   },
   methods: {
     renderCharacterRoutes: function (routes) {
-      window.cancelAnimationFrame(this.charaterLineAnimation)
-      this.charaterLineAnimation = null
+      if (this.charaterLineAnimation) {
+        window.cancelAnimationFrame(this.charaterLineAnimation)
+        this.charaterLineAnimation = null
+      }
       var vm = this
       const speed = 1 / 100
       var pointIndex = 0
@@ -115,6 +117,7 @@ export default {
           vm.map.getSource('character-points')
             .setData(dataConverter.getPointsSource(routes.filter((_, index) => index <= pointIndex + 1)).data)
           if (pointIndex >= routes.length - 2) {
+            this.charaterLineAnimation = null
             return
           } else {
             pointIndex++
@@ -126,7 +129,6 @@ export default {
         } else {
           renderedRoutes[renderedRoutes.length - 1] = nextPoint.position
         }
-        console.log('pointIndex', pointIndex)
         vm.map.getSource('character-routes')
           .setData(dataConverter.getLineSource(renderedRoutes).data)
         vm.charaterLineAnimation = window.requestAnimationFrame(animate)
