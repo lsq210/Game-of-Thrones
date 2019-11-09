@@ -1,11 +1,17 @@
 <template>
   <div class="families-wrapper">
+    <family
+      v-bind:family="selectedFamily"
+      v-bind:familyState="familyState"
+      v-bind:allegianceState="allegianceState"
+      v-bind:vassalsState="vassalsState"
+      @close="close"/>
     <div class="families" v-if="familiesState">
       <div
-        v-for="(family, index) in families"
+        v-for="(family, index) in Families"
         :key="'family-' + family.name + index"
         class="family">
-        <img class="family-img" :src="family.img" v-on:click="changefamily(family.ID)" />
+        <img class="family-img" :src="family.img" v-on:click="changefamily(family)" />
         <span class="family-name">{{ family.name }}</span>
       </div>
     </div>
@@ -14,14 +20,21 @@
 
 <script>
 import { mapState } from 'vuex'
-import families from '@/data/families'
-import Utils from '@/utils.js'
+import Families from '@/data/families'
+import Family from './Family'
 
 export default {
   data () {
     return {
-      families: families
+      Families,
+      selectedFamily: null,
+      familyState: false,
+      allegianceState: false,
+      vassalsState: false
     }
+  },
+  components: {
+    Family
   },
   computed: {
     ...mapState({
@@ -36,14 +49,22 @@ export default {
     }
   },
   methods: {
-    buttonclick: function (family) {
-      Utils.$emit('event', family)
+    changefamily: function (family) {
+      this.selectedFamily = family
+      this.familyState = true
+      if (family.allegiance.length > 0) {
+        this.allegianceState = true
+      } else {
+        this.allegianceState = false
+      }
+      if (family.vassals.length > 0) {
+        this.vassalsState = true
+      } else {
+        this.vassalsState = false
+      }
     },
-    changefamily: function (item) {
-      this.$store.state.familyInfoID = item
-      this.$store.state.familyInfoShow = true
-      if (families[this.$store.state.familyInfoID].allegiance.length > 0) { this.$store.state.familyAllegiance = true } else { this.$store.state.familyAllegiance = false }
-      if (families[this.$store.state.familyInfoID].vassals.length > 0) { this.$store.state.familyVassals = true } else { this.$store.state.familyVassals = false }
+    close: function () {
+      this.familyState = false
     }
   }
 }

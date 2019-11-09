@@ -1,29 +1,29 @@
 <template>
-  <div class="family-info-wrapper" v-if="$store.state.familyInfoShow">
+  <div class="family-info-wrapper" v-if="familyState">
       <div class="family-card">
         <div class="family-info-show">
-          <img class="close-button" src="@/assets/icons-close.png" height="32" width="32" v-on:click="changefamilyClose"/>
-          <img class='family-info-img' :src="families[$store.state.familyInfoID].img"/>
-          <span class='family-name'>{{families[$store.state.familyInfoID].name}}</span>
+          <img class="close-button" src="@/assets/icons-close.png" height="32" width="32" v-on:click="familyClose"/>
+          <img class='family-info-img' :src="family.img"/>
+          <span class='family-name'>{{family.name}}</span>
         </div>
         <div class="family-info">
-          <span class="family-info-words">{{families[$store.state.familyInfoID].words}}</span>
-          <div class='allegiance-card' v-if="$store.state.familyAllegiance">
+          <span class="family-info-words">{{family.words}}</span>
+          <div class='allegiance-card' v-if="allegianceState">
             <span class="allegiance">Allegiance</span>
             <div
-              v-for="index in families[$store.state.familyInfoID].allegiance"
+              v-for="index in family.allegiance"
               :key="'family-'+index"
               class="allegiance-info">
-              <span class="family-allegiance-name" v-on:click="changefamily(index)">{{families[index].name}}</span>
+              <span class="family-allegiance-name">{{Families[index].name}}</span>
             </div>
           </div>
-          <div class='vassals-card' v-if="$store.state.familyVassals">
+          <div class='vassals-card' v-if="vassalsState">
             <span class='vassals'>Vassals</span>
             <div
-              v-for="index in families[$store.state.familyInfoID].vassals"
+              v-for="index in family.vassals"
               :key="'family-'+index"
               class="vassals-info">
-              <span class='family-vassals-name' v-on:click="changefamily(index)">{{families[index].name}}</span>
+              <span class='family-vassals-name'>{{Families[index].name}}</span>
             </div>
           </div>
           <div class='characters-card'>
@@ -35,36 +35,30 @@
 </template>
 
 <script>
-import Utils from '@/utils.js'
-import families from '@/data/families'
+import Families from '@/data/families'
 
 export default {
   data () {
     return {
-      families: families
+      Families
     }
   },
-  mounted () {
-    var that = this
-    Utils.$on('event', function (family) {
-      that.show(family)
-    })
+  props: {
+    family: Object,
+    familyState: Boolean,
+    allegianceState: Boolean,
+    vassalsState: Boolean
+  },
+  watch: {
+    familyState: function () {
+      console.log('aaaaa', this.familyState)
+    }
   },
   methods: {
-    show: function (family) {
-      alert(family)
-      console.log(family)
-    },
-    emitEvent () {},
-    changefamily: function (item) {
-      this.$store.state.familyInfoID = item
-      if (families[this.$store.state.familyInfoID].allegiance.length > 0) { this.$store.state.familyAllegiance = true } else { this.$store.state.familyAllegiance = false }
-      if (families[this.$store.state.familyInfoID].vassals.length > 0) { this.$store.state.familyVassals = true } else { this.$store.state.familyVassals = false }
-    },
-    changefamilyClose: function (item) {
-      this.$store.state.familyInfoShow = false
+    familyClose: function () {
+      console.log('close')
+      this.$emit('close')
     }
-
   }
 }
 </script>
@@ -74,13 +68,12 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  // width: 400px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: width 5s;
-  // background-color: red;
+  z-index: 100;
   .family-card{
     left: 0;
     width: 340px;

@@ -15,9 +15,6 @@ const store = new Vuex.Store({
       selectedEvents: [],
       center: null
     }
-    familyInfoID: 0,
-    familyAllegiance: false,
-    familyVassals: false
   },
   mutations: {
     changeNav (state, navName) {
