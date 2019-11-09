@@ -117,7 +117,7 @@ export default {
           vm.map.getSource('character-points')
             .setData(dataConverter.getPointsSource(routes.filter((_, index) => index <= pointIndex + 1)).data)
           if (pointIndex >= routes.length - 2) {
-            this.charaterLineAnimation = null
+            vm.charaterLineAnimation = null
             return
           } else {
             pointIndex++
