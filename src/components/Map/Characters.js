@@ -99,7 +99,7 @@ export default {
       window.cancelAnimationFrame(this.charaterLineAnimation)
       this.charaterLineAnimation = null
       var vm = this
-      const speed = 1 / 40
+      const speed = 1 / 100
       var pointIndex = 0
       var startTime = performance.now()
       var renderedRoutes = [routes[0]]
@@ -107,7 +107,7 @@ export default {
         .setData(dataConverter.getPointsSource(renderedRoutes).data)
       this.map.getSource('character-routes')
         .setData(dataConverter.getLineSource(renderedRoutes).data)
-      this.$nextTick(animate)
+      vm.charaterLineAnimation = window.requestAnimationFrame(animate)
       function animate () {
         var duration = performance.now() - startTime
         var nextPoint = getNextPoint(routes[pointIndex], routes[pointIndex + 1], speed, duration)
@@ -115,16 +115,18 @@ export default {
           vm.map.getSource('character-points')
             .setData(dataConverter.getPointsSource(routes.filter((_, index) => index <= pointIndex + 1)).data)
           if (pointIndex >= routes.length - 2) {
-            if (vm.charaterLineAnimation) {
-              window.cancelAnimationFrame(vm.charaterLineAnimation)
-              vm.charaterLineAnimation = null
-            }
+            return
           } else {
             pointIndex++
             startTime = performance.now()
           }
         }
-        renderedRoutes.push(nextPoint.position)
+        if (pointIndex === renderedRoutes.length - 1) {
+          renderedRoutes.push(nextPoint.position)
+        } else {
+          renderedRoutes[renderedRoutes.length - 1] = nextPoint.position
+        }
+        console.log('pointIndex', pointIndex)
         vm.map.getSource('character-routes')
           .setData(dataConverter.getLineSource(renderedRoutes).data)
         vm.charaterLineAnimation = window.requestAnimationFrame(animate)
