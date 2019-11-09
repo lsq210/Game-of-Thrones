@@ -13,8 +13,7 @@ const store = new Vuex.Store({
     event: {
       time: 298,
       visibility: 'none'
-    },
-    characterID: 0
+    }
   },
   mutations: {
     changeNavShow (state, payload) {

@@ -9,8 +9,7 @@
     <nav-bar/>
     <families/>
     <time-line/>
-    <character-tree/>
-    <character-card/>
+    <characters/>
   </div>
 </template>
 
@@ -19,8 +18,7 @@ import MapComponent from '@/components/Map'
 import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
 import TimeLine from '@/components/TimeLine'
-import CharacterTree from '@/components/CharacterTree'
-import CharacterCard from '@/components/CharacterCard'
+import Characters from '@/components/Characters'
 
 export default {
   name: 'App',
@@ -29,8 +27,7 @@ export default {
     NavBar,
     Families,
     TimeLine,
-    CharacterTree,
-    CharacterCard
+    Characters
   },
   data () {
     return {

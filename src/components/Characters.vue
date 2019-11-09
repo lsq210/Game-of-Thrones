@@ -1,12 +1,13 @@
 <template>
 <!--滚动条-->
-  <div class="CharacterTree-wrapper" id="treeContainer" v-if="$store.state.charactersShow">
+  <div class="characters-wrapper" v-if="$store.state.charactersShow">
+    <character-card v-bind:characterId="tempID"/>
     <div
         v-for="(character, index) in characters"
         :key="'character-' + character.name + index"
         class="character">
         <img class="character-avatar" :src="character.avatar"
-        v-on:mouseenter="tempInfo(character.id)" v-on:mouseleave="restoreInfo()"
+        v-on:mouseenter="tempInfo(character.id)" v-on:mouseleave="restoreInfo(character.id)"
         v-on:click="showInfo(character.id)"/>
         <span class="character-name">{{ character.name }}</span>
       </div>
@@ -15,6 +16,7 @@
 
 <script>
 import characters from '@/data/characters'
+import CharacterCard from './CharacterCard'
 
 export default {
   data () {
@@ -24,19 +26,21 @@ export default {
       stage: true
     }
   },
+  components: {
+    CharacterCard
+  },
   methods: {
     showInfo: function (id) {
-      this.$store.state.characterID = id
+      this.tempID = id
       this.stage = false
     },
     tempInfo: function (id) {
       this.stage = true
-      this.tempID = this.$store.state.characterID
-      this.$store.state.characterID = id
+      this.tempID = id
     },
-    restoreInfo: function () {
+    restoreInfo: function (id) {
       if (this.stage) {
-        this.$store.state.characterID = this.tempID
+        this.tempID = id
       }
     }
   }
@@ -47,7 +51,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/var.scss';
 
-.CharacterTree-wrapper {
+.characters-wrapper {
   right: 0;
   bottom: 0;
   width: 100vw;

@@ -28,10 +28,6 @@ export default {
           title: 'Characters',
           img: '/static/characters/JonSnow.webp'
         },
-        // {
-        //   title: 'Cities',
-        //   img: '/static/cities/Braavos.webp'
-        // },
         {
           title: 'Events',
           img: '/static/events/RedWedding.webp'
