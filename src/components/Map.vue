@@ -7,7 +7,7 @@ import { mapState } from 'vuex'
 import mapboxgl from 'mapbox-gl'
 import Mixins from './Map/Mixins'
 import get3DLayer from '@/utils/get3DLayer'
-import cityModels from '@/data/cityModels'
+import threeDModels from '@/data/threeDModels'
 const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1biJ9.vT96vIXE74LTVV4xXrv0Zw'
 
 export default {
@@ -57,9 +57,9 @@ export default {
       console.log('经纬度是', e.lngLat)
     },
     addCityModels: function () {
-      var citiesModelLayer = get3DLayer('winterfall-model', cityModels)
+      var threeDModelsLayer = get3DLayer('3d-model', threeDModels)
       this.map.on('style.load', () => {
-        this.map.addLayer(citiesModelLayer)
+        this.map.addLayer(threeDModelsLayer)
       })
     }
   }
