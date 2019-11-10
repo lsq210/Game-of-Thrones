@@ -1,10 +1,10 @@
 const threeDModels = [
   {
     id: 0,
-    name: 'winterfall',
-    description: 'winterfall',
+    name: 'winterfell',
+    description: 'winterfell',
     position: [14.542365659089342, 26.541643634608064],
-    url: '/static/3dmodels/winterfall/scene.gltf',
+    url: '/static/3dmodels/winterfell/scene.gltf',
     size: 20
   },
   {
@@ -26,7 +26,7 @@ const threeDModels = [
   {
     id: 3,
     name: 'castleblack',
-    description: 'weirwood in winterfall',
+    description: 'weirwood in winterfell',
     position: [15.5100820713146, 39.09968493908772],
     url: '/static/3dmodels/weirwood/scene.gltf',
     size: 1000

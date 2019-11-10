@@ -16,10 +16,10 @@
       </div>
     </div>
     <div class="event-details">
+      <div class="name" @click="fly">{{ eventName }}</div>
       <div class="item" v-for="(item, index) in itemList" :key="`itemList-${index}`">
         {{ item }} : {{ eventDetails[index] }}
       </div>
-      <button @click="fly">Fly to</button>
     </div>
   </div>
 </template>
@@ -30,15 +30,16 @@ import TimeLine from '@/components/TimeLine'
 export default {
   data: function () {
     return {
+      Events,
       seasons: [1, 2, 3, 4, 5, 6, 7],
       episodes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      allEvents: Events,
       season: null,
       episode: null,
-      itemList: ['Name', 'Place', 'Position', 'Begin', 'End', 'Families', 'Organizations', 'Characters', 'Death'],
+      itemList: [],
       eventDetails: [],
       time: null,
-      seriesState: true
+      seriesState: true,
+      eventName: null
     }
   },
   components: {
@@ -50,11 +51,11 @@ export default {
     }),
     selectedEvents () {
       if (this.seriesState) {
-        return this.allEvents.filter(event => {
+        return this.Events.filter(event => {
           return event.source_season === this.season & event.source_episode === this.episode
         })
       } else {
-        return this.allEvents.filter(event => {
+        return this.Events.filter(event => {
           return event.beginTime <= this.time && event.endTime >= this.time
         })
       }
@@ -75,14 +76,15 @@ export default {
   methods: {
     showDetails: function (id) {
       this.eventDetails = []
+      this.itemList = ['Place', 'Position', 'Begin', 'End', 'Families', 'Organizations', 'Characters', 'Death']
       var event = this.selectedEvents.filter(event => {
         return event.id === id
       })
-      this.eventDetails.push(event[0].name)
+      this.eventName = event[0].name
       this.eventDetails.push(event[0].place)
       this.eventDetails.push(event[0].position)
-      this.eventDetails.push(event[0].beginTime)
-      this.eventDetails.push(event[0].endTime)
+      this.eventDetails.push(event[0].beginTime + ' AC')
+      this.eventDetails.push(event[0].endTime + ' AC')
       this.eventDetails.push(event[0].families)
       this.eventDetails.push(event[0].organizations)
       this.eventDetails.push(event[0].characters)
@@ -132,12 +134,22 @@ export default {
     cursor: pointer;
   }
   .event-details {
-    margin-top: 24px;
-    height: 30vh;
-    background-color: $primer-color;
-    max-width: 18vw;
+    height: 380px;
+    width: 300px;
+    background: url('/static/paper.png');
+    background-size: 300px;
+    position: fixed;
+    top: 14vh;
+    right: 6vw;
+    padding: 60px 26px 40px 26px;
+    .name {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+    }
     .item {
-      border-top: 1px solid $text-color;
+      // border-top: 1px solid $text-color;
+      font-size: 16px;
     }
   }
 }

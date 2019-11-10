@@ -11,7 +11,7 @@ const events = [
     beginTime: 298,
     endTime: 298,
     families: null,
-    organizations: 'Night\'s Watch',
+    organizations: ['Night\'s Watch'],
     characters: ['Ser Waymar Royce', 'Will', 'ared'],
     death: null
   },
