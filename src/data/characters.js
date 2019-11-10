@@ -25,7 +25,7 @@ const characters = [
   {
     id: 1,
     name: 'Benjen Stark',
-    male: 0,
+    male: 1,
     avatar: '/static/houses/Arryn.webp',
     dateofBirth: null,
     Age: null,
