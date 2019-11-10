@@ -1,6 +1,8 @@
 <template>
   <div class="timeline-wrapper">
-    <button @click="changeSelectWay">三眼乌鸦</button>
+    <img
+      @click="changeSelectWay"
+      src="/static/crow.png">
     <div class="timeline" v-if="timeLineState">
       <vue-slider
       v-model="time"
@@ -51,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/var.scss';
-.timeline-wrapper {
+.timeline {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -59,9 +61,13 @@ export default {
   width: 100vw;
   height: 8vh;
   margin:0 auto;
-  button {
-    width: 40x;
-    height: 40px;
-  }
+}
+img {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 10px;
+  left: 100px;
+  cursor: pointer;
 }
 </style>
