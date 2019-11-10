@@ -2,225 +2,106 @@ const families = [
   {
     ID: 0,
     name: 'House Stark',
-    img: '/static/houses/Stark.webp',
-    position: 'Winterfell',
     words: 'Winter is coming',
-    membersID: '0',
-    region: 'The North',
-    allegiance: [4, 23],
-    vassals: [9, 1, 18, 17]
+    allegiance: [4, 10],
+    vassals: [1, 9, 12],
+    img: '/static/houses/Stark.webp'
   },
   {
     ID: 1,
     name: 'House Tully',
-    img: '/static/houses/Tully.webp',
-    words: 'Family,Duty,Honor',
-    seat: 'Riverrun',
-    region: 'The Riverlands',
-    allegiance: [0, 4, 23],
-    vassals: []
+    words: 'Family, Duty, Honor',
+    allegiance: [0, 6, 10],
+    vassals: [],
+    img: '/static/houses/Tully.webp'
   },
   {
     ID: 2,
     name: 'House Lannister',
-    img: '/static/houses/Lannister.webp',
-    words: 'Hear Me Roar!'
+    words: 'Hear Me Roar!',
+    allegiance: [4, 10],
+    vassals: [],
+    img: '/static/houses/Lannister.webp'
   },
   {
     ID: 3,
     name: 'House Tyrell',
-    img: '/static/houses/Tyrell.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    words: 'Growing Strong',
+    allegiance: [4, 10],
+    vassals: [8, 11],
+    img: '/static/houses/Tyrell.webp'
   },
   {
     ID: 4,
     name: 'House Targaryen',
-    img: '/static/houses/Targaryen.webp',
-    words: 'Fire and Blood'
+    words: 'Fire and Blood',
+    allegiance: [],
+    vassals: [0, 1, 2, 7, 9, 10],
+    img: '/static/houses/Targaryen.webp'
   },
   {
     ID: 5,
     name: 'House Bolton',
-    img: '/static/houses/Bolton.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    words: 'Our Blades Are Sharp',
+    allegiance: [0],
+    vassals: [11],
+    img: '/static/houses/Bolton.webp'
   },
   {
     ID: 6,
     name: 'House Frey',
-    img: '/static/houses/Frey.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    words: 'We Stand Together',
+    allegiance: [0, 2, 10],
+    vassals: [],
+    img: '/static/houses/Frey.webp'
   },
   {
     ID: 7,
-    name: 'House Greyjoy',
-    img: '/static/houses/Greyjoy.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    name: 'House Grayjoy',
+    words: 'We Do Not Sow',
+    allegiance: [4, 10],
+    vassals: [],
+    img: '/static/houses/Greyjoy.webp'
   },
   {
     ID: 8,
-    name: 'House Martell',
-    img: '/static/houses/Martell.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    name: 'House Tarly',
+    words: 'Fist in Battle',
+    allegiance: [2],
+    vassals: [],
+    img: '/static/houses/Tarly.webp'
   },
   {
     ID: 9,
     name: 'House Arryn',
-    img: '/static/houses/Arryn.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    words: 'As High As Honor',
+    allegiance: [0, 10],
+    vassals: [],
+    img: '/static/houses/Arryn.webp'
   },
   {
     ID: 10,
     name: 'House Baratheon',
-    img: '/static/houses/Baratheon.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    words: 'Ours is the Fury',
+    allegiance: [],
+    vassals: [0, 1, 2, 3, 5, 6, 7, 9],
+    img: '/static/houses/Baratheon.webp'
   },
   {
     ID: 11,
-    name: 'House Tarly',
-    img: '/static/houses/Tarly.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    name: 'House Karstark',
+    words: 'The Sun of Winter',
+    allegiance: [0, 5],
+    vassals: [],
+    img: '/static/houses/Karstark.webp'
   },
   {
     ID: 12,
-    name: 'House Florent',
-    img: '/static/houses/Florent.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 13,
-    name: 'House Karstark',
-    img: '/static/houses/Karstark.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 14,
-    name: 'House Umber',
-    img: '/static/houses/Umber.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 15,
-    name: 'House Manderly',
-    img: '/static/houses/Manderly.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 16,
-    name: 'House Reed',
-    img: '/static/houses/Reed.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 17,
     name: 'House Mormont',
-    img: '/static/houses/Mormont.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 18,
-    name: 'House Glover',
-    img: '/static/houses/Glover.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 19,
-    name: 'House Forrester',
-    img: '/static/houses/Forrester.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 20,
-    name: 'House Whitehill',
-    img: '/static/houses/Whitehill.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 21,
-    name: 'House Royce',
-    img: '/static/houses/Royce.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 22,
-    name: 'House Blackfyre',
-    img: '/static/houses/Blackfyre.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 23,
-    name: 'House Baratheon of King\'s Landing',
-    img: '/static/houses/Baratheon of King\'s Landing.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
-  },
-  {
-    ID: 24,
-    name: 'House Baratheon of Dragonstone',
-    img: '/static/houses/Baratheon of Dragonstone.webp',
-    location: {
-      lng: 2,
-      lon: 10
-    }
+    words: 'Here We Stand',
+    allegiance: [0],
+    vassals: [],
+    img: '/static/houses/Mormont.webp'
   }
 ]
-
 export default families
