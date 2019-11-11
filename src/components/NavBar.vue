@@ -85,7 +85,7 @@ $nav-height: 100px;
   .nav-bar {
     height: $nav-height;
     background-color: #e7d9ce;
-    background-image: url('/static/envelope.png');
+    background-image: url('/static/img/envelope.png');
     background-size: contain;
     border-radius: 8px;
     filter: drop-shadow(2px 4px 6px black);

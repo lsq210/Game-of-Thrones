@@ -31,3 +31,9 @@ html, body {
 .vue-slider-dot-handle-focus {
   box-shadow: none;
 }
+.vue-slider-process {
+  background-color: $primer-color;
+}
+.vue-slider:hover .vue-slider-process {
+  background-color: $primer-color;
+}

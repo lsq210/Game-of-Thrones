@@ -1,11 +1,13 @@
 <template>
   <div class="events-wrapper" v-if="eventsState">
-    <div class="title" v-if="seriesState">Select Events!</div>
-    <div class="series-select" v-if="seriesState">
-      <div>seasons</div>
-      <v-select :options="seasons" style="width: 30%" v-model="season"></v-select>
-      <div>episodes</div>
-      <v-select :options="episodes" style="width: 30%" v-model="episode"></v-select>
+    <div class="series" v-if="seriesState">
+      <div class="title">Select Events!</div>
+      <div class="select">
+        <div>seasons </div>
+        <v-select :options="seasons" style="width: 30%;" v-model="season"></v-select>
+        <div>episodes </div>
+        <v-select :options="episodes" style="width: 30%;" v-model="episode"></v-select>
+      </div>
     </div>
     <time-line @changeSelectWay="changeSelectWay" @changeTime="changeTime"/>
     <div class="events-list" v-if="eventListState">
@@ -136,26 +138,32 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  .title {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    color: $primer-color;
-    margin-bottom: 10px;
-  }
-  .series-select {
-    display: flex;
-    width: 18vw;
-    background: url('/static/paper3.png');
+  .series {
+    width: 17.4vw;
+    height: 108px;
+    background: url('/static/img/paper3.png');
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    .title {
+      display: flex;
+      justify-content: center;
+      font-size: 30px;
+      color: $text-color;
+      text-shadow: 6px 6px 6px #6500007d;
+      margin-bottom: 20px;
+    }
+    .select {
+      display: flex;
+    }
   }
   .events-list {
     margin-top: 24px;
     height: 200px;
     width: 300px;
-    background: url('/static/paper2.png');
+    background: url('/static/img/paper2.png');
     background-size: 300px;
     padding: 36px 14px 30px 22px;
     line-height: 2rem;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     .content {
       overflow-y: auto;
       height: 130px;
@@ -175,12 +183,13 @@ export default {
   .event-details {
     height: 380px;
     width: 300px;
-    background: url('/static/paper.png');
+    background: url('/static/img/paper.png');
     background-size: 300px;
     position: fixed;
     top: 14vh;
     right: 6vw;
     padding: 60px 26px 40px 26px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     .name {
       font-size: 20px;
       display: flex;
@@ -191,7 +200,7 @@ export default {
       }
     }
     .details {
-      height: 300px;
+      height: 230px;
       width: 240px;
       overflow-y: auto;
       .item {

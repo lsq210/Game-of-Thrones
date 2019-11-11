@@ -34,7 +34,7 @@ export default {
       let img = new Image()
       img.src = event.img
       img.alt = event.name
-      img.width = 180
+      img.width = 160
       img.height = 100
       drawRoundImgToMap(this.map, `event-${event.id}`, img, 10)
     })

@@ -2,7 +2,7 @@
   <div class="timeline-wrapper">
     <img
       @click="changeSelectWay"
-      src="/static/crow.png">
+      src="/static/img/crow.png">
     <div class="timeline" v-if="timeLineState">
       <vue-slider
       v-model="time"
