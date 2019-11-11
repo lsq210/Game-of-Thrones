@@ -26,7 +26,7 @@
 </template>
 <script>
 import { mapState } from 'vuex'
-import Events from '@/data/events.js'
+import Events from '@/data/events.json'
 import TimeLine from '@/components/TimeLine'
 export default {
   data: function () {

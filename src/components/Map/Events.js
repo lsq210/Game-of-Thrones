@@ -1,5 +1,5 @@
 import mapboxgl from 'mapbox-gl'
-import Events from '@/data/events.js'
+import Events from '@/data/events.json'
 import dataConverter from '@/utils/dataConverter'
 import drawRoundImgToMap from '@/utils/generateRoundImg'
 import { mapState } from 'vuex'
