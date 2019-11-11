@@ -71,4 +71,8 @@ export default {
   width: 100vw;
   height: 100vh;
 }
+img {
+  width: 180px;
+  height: 140px;
+}
 </style>

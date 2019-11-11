@@ -23,7 +23,7 @@ export default {
       time: 298,
       options: {
         min: 298,
-        max: 320
+        max: 305
       },
       timeLineState: false
     }

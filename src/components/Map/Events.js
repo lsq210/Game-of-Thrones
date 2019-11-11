@@ -1,5 +1,5 @@
 import mapboxgl from 'mapbox-gl'
-import Events from '@/data/events.js'
+import Events from '@/data/events.json'
 import dataConverter from '@/utils/dataConverter'
 import drawRoundImgToMap from '@/utils/generateRoundImg'
 import { mapState } from 'vuex'
@@ -34,6 +34,8 @@ export default {
       let img = new Image()
       img.src = event.img
       img.alt = event.name
+      img.width = 180
+      img.height = 100
       drawRoundImgToMap(this.map, `event-${event.id}`, img, 10)
     })
     var eventsSource = dataConverter.getEventPointsSource(this.selectedEvents)

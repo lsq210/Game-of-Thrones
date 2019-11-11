@@ -26,13 +26,13 @@
 </template>
 <script>
 import { mapState } from 'vuex'
-import Events from '@/data/events.js'
+import Events from '@/data/events.json'
 import TimeLine from '@/components/TimeLine'
 export default {
   data: function () {
     return {
       Events,
-      seasons: [1, 2, 3, 4, 5, 6, 7],
+      seasons: [1, 2, 3, 4, 5, 6, 7, 8],
       episodes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       season: null,
       episode: null,
@@ -103,7 +103,7 @@ export default {
       this.eventDetails.push(event[0].families.join(', '))
       this.eventDetails.push(event[0].organizations.join(', '))
       this.eventDetails.push(event[0].characters.join(', '))
-      this.eventDetails.push(event[0].death)
+      this.eventDetails.push(event[0].death.join(','))
     },
     fly: function () {
       var center = this.eventDetails[1]
