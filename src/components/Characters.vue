@@ -9,15 +9,15 @@
         <img class="character-avatar" :src="character.avatar"
         @mouseenter="tempInfo(character.id)" @mouseleave="restoreInfo(character.id)"
         @click="selectCharacter(character.id)"/>
-        <span class="character-name">{{ character.name }}</span>
-      </div>
+        <div class="character-name"><span>{{ character.name }}</span></div>
+    </div>
   </div>
 </template>
 
 <script>
 import CharacterCard from './CharacterCard'
 import { mapState } from 'vuex'
-import Characters from '@/data/characters.js'
+import Characters from '@/data/characters.json'
 import Events from '@/data/events.json'
 
 export default {
@@ -77,7 +77,6 @@ export default {
   bottom: 0;
   width: 100vw;
   display: flex;
-  align-items: flex-end;
   z-index: 5;
   overflow: auto;
   background: none;
@@ -88,15 +87,18 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
     margin: 2px 10px 2px 10px;
     cursor: pointer;
     float: left;
+    vertical-align:top;
     .character-avatar {
       width: 80px;
       height: 80px;
       border-radius: 50%;
       border: 3px solid #333;
       transition: 0.2s;
+      margin-top:0;
     }
     .character-avatar:hover {
       width: 100px;
@@ -108,6 +110,9 @@ export default {
       color: #f7deab;
       font-weight: bold;
       font-family: cursive;
+      font-size: 2vh;
+      min-width: 10vh;
+      text-align: center;
     }
   }
 }

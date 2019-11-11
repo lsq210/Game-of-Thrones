@@ -8,10 +8,10 @@
       <div style="text-align:left;padding:7px 0 10px 0;">
       <span v-if="characters[characterId].male!=null">Gender: <img class="gender" :src="'/static/icon/nan.png'" v-if="characters[characterId].male === 0"/>
       <img class="gender" :src="'/static/icon/nv.png'" v-else><br/></span>
-      <span v-if="characters[characterId].dateofBirth!=null" style="vertical-align:middle;">Date of Birth: {{characters[characterId].dateofBirth}}</span>
-      <img :src="'/static/icon/birthday.png'" v-if="characters[characterId].dateofBirth!=null" style="vertical-align:middle;"/><br/>
-      <span v-if="characters[characterId].Age!=null">Age: {{characters[characterId].Age}}<br/></span>
-      <div style="padding:7px 0 10px 0;"><span v-if="characters[characterId].Status!=null">Status: {{characters[characterId].Status}}<br/></span></div>
+      <span v-if="characters[characterId].dateofBirth!=''" style="vertical-align:middle;">Date of Birth: {{characters[characterId].dateofBirth}}</span>
+      <img :src="'/static/icon/birthday.png'" v-if="characters[characterId].dateofBirth!=''" style="vertical-align:middle;"/><br/>
+      <span v-if="characters[characterId].Age!=''">Age: {{characters[characterId].Age}}<br/></span>
+      <div style="padding:7px 0 10px 0;"><span v-if="characters[characterId].status!=''">Status: {{characters[characterId].status}}<br/></span></div>
       </div>
       </div>
     </div>
@@ -20,22 +20,22 @@
       <div class="info">
     <!--杀人和屏幕时间-->
       <div class="killAndTime">
-        <div style="display:flex;flex-direction:column;"><img class="kAT" :src="'/static/icon/sword.png'"/><span class="KAT">Kill: name</span></div>
-        <div style="display:flex;flex-direction:column;"><img class="kAT" :src="'/static/icon/clock.png'"/><span class="KAT">Kill: name</span></div>
+        <div style="display:flex;flex-direction:column;"><img class="kAT" :src="'/static/icon/sword.png'"/><span class="KAT">Kill: {{characters[characterId].kill}}</span></div>
+        <div style="display:flex;flex-direction:column;"><img class="kAT" :src="'/static/icon/clock.png'"/><span class="KAT">Screen Time: {{characters[characterId].screentime}}</span></div>
       </div>
       <br/>
     <!--别名，头衔-->
       <div class="subinfo">
         <img class="illustration" :src="'/static/icon/title.png'"/>
         <div style="margin-left:10px;">
-        <div style="display:flex;" v-if="characters[characterId].nickname!=null">
+        <div style="display:flex;" v-if="characters[characterId].nickname.length!=0">
           <span>Nickname:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(nick, index) in characters[characterId].nickname"
           :key="'nickname-' + index">{{nick}}<br/></span>
           </div></div>
-        <div style="display:flex;width35vh" v-if="characters[characterId].titles!=null">
-          <span v-if="characters[characterId].titles!=null" style="display:flex;">Titles:&nbsp;</span>
+        <div style="display:flex;width35vh" v-if="characters[characterId].titles.length!=0">
+          <span v-if="characters[characterId].titles.length!=0" style="display:flex;">Titles:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(title, index) in characters[characterId].titles"
           :key="'title-' + index">{{title}}<br/></span>
@@ -47,25 +47,25 @@
       <div class="subinfo">
         <img class="illustration" :src="'/static/icon/culture.png'"/>
         <div style="margin-left:10px;">
-        <div style="display:flex;" v-if="characters[characterId].origin!=null">
+        <div style="display:flex;" v-if="characters[characterId].origin.length!=0">
           <span>Origin:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(org, index) in characters[characterId].origin"
           :key="'origin-' + index">{{org}}<br/></span>
           </div></div>
-        <div style="display:flex;" v-if="characters[characterId].allegiance!=null">
+        <div style="display:flex;" v-if="characters[characterId].allegiance.length!=0">
           <span>Allegiance:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(allegiance, index) in characters[characterId].allegiance"
           :key="'allegiance-' + index">{{allegiance}}<br/></span>
           </div></div>
-        <div style="display:flex;" v-if="characters[characterId].religion!=null">
+        <div style="display:flex;" v-if="characters[characterId].religion.length!=0">
           <span>Religion:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(religion, index) in characters[characterId].religion"
           :key="'religion-' + index">{{religion}}<br/></span>
           </div></div>
-        <div style="display:flex;" v-if="characters[characterId].culture!=null">
+        <div style="display:flex;" v-if="characters[characterId].culture.length!=0">
           <span>Culture:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(culture, index) in characters[characterId].culture"
@@ -78,38 +78,33 @@
       <div class="subinfo">
         <img class="illustration" :src="'/static/icon/relationship.png'"/>
         <div style="margin-left:10px;">
-        <div style="display:flex;" v-if="characters[characterId].houses!=null">
-          <span>House:&nbsp;</span>
-          <div style="text-align:left;"><span
-          v-for="(house, index) in characters[characterId].houses"
-          :key="'house-' + index">{{house}}<br/></span>
-          </div></div>
-        <div style="display:flex;" v-if="characters[characterId].father!=null">
+        <span v-if="characters[characterId].houses!=null">House: {{characters[characterId].houses}}<br/></span>
+        <div style="display:flex;" v-if="characters[characterId].father.length!=0">
           <span>Father:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(father, index) in characters[characterId].father"
           :key="'father-' + index">{{father}}<br/></span>
           </div></div>
         <span v-if="characters[characterId].mother!=null">Mother: {{characters[characterId].mother}}<br/></span>
-        <div style="display:flex;" v-if="characters[characterId].children!=null">
+        <div style="display:flex;" v-if="characters[characterId].children.length!=0">
           <span>Children:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(child, index) in characters[characterId].children"
           :key="'child-' + index">{{child}}<br/></span>
           </div></div>
-        <div style="display:flex;" v-if="characters[characterId].sibling!=null">
+        <div style="display:flex;" v-if="characters[characterId].siblings.length!=0">
           <span>Siblings:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(sibling, index) in characters[characterId].siblings"
           :key="'sibling-' + index">{{sibling}}<br/></span>
           </div></div>
-        <div style="display:flex;" v-if="characters[characterId].children!=null">
+        <div style="display:flex;" v-if="characters[characterId].children.length!=0">
           <span>Children:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(child, index) in characters[characterId].children"
           :key="'child-' + index">{{child}}<br/></span>
           </div></div>
-        <div style="display:flex;" v-if="characters[characterId].loversOrspouse!=null">
+        <div style="display:flex;" v-if="characters[characterId].loversOrspouse.length!=0">
           <span>Lover/Spouse:&nbsp;</span>
           <div style="text-align:left;"><span
           v-for="(lover, index) in characters[characterId].loversOrspouse"
@@ -121,11 +116,11 @@
     <!--事件-->
       <div class="subinfo">
         <img class="illustration" :src="'/static/icon/event.png'"/>
-        <div style="display:flex;" v-if="characters[characterId].Events!=null">
+        <div style="display:flex;" v-if="characters[characterId].events.length!=0">
           <span>Events:&nbsp;</span>
           <div style="text-align:left;"><span
-          v-for="(event, index) in characters[characterId].Events"
-          :key="'event-' + index">{{event}}<br/></span>
+          v-for="(event, index) in characters[characterId].events"
+          :key="'event-' + index">{{Events[event].name}}<br/></span>
           </div></div>
       </div>
     </div>
@@ -133,11 +128,13 @@
 </template>
 
 <script>
-import characters from '@/data/characters'
+import characters from '@/data/characters.json'
+import Events from '@/data/events.json'
 
 export default {
   data () {
     return {
+      Events,
       characters: characters
     }
   },
@@ -211,10 +208,10 @@ export default {
       text-align: center;
       font-family: "Times New Roman", Times, serif;
       .name {
-        font-size: 40px;
-        color: #306ed2;
-        text-shadow: 2px 2px #173c79;
+        font-size: 25px;
+        color: #132275;
         font-style: italic;
+        font-weight: bold;
       }
       .gender {
         vertical-align: middle;
@@ -242,8 +239,8 @@ export default {
       }
     }
     .illustration {
-      width:7vh;
-      height:7vh;
+      width:5vh;
+      height:5vh;
       vertical-align: text-top;
       margin-right:10px;
     }
