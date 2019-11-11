@@ -199,7 +199,7 @@ export default {
       height: 12vh;
       border-radius: 50%;
       border: 3px solid #333;
-      margin: 42px 20px 42px 20px;
+      margin: 42px 7px 42px 20px;
     }
     .nameand {
       width: 35vh;
@@ -219,7 +219,6 @@ export default {
     }
   }
   .info {
-    margin-top: 20px;
     padding: 0 20px 20px 20px;
     line-height: 120%;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
