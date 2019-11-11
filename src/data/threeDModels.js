@@ -25,7 +25,7 @@ const threeDModels = [
   },
   {
     id: 3,
-    name: 'castleblack',
+    name: 'weirwood',
     description: 'weirwood in winterfell',
     position: [15.5100820713146, 39.09968493908772],
     url: '/static/3dmodels/weirwood/scene.gltf',

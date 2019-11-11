@@ -6,8 +6,6 @@
 import { mapState } from 'vuex'
 import mapboxgl from 'mapbox-gl'
 import Mixins from './Map/Mixins'
-import get3DLayer from '@/utils/get3DLayer'
-import threeDModels from '@/data/threeDModels'
 const mapboxToken = 'pk.eyJ1IjoiY3N0YW8iLCJhIjoiY2p1eThkYjgzMHNvbzQ0cnhqd3c3OTU1biJ9.vT96vIXE74LTVV4xXrv0Zw'
 
 export default {
@@ -25,7 +23,6 @@ export default {
   },
   mounted () {
     this.initMap()
-    this.addCityModels()
   },
   watch: {
     navName: function (newValue, oldValue) {
@@ -55,12 +52,6 @@ export default {
     },
     mapClickEvent: function (e) {
       console.log('经纬度是', e.lngLat)
-    },
-    addCityModels: function () {
-      var threeDModelsLayer = get3DLayer('3d-model', threeDModels)
-      this.map.on('style.load', () => {
-        this.map.addLayer(threeDModelsLayer)
-      })
     }
   }
 }

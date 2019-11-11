@@ -6,6 +6,7 @@
     :style="{top: logoTop + 'px'}"
     @click="returnHome"/>
     <map-component/>
+    <three-d-control/>
     <nav-bar/>
     <families/>
     <events/>
@@ -19,6 +20,7 @@ import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
 import Events from '@/components/Events'
 import Characters from '@/components/Characters'
+import ThreeDControl from '@/components/ThreeDControl'
 
 export default {
   name: 'App',
@@ -27,7 +29,8 @@ export default {
     NavBar,
     Families,
     Events,
-    Characters
+    Characters,
+    ThreeDControl
   },
   data () {
     return {

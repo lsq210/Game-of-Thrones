@@ -8,7 +8,7 @@
       v-model="time"
       v-bind="options"
       v-on:change="changeTime(time)"
-      style="width: 90vw"/>
+      style="width: 80vw"/>
   </div>
   </div>
 </template>
@@ -66,8 +66,8 @@ img {
   width: 100px;
   height: 100px;
   position: fixed;
-  bottom: 10px;
-  left: 100px;
+  bottom: 25px;
+  left: 60px;
   cursor: pointer;
 }
 </style>
