@@ -33,7 +33,7 @@ export default {
           img: '/static/events/RedWedding.webp'
         },
         {
-          title: 'Statistics',
+          title: 'About',
           img: '/static/wars/ConquestOfDorne.webp'
         }
       ]
@@ -51,7 +51,7 @@ export default {
           return false
         case 'Events':
           return false
-        case 'Statistics':
+        case 'About':
           return false
         case null:
           return true
