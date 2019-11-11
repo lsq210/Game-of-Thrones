@@ -5,7 +5,8 @@
       v-bind:familyState="familyState"
       v-bind:allegianceState="allegianceState"
       v-bind:vassalsState="vassalsState"
-      @close="close"/>
+      @close="close"
+      @showFamily="updatefamily" />
     <div class="families" v-if="familiesState">
       <div
         v-for="(family, index) in Families"
@@ -58,6 +59,20 @@ export default {
         this.allegianceState = false
       }
       if (family.vassals.length > 0) {
+        this.vassalsState = true
+      } else {
+        this.vassalsState = false
+      }
+    },
+    updatefamily: function (newfamily) {
+      this.selectedFamily = newfamily
+      this.familyState = true
+      if (newfamily.allegiance.length > 0) {
+        this.allegianceState = true
+      } else {
+        this.allegianceState = false
+      }
+      if (newfamily.vassals.length > 0) {
         this.vassalsState = true
       } else {
         this.vassalsState = false

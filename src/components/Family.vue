@@ -14,7 +14,7 @@
               v-for="index in family.allegiance"
               :key="'family-'+index"
               class="allegiance-info">
-              <span class="family-allegiance-name">{{Families[index].name}}</span>
+              <span class="family-allegiance-name" @click="changeFamilyData(Families[index])">{{Families[index].name}}</span>
             </div>
           </div>
           <div class='vassals-card' v-if="vassalsState">
@@ -23,11 +23,17 @@
               v-for="index in family.vassals"
               :key="'family-'+index"
               class="vassals-info">
-              <span class='family-vassals-name'>{{Families[index].name}}</span>
+              <span class='family-vassals-name' @click="changeFamilyData(Families[index])">{{Families[index].name}}</span>
             </div>
           </div>
           <div class='characters-card'>
             <span class='characters'>Members</span>
+            <div
+              v-for="(member,index) in family.members"
+              :key="'family-'+index"
+              class="members-info">
+              <span class='member-name'>{{member}}</span>
+              </div>
           </div>
         </div>
       </div>
@@ -40,7 +46,8 @@ import Families from '@/data/families'
 export default {
   data () {
     return {
-      Families
+      Families,
+      change_data: this.Object
     }
   },
   props: {
@@ -58,6 +65,10 @@ export default {
     familyClose: function () {
       console.log('close')
       this.$emit('close')
+    },
+    changeFamilyData: function (newfamily) {
+      console.log(newfamily)
+      this.$emit('showFamily', newfamily)
     }
   }
 }
@@ -90,17 +101,19 @@ export default {
     }
     .family-info-show{
       position:relative;
-      left: 105px;
-      width: 100px;
+      left: 20px;
+      width: 200px;
       height: 150px;
       margin: 10px 10px;
       .close-button{
         position:relative;
-        left: 170px;
+        top:-70px;
+        left: 200px;
       }
       .family-info-img{
         position: relative;
-        top:-30px;
+        //top:-30px;
+        left: -5px;
         margin: 15px 10px;
         width: 80px;
         height: 80px;
@@ -108,12 +121,13 @@ export default {
       }
       .family-name{
         position: relative;
-        top:-30px;
-        margin-top: 6px;
+        top:10px;
+        //left: px;
         line-height: 20px;
         color: #11274b;
         font-size: 200%;
-        font-family: Georgia, serif;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
         font-weight: bold;
         text-align: center;
       }
@@ -122,8 +136,8 @@ export default {
       position: relative;
       width: 200px;
       height: 50px;
-      top: 200px;
-      left: -45px;
+      top: -200px;
+      //left: -45px;
       text-align: center;
       .family-info-words{
         position:relative;
@@ -163,7 +177,10 @@ export default {
           line-height:15px;
           color: #11274b;
           font-weight: bold;
-          font-family: cursive;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+                font-size: 120%;
+
         }
         }
       }
@@ -197,7 +214,9 @@ export default {
             line-height:15px;
             color: #11274b;
             font-weight: bold;
-            font-family: cursive;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: 120%;
           }
         }
       }
@@ -215,6 +234,16 @@ export default {
           color: black;
           font-weight: bold;
           align-items: flex-start;
+      }
+      .members-info{
+        position: relative;
+        left: 30px;
+        .member-name{
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: 100%;
+                    color: #11274b;
+        }
       }
     }
   }
