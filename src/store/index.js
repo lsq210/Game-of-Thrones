@@ -14,6 +14,10 @@ const store = new Vuex.Store({
     events: {
       selectedEvents: [],
       center: null
+    },
+    threelayer: {
+      visible: false,
+      center: null
     }
   },
   mutations: {
@@ -28,6 +32,12 @@ const store = new Vuex.Store({
     },
     changeCharacter (state, selectedEvents) {
       state.charaters.selectedEvents = selectedEvents
+    },
+    changeThreeLayer (state, visible) {
+      state.threelayer.visible = visible
+    },
+    sendModelCenter (state, center) {
+      state.threelayer.center = center
     }
   }
 })

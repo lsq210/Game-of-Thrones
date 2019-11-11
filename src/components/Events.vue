@@ -9,17 +9,22 @@
     </div>
     <time-line @changeSelectWay="changeSelectWay" @changeTime="changeTime"/>
     <div class="events-list" v-if="eventListState">
-      <div v-for="(event, index) in selectedEvents"
-        :key="`selectedEvents-${index}`"
-        @click="showDetails(event.id)">
-        {{ event.name }}
+      <div class="content">
+        <span
+          v-for="(event, index) in selectedEvents"
+          :key="`selectedEvents-${index}`"
+          @click="showDetails(event.id)">
+          {{ event.name }}
+        </span>
       </div>
     </div>
     <div class="event-details" v-if="eventDetailsState">
       <div class="name" @click="fly">{{ eventName }}</div>
-      <div class="item" v-for="(item, index) in itemList" :key="`itemList-${index}`">
+      <div class="details">
+        <div class="item" v-for="(item, index) in itemList" :key="`itemList-${index}`">
         <span style="margin-right: 10px">{{ item }}:</span>
         <span>{{ eventDetails[index] }}</span>
+      </div>
       </div>
     </div>
   </div>
@@ -150,9 +155,19 @@ export default {
     background: url('/static/paper2.png');
     background-size: 300px;
     padding: 36px 14px 30px 22px;
-    cursor: pointer;
     line-height: 2rem;
-    overflow-y: auto;
+    .content {
+      overflow-y: auto;
+      height: 130px;
+      width: 250px;
+      span {
+        cursor: pointer;
+        display: block;
+        &:hover {
+          color: $second-color;
+        }
+      }
+    }
     &::-webkit-scrollbar {
       width: 0
     }
@@ -166,19 +181,23 @@ export default {
     top: 14vh;
     right: 6vw;
     padding: 60px 26px 40px 26px;
-    overflow-y: auto;
-    &::-webkit-scrollbar {
-      width: 0
-    }
     .name {
       font-size: 20px;
       display: flex;
       justify-content: center;
       cursor: pointer;
+      &:hover {
+        color: $second-color;
+      }
     }
-    .item {
-      font-size: 16px;
-      line-height: 1.8rem;
+    .details {
+      height: 300px;
+      width: 240px;
+      overflow-y: auto;
+      .item {
+        font-size: 16px;
+        line-height: 1.8rem;
+      }
     }
   }
 }
