@@ -10,8 +10,8 @@ const events = [
     position: [18.80, 35.34],
     beginTime: 298,
     endTime: 298,
-    families: null,
-    organizations: 'Night\'s Watch',
+    families: [],
+    organizations: ['Night\'s Watch'],
     characters: ['Ser Waymar Royce', 'Will', 'ared'],
     death: null
   },
@@ -43,7 +43,7 @@ const events = [
     beginTime: 298,
     endTime: 299,
     families: ['Stark', 'Lannister', 'Baratheon'],
-    organizations: null,
+    organizations: [],
     characters: ['Bran', 'Cersei', 'Jaime'],
     death: null
   },
@@ -59,7 +59,7 @@ const events = [
     beginTime: 318,
     endTime: 318,
     families: ['Stark', 'Lannister'],
-    organizations: null,
+    organizations: [],
     characters: ['Catelyn', 'Rodrik Cassel', 'Tyrion', 'Yoren'],
     death: null
   }

@@ -14,8 +14,20 @@ html, body {
 ::-webkit-scrollbar {
 	width: 5px;
 	height: 5px;
-	// background-color: #9f997f;
-	// &-thumb {
-	// 	background-color: #707070;
-	// }
+}
+
+.vue-slider-dot {
+  top: -460% !important;
+  width: 80px !important;
+  height: 80px !important;
+  .vue-slider-dot-handle {
+    background-image: url('/static/crow.png');
+    background-size: 80px;
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
+  }
+}
+.vue-slider-dot-handle-focus {
+  box-shadow: none;
 }
