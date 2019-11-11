@@ -133,7 +133,7 @@
 </template>
 
 <script>
-import characters from '@/data/characters'
+import characters from '@/data/characters.json'
 
 export default {
   data () {

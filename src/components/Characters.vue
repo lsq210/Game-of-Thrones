@@ -17,7 +17,7 @@
 <script>
 import CharacterCard from './CharacterCard'
 import { mapState } from 'vuex'
-import Characters from '@/data/characters.js'
+import Characters from '@/data/characters.json'
 import Events from '@/data/events.json'
 
 export default {

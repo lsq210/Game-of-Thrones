@@ -26,7 +26,7 @@ export default {
         },
         {
           title: 'Characters',
-          img: '/static/characters/JonSnow.webp'
+          img: '/static/characters/Jon Snow.jpg'
         },
         {
           title: 'Events',

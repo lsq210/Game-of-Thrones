@@ -1,0 +1,2326 @@
+[
+    {
+        "id": 0,
+        "name": "Jon Snow",
+        "male": 0,
+        "avatar": "/static/characters/Jon Snow.jpg",
+        "dateofBirth": "281 AC",
+        "Age": "23",
+        "origin": [
+            "birthplace: Tower of Joy",
+            "raised: Winterfell"
+        ],
+        "nickname": [
+            "King Crow",
+            "The White Wolf"
+        ],
+        "titles": [
+            "Warden of the North",
+            "King in the Norith",
+            "998th Lord Commander of the Night's Watch"
+        ],
+        "allegiance": [
+            "Night's Watch",
+            "Free Folk",
+            "House Stark",
+            "House Targaryen"
+        ],
+        "religion": [
+            "Old Gods of the Forest"
+        ],
+        "culture": [
+            "Northmen"
+        ],
+        "houses": "House Stark, House Targaryen",
+        "father": [
+            "Biological: Rhaegar Targaryen",
+            "Adoptive: Eddard Stark"
+        ],
+        "mother": "Lyanna Stark",
+        "children": [],
+        "siblings": [
+            "Rhaenys Targaryen",
+            "Aegon Targaryen",
+            "Robb Stark",
+            "Sansa Stark",
+            "Arya Stark",
+            "Bran Stark",
+            "Rickon Stark"
+        ],
+        "loversOrspouse": [
+            "Ygritte",
+            "Daenerys Targaryen"
+        ],
+        "status": "Alive",
+        "events": [
+            24,
+            25,
+            27,
+            34,
+            45
+        ],
+        "kill": 13,
+        "screentime": "9hr 7m"
+    },
+    {
+        "id": 1,
+        "name": "Sansa Stark",
+        "male": 1,
+        "avatar": "/static/characters/Sansa.jpg",
+        "dateofBirth": "285 AC",
+        "Age": "20",
+        "origin": [
+            "Winyerfell"
+        ],
+        "nickname": [
+            "Little dove",
+            "Lady Stark"
+        ],
+        "titles": [
+            "Queen in the North",
+            "Lady of Winterfell",
+            "Wardeness of the North",
+            "Princess",
+            "Lady Regent of the North"
+        ],
+        "allegiance": [
+            "House Stark",
+            "House Targaryen",
+            "HouseBolton",
+            "House Lannister"
+        ],
+        "religion": [
+            "Old Gods of the Forest"
+        ],
+        "culture": [
+            "Northmen"
+        ],
+        "houses": "House Stark",
+        "father": [
+            "Eddard Stark"
+        ],
+        "mother": "Catelyn Stark",
+        "children": [],
+        "siblings": [
+            "Robb Stark",
+            "Arya Stark",
+            "Bran Stark",
+            "Rickon Stark",
+            "Jon Snow"
+        ],
+        "loversOrspouse": [
+            "Tytion Lannister",
+            "Ramsay Bolton"
+        ],
+        "status": "Alive",
+        "events": [
+            34,
+            46,
+            48
+        ],
+        "kill": 1,
+        "screentime": "6hr 2m"
+    },
+    {
+        "id": 2,
+        "name": "Arya Stark",
+        "male": 1,
+        "avatar": "/static/characters/Arya.jpg",
+        "dateofBirth": "287 AC",
+        "Age": "18",
+        "origin": [
+            "Winterfell"
+        ],
+        "nickname": [
+            "Arry",
+            "Lanna"
+        ],
+        "titles": [
+            "Princess"
+        ],
+        "allegiance": [
+            "House Stark",
+            "Faceless Men"
+        ],
+        "religion": [
+            "Many-Faced God",
+            "Old Gods of the Forest",
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Northmen",
+            "Braavosi"
+        ],
+        "houses": "House Stark",
+        "father": [
+            "Eddard Stark "
+        ],
+        "mother": "Catelyn Stark",
+        "children": [],
+        "siblings": [
+            "Robb Stark",
+            "Sansa Stark",
+            "Bran Stark",
+            "Rickon Stark",
+            "Jon Snow"
+        ],
+        "loversOrspouse": [
+            "Gendry Baratheon"
+        ],
+        "status": "Alive",
+        "events": [
+            37,
+            48
+        ],
+        "kill": 11,
+        "screentime": "5hr 32m"
+    },
+    {
+        "id": 3,
+        "name": "Bran Stark",
+        "male": 0,
+        "avatar": "/static/characters/Bran.jpg",
+        "dateofBirth": "288 AC",
+        "Age": "17",
+        "origin": [
+            "Winterfell"
+        ],
+        "nickname": [
+            "The Three-Eyed Raven",
+            "Little Lord",
+            "Bran the Broken"
+        ],
+        "titles": [
+            "King of the Andals and the First Men",
+            "Lord of the SIx Kingdoms",
+            "Protector of the Realm",
+            "Prince",
+            "Acting Lord of Winterfell"
+        ],
+        "allegiance": [
+            "House Stark"
+        ],
+        "religion": [
+            "Old Gods of the Forest"
+        ],
+        "culture": [
+            "Northmen"
+        ],
+        "houses": "House Stark",
+        "father": [
+            "Eddard Stark"
+        ],
+        "mother": "Catelyn Stark",
+        "children": [],
+        "siblings": [
+            "Robb Stark",
+            "Sansa Stark",
+            "Arya Stark",
+            "Rickon Stark",
+            "Jon Snow"
+        ],
+        "loversOrspouse": [],
+        "status": "Alive",
+        "events": [
+            2,
+            31,
+            48
+        ],
+        "kill": 0,
+        "screentime": "3hr 4m"
+    },
+    {
+        "id": 4,
+        "name": "Edmure Tully",
+        "male": 0,
+        "avatar": "/static/characters/Edmure.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Riverrun"
+        ],
+        "nickname": [],
+        "titles": [
+            "Lord of Riverrun",
+            "Lord Paramount of the Trident",
+            "Ser"
+        ],
+        "allegiance": [
+            "House Tully",
+            "King of the Andals and the First Men",
+            "House Lannister"
+        ],
+        "religion": [
+            "Unknown"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Tully",
+        "father": [
+            "Hoster Tully"
+        ],
+        "mother": "Walder Frey",
+        "children": [],
+        "siblings": [
+            "Catelyn Stark",
+            "Lysa Arryn"
+        ],
+        "loversOrspouse": [
+            "Roslin Frey"
+        ],
+        "status": "Alive",
+        "events": [
+            48
+        ],
+        "kill": 0,
+        "screentime": "35m"
+    },
+    {
+        "id": 5,
+        "name": "Davos Seaworth",
+        "male": 0,
+        "avatar": "/static/characters/Davos.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Gin Alley",
+            "King's Landing"
+        ],
+        "nickname": [
+            "The Onino Knight",
+            "Davos of Flea Bottom"
+        ],
+        "titles": [
+            "Lord",
+            "Ser",
+            "Master of Ships",
+            "Hand of the King"
+        ],
+        "allegiance": [
+            "House Seaworth",
+            "House Stark",
+            "House Baratheon of Dragonstone"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "",
+        "father": [],
+        "mother": "",
+        "children": [
+            "Matthos Seaworth"
+        ],
+        "siblings": [],
+        "loversOrspouse": [
+            "Marya Seaworth"
+        ],
+        "status": "Alive",
+        "events": [
+            14,
+            34,
+            48
+        ],
+        "kill": 0,
+        "screentime": "4hr 1m"
+    },
+    {
+        "id": 6,
+        "name": "Tormund Giantsbane",
+        "male": 0,
+        "avatar": "/static/characters/Tormund.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Beyond the Wall"
+        ],
+        "nickname": [
+            "Tormund Giantsbane"
+        ],
+        "titles": [],
+        "allegiance": [
+            "Free Folk",
+            "Jon Snow",
+            "Mance Rayder"
+        ],
+        "religion": [],
+        "culture": [
+            "Free Folk"
+        ],
+        "houses": "",
+        "father": [],
+        "mother": "",
+        "children": [
+            "2 daughters"
+        ],
+        "siblings": [],
+        "loversOrspouse": [],
+        "status": "Alive",
+        "events": [
+            24,
+            25,
+            27,
+            34,
+            44
+        ],
+        "kill": 3,
+        "screentime": "2hr 42m"
+    },
+    {
+        "id": 7,
+        "name": "Meera Reed",
+        "male": 1,
+        "avatar": "/static/characters/Meera.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [],
+        "nickname": [],
+        "titles": [],
+        "allegiance": [
+            "House Reed",
+            "House Stark"
+        ],
+        "religion": [
+            "Old Gods of the Forest"
+        ],
+        "culture": [
+            "Crannogmen"
+        ],
+        "houses": "",
+        "father": [
+            "Howland Reed"
+        ],
+        "mother": "",
+        "children": [],
+        "siblings": [
+            "Jojen Reed"
+        ],
+        "loversOrspouse": [],
+        "status": "Alive",
+        "events": [
+            null
+        ],
+        "kill": 2,
+        "screentime": "1hr 6m"
+    },
+    {
+        "id": 8,
+        "name": "Lyanna Mormont",
+        "male": 1,
+        "avatar": "/static/characters/Lyanna.jpg",
+        "dateofBirth": "292 AC",
+        "Age": "13",
+        "origin": [
+            "Bear Island",
+            "the North"
+        ],
+        "nickname": [],
+        "titles": [
+            "Lady of Bear Island"
+        ],
+        "allegiance": [
+            "House Mormont",
+            "House Stark",
+            "White Walkers"
+        ],
+        "religion": [
+            "Old Gods of the Forest"
+        ],
+        "culture": [
+            "Northmen"
+        ],
+        "houses": "House Mormont",
+        "father": [],
+        "mother": "Maege Mormont",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [],
+        "status": "Deceased",
+        "events": [
+            34
+        ],
+        "kill": 0,
+        "screentime": "23m"
+    },
+    {
+        "id": 9,
+        "name": "Benjen Stark",
+        "male": 0,
+        "avatar": "/static/characters/Benjen.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Winterfell"
+        ],
+        "nickname": [],
+        "titles": [
+            "First Ranger"
+        ],
+        "allegiance": [
+            "House Stark",
+            "Three-Eyed Raven",
+            "The Night's Watch"
+        ],
+        "religion": [
+            "Old Gods of the Forest"
+        ],
+        "culture": [
+            "Northmen"
+        ],
+        "houses": "House Stark",
+        "father": [
+            "Rickard Stark"
+        ],
+        "mother": "",
+        "children": [],
+        "siblings": [
+            "Brandon Stark",
+            "Eddard Stark",
+            "Lyanna Stark"
+        ],
+        "loversOrspouse": [],
+        "status": "Deceased",
+        "events": [
+            null
+        ],
+        "kill": 0,
+        "screentime": "26m"
+    },
+    {
+        "id": 10,
+        "name": "Cersei Lannister",
+        "male": 1,
+        "avatar": "/static/characters/Cersei.jpg",
+        "dateofBirth": "262 AC",
+        "Age": "43",
+        "origin": [
+            "Casterly Rock"
+        ],
+        "nickname": [
+            "Cersei of the House Lannister",
+            "The mother of madness"
+        ],
+        "titles": [
+            "Queen of the Andals and the First Men",
+            "Protector of the Seven Kingdoms",
+            "Lady of Casterly Rock",
+            "Lady Paramount of the Westerlands",
+            "Wardness of the West",
+            "Queen Mother",
+            "Queen Regent",
+            "Queen Consort"
+        ],
+        "allegiance": [
+            "House Lannister",
+            "House Baratheon of King's Landing"
+        ],
+        "religion": [],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Lannister",
+        "father": [
+            "Tywin Lannister"
+        ],
+        "mother": "Joanna Lannister",
+        "children": [
+            "Unnanmed son",
+            "Joffrey Baratheon",
+            "Myrcella Baratheon",
+            "Tommen Baratheon",
+            "Unborn child"
+        ],
+        "siblings": [
+            "Jaime Lannister",
+            "Tyrion Lannister"
+        ],
+        "loversOrspouse": [
+            "Jaime Lannister",
+            "Lancel Lannister",
+            "Euron Greyjoy"
+        ],
+        "status": "Deceased",
+        "events": [
+            2,
+            8,
+            10,
+            18,
+            19,
+            26,
+            36,
+            40,
+            45
+        ],
+        "kill": 7,
+        "screentime": "6hr 39m"
+    },
+    {
+        "id": 11,
+        "name": "Jaime Lannister",
+        "male": 0,
+        "avatar": "/static/characters/Jaime.jpg",
+        "dateofBirth": "262 AC",
+        "Age": "43",
+        "origin": [
+            "Casterly Rock"
+        ],
+        "nickname": [
+            "Kingslayer",
+            "Oathbreaker"
+        ],
+        "titles": [
+            "Ser",
+            "Lord Commander of the Kingsguard"
+        ],
+        "allegiance": [
+            "House Lannister",
+            "Kingsguard"
+        ],
+        "religion": [],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Lannister",
+        "father": [
+            "Tywin Lannister"
+        ],
+        "mother": "Joanna Lannister",
+        "children": [
+            "Joffrey Baratheon",
+            "Myrcella Baratheon",
+            "Tommen Baratheon",
+            "Unborn child"
+        ],
+        "siblings": [
+            "Cersei Lannister",
+            "Jaime Lannister"
+        ],
+        "loversOrspouse": [
+            "Cersei Lannister",
+            "Brienne of Tarth"
+        ],
+        "status": "Deceased",
+        "events": [
+            2,
+            6,
+            22,
+            33,
+            38,
+            41,
+            42,
+            43
+        ],
+        "kill": 4,
+        "screentime": "5hr 29m"
+    },
+    {
+        "id": 12,
+        "name": "Tyrion Lannister",
+        "male": 0,
+        "avatar": "/static/characters/Tyrion.png",
+        "dateofBirth": "266 AC",
+        "Age": "39",
+        "origin": [
+            "Casterly Rock"
+        ],
+        "nickname": [
+            "The lmp",
+            "The Halfman"
+        ],
+        "titles": [
+            "Lord of Casterly Rock",
+            "Lord Paramount of the Westerlands",
+            "Warden of the West",
+            "Hand of the Queen",
+            "Master of Coin",
+            "Acting Hand of the King"
+        ],
+        "allegiance": [
+            "House Lannister",
+            "King of the Andals and the First Men",
+            "House Targaryen"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Lannister",
+        "father": [
+            "Tywin Lannister"
+        ],
+        "mother": "Joanna Lannister",
+        "children": [
+            "null"
+        ],
+        "siblings": [
+            "Cersei Lannister",
+            "Tyrion Lannister"
+        ],
+        "loversOrspouse": [
+            "Tysha",
+            "Sansa Stark",
+            "Shae"
+        ],
+        "status": "Alive",
+        "events": [
+            5,
+            7,
+            12,
+            14,
+            18,
+            19,
+            21,
+            35,
+            41,
+            48
+        ],
+        "kill": 2,
+        "screentime": "9hr 9m"
+    },
+    {
+        "id": 13,
+        "name": "Qyburn",
+        "male": 0,
+        "avatar": "/static/characters/Qyburn.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [],
+        "nickname": [],
+        "titles": [
+            "Hand of the Queen",
+            "Master of Whisperers"
+        ],
+        "allegiance": [
+            "House Lannister",
+            "House Baratheon of King's Landing",
+            "House Botton",
+            "Order of Maesters"
+        ],
+        "religion": [],
+        "culture": [
+            "null"
+        ],
+        "houses": "",
+        "father": [],
+        "mother": "",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [],
+        "status": "Deceased",
+        "events": [
+            36
+        ],
+        "kill": 0,
+        "screentime": "1hr 10m"
+    },
+    {
+        "id": 14,
+        "name": "Gregor Clegane",
+        "male": 0,
+        "avatar": "/static/characters/Gregor.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Clegane's Keep"
+        ],
+        "nickname": [
+            "The Mountain That Rides",
+            "Tywin Lannister's Mad Dog"
+        ],
+        "titles": [
+            "Ser",
+            "Castellan of Harrenhal",
+            "Knight of Clegane's Keep"
+        ],
+        "allegiance": [
+            "House Clegane",
+            "House Lannister",
+            "Queensguard",
+            "Kingsguard"
+        ],
+        "religion": [],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Clegane",
+        "father": [
+            "Unnamed father"
+        ],
+        "mother": "",
+        "children": [
+            "Sandor CLegane",
+            "Unnamed sister"
+        ],
+        "siblings": [],
+        "loversOrspouse": [],
+        "status": "Deceased",
+        "events": [
+            15
+        ],
+        "kill": 3,
+        "screentime": "1hr 21m"
+    },
+    {
+        "id": 15,
+        "name": "Ser Bronn",
+        "male": 0,
+        "avatar": "/static/characters/Ser.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [],
+        "nickname": [
+            "Ser Broon of the Blackwater",
+            "Cooper"
+        ],
+        "titles": [
+            "Lord of Highgarden",
+            "Lord Paramount of the Reach",
+            "Master of Coin",
+            "Ser",
+            "Commander of the City Watch"
+        ],
+        "allegiance": [
+            "Unnamed house",
+            "King of the Andals and the First Men",
+            "House Lannister",
+            "Catelyn Stark",
+            "City Watch of King's Landing"
+        ],
+        "religion": [],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "",
+        "father": [],
+        "mother": "",
+        "children": [],
+        "siblings": [
+            "Unnamed younger brother"
+        ],
+        "loversOrspouse": [],
+        "status": "Alive",
+        "events": [
+            14,
+            33,
+            42,
+            43
+        ],
+        "kill": 3,
+        "screentime": "2hr 26m"
+    },
+    {
+        "id": 16,
+        "name": "Tywin Lannister",
+        "male": 0,
+        "avatar": "/static/characters/Tywin.jpg",
+        "dateofBirth": "234 AC",
+        "Age": "67",
+        "origin": [
+            "Casterly Rock"
+        ],
+        "nickname": [],
+        "titles": [
+            "Lord of Casterly Rock",
+            "Lord Paramount of the Westerlands",
+            "Warden of the Westm Shield of Lannisport",
+            "Hand of the King",
+            "Protector of the Realm",
+            "Savior of the City"
+        ],
+        "allegiance": [
+            "House Lannister",
+            "House Baratheon of King's Landing",
+            "House Targaryen"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Lannister",
+        "father": [
+            "Tytos Lannister"
+        ],
+        "mother": "Jeyne Marbrand",
+        "children": [
+            "Cersei Lannister",
+            "Jaime Lannister",
+            "Tyrion Lannister"
+        ],
+        "siblings": [
+            "Kevan Lannister"
+        ],
+        "loversOrspouse": [
+            "Shae",
+            "Joanna Lannister"
+        ],
+        "status": "Deceased",
+        "events": [
+            14,
+            16,
+            18,
+            19,
+            21,
+            0
+        ],
+        "kill": 0,
+        "screentime": "2hr 23m"
+    },
+    {
+        "id": 17,
+        "name": "Joffrey Baratheon",
+        "male": 0,
+        "avatar": "/static/characters/Joffery.jpg",
+        "dateofBirth": "282 AC",
+        "Age": "19",
+        "origin": [
+            "King's Landing"
+        ],
+        "nickname": [
+            "Joff"
+        ],
+        "titles": [
+            "King of the Andals and the First Men",
+            "Lord of the Seven Kingdoms",
+            "Protector of the Realm",
+            "Lord of Storm's End",
+            "Lord Paramount of the Stormlands"
+        ],
+        "allegiance": [
+            "House Baratheon of King's Landing"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Baratheon",
+        "father": [
+            "Biological: Jaime Lannister",
+            "Legal: Robert Baratheon"
+        ],
+        "mother": "Cersei Lannister",
+        "children": [],
+        "siblings": [
+            "Myrcella Baratheon",
+            "Tommen Baratheon",
+            "Unborn child",
+            "Unnamed Baratheon"
+        ],
+        "loversOrspouse": [
+            "Margaery Tyrell"
+        ],
+        "status": "Deceased",
+        "events": [
+            8,
+            10,
+            11,
+            12,
+            14,
+            17
+        ],
+        "kill": 1,
+        "screentime": "2hr 26m"
+    },
+    {
+        "id": 18,
+        "name": "Myrcella Baratheon",
+        "male": 1,
+        "avatar": "/static/characters/Myrcella.jpg",
+        "dateofBirth": "283AC",
+        "Age": "19",
+        "origin": [
+            "King's Landing"
+        ],
+        "nickname": [],
+        "titles": [
+            "Princess"
+        ],
+        "allegiance": [
+            "House Baratheon of King's Landing",
+            "Doran Martell"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Baratheon",
+        "father": [
+            "Biological: Jaime Lannister",
+            "Legal: Robert Baratheon"
+        ],
+        "mother": "Cersei Lannister",
+        "children": [],
+        "siblings": [
+            "Joffery Baratheon",
+            "Tommen Baratheon",
+            "Unborn child",
+            "Unnamed Baratheon"
+        ],
+        "loversOrspouse": [],
+        "status": "Deceased",
+        "events": [],
+        "kill": 0,
+        "screentime": "41m"
+    },
+    {
+        "id": 19,
+        "name": "Tommen Baratheon",
+        "male": 0,
+        "avatar": "/static/characters/Tommen.jpg",
+        "dateofBirth": "287AC",
+        "Age": "16",
+        "origin": [
+            "King's Landing"
+        ],
+        "nickname": [
+            "Tommen of the House",
+            "The Boy King"
+        ],
+        "titles": [
+            "King of the Andals and the First Men",
+            "Lord of the Seven Kingdoms",
+            "Lord of Storm's End",
+            "Lord Paramount of the Stormlands"
+        ],
+        "allegiance": [
+            "House Baratheon of King's Landing",
+            "Faith of the Seven"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Baratheon",
+        "father": [
+            "Biological: Jaime Lannister",
+            "Legal: Robert Baratheon"
+        ],
+        "mother": "Cersei Lannister",
+        "children": [],
+        "siblings": [
+            "Joffery Baratheon",
+            "Myrcella Baratheon",
+            "Unborn child",
+            "Unnamed Baratheon"
+        ],
+        "loversOrspouse": [
+            "Margaery Tyrell"
+        ],
+        "status": "Deceased",
+        "events": [
+            38
+        ],
+        "kill": 1,
+        "screentime": "1hr 37m"
+    },
+    {
+        "id": 20,
+        "name": "Daenerys Targaryen",
+        "male": 1,
+        "avatar": "/static/characters/Daenerys.jpg",
+        "dateofBirth": "Summer of 282 AC",
+        "Age": "23",
+        "origin": [
+            "birthplace: Dragonstone",
+            "raised: Free Cities"
+        ],
+        "nickname": [
+            "Dany",
+            " Mhysa"
+        ],
+        "titles": [
+            "Queen of the Andals",
+            "the Rhoynar",
+            "and the First Men",
+            "Protector of the Seven Kingdoms",
+            "Khaleesi of the Great Grass Sea",
+            "Breaker of Chains",
+            "Mother of Dragons",
+            "The Unburnt",
+            "Queen of Meereen",
+            "Princess of Dragonstone"
+        ],
+        "allegiance": [
+            "House Targaryen"
+        ],
+        "religion": [],
+        "culture": [
+            "Valyrian"
+        ],
+        "houses": "House Targaryen",
+        "father": [
+            "Aerys Ⅱ Targarten"
+        ],
+        "mother": "Rhaella Targaryen",
+        "children": [
+            "Rhaego"
+        ],
+        "siblings": [
+            "Rhaegar Targaryen",
+            "Viserys Targaryen"
+        ],
+        "loversOrspouse": [
+            "Daario Naharis",
+            "Jon Snow"
+        ],
+        "status": "Deceased",
+        "events": [
+            1,
+            30,
+            35,
+            39,
+            45
+        ],
+        "kill": 16,
+        "screentime": "7hr 0m"
+    },
+    {
+        "id": 21,
+        "name": "Rhaegar Targaryen",
+        "male": 0,
+        "avatar": "/static/characters/Rhaegar.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [],
+        "nickname": [
+            "The Last Dragon "
+        ],
+        "titles": [
+            "Prince of Dragonstone",
+            "Ser"
+        ],
+        "allegiance": [
+            "House Targaryen"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Valyrian"
+        ],
+        "houses": "House Targaryen",
+        "father": [
+            "Aerys Ⅱ Targarten"
+        ],
+        "mother": "Rhaella Targaryen",
+        "children": [
+            "Rhaenys Targaryen",
+            "Aegon Targaryen",
+            "Jon Snow"
+        ],
+        "siblings": [
+            "Viserys Targaryen",
+            "Daenerys Targaryen"
+        ],
+        "loversOrspouse": [
+            "Elia Martell",
+            "Lyanna Stark"
+        ],
+        "status": "Deceased",
+        "events": [],
+        "kill": 0,
+        "screentime": "30s"
+    },
+    {
+        "id": 22,
+        "name": "Varys",
+        "male": 0,
+        "avatar": "/static/characters/Varys.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Lys"
+        ],
+        "nickname": [
+            "The Spider",
+            "The Eunuch"
+        ],
+        "titles": [
+            "Master of Whisperers"
+        ],
+        "allegiance": [
+            "House Targaryen",
+            "House Baratheon of King's Landing"
+        ],
+        "religion": [],
+        "culture": [
+            "Lysene"
+        ],
+        "houses": "",
+        "father": [],
+        "mother": "",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [],
+        "status": "Deceased",
+        "events": [],
+        "kill": 0,
+        "screentime": "3hr 33m"
+    },
+    {
+        "id": 23,
+        "name": "Yara Greyjoy",
+        "male": 1,
+        "avatar": "/static/characters/Yara.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Pyke"
+        ],
+        "nickname": [],
+        "titles": [
+            "Lady of the iron islands",
+            "Queen of Salt and Rock",
+            "Daughter of the Sea Wind",
+            "Lady Reaoer of Pyke",
+            "Queen of the Iron Islands"
+        ],
+        "allegiance": [
+            "King of the Andals and the First Men",
+            "House Greyjoy",
+            "House Targaryen"
+        ],
+        "religion": [
+            "Drowned God"
+        ],
+        "culture": [
+            "Ironborn"
+        ],
+        "houses": "House Greyjoy",
+        "father": [
+            "Balon Greyjoy"
+        ],
+        "mother": "Alannys Greyjoy",
+        "children": [],
+        "siblings": [
+            "Rodrik Greyjoy",
+            "Maron Greyjoy",
+            "Theon Greyjoy"
+        ],
+        "loversOrspouse": [],
+        "status": "Alive",
+        "events": [
+            40,
+            48
+        ],
+        "kill": 0,
+        "screentime": "58m"
+    },
+    {
+        "id": 24,
+        "name": "Theon Greyjoy",
+        "male": 0,
+        "avatar": "/static/characters/Theon.jpg",
+        "dateofBirth": "281AC",
+        "Age": "24",
+        "origin": [
+            "Pyke"
+        ],
+        "nickname": [
+            "Reek",
+            "Little Theon"
+        ],
+        "titles": [
+            "Prince",
+            "Prince of Winterfell"
+        ],
+        "allegiance": [
+            "House Greyjoy",
+            "Yara Greyjoy",
+            "House Stark",
+            "House Bolton",
+            "House Targaryen",
+            "Eddard Stark",
+            "Ramsay Bolton"
+        ],
+        "religion": [
+            "Drowned God"
+        ],
+        "culture": [
+            "Ironborn"
+        ],
+        "houses": "House Greyjoy",
+        "father": [
+            "Balon Greyjoy"
+        ],
+        "mother": "Alannys Greyjoy",
+        "children": [],
+        "siblings": [
+            "Rodrik Greyjoy",
+            "Maron Greyjoy",
+            "Yara Greyjoy"
+        ],
+        "loversOrspouse": [],
+        "status": "Deceased",
+        "events": [
+            8,
+            10,
+            11,
+            12,
+            14,
+            17,
+            24,
+            38,
+            39,
+            40,
+            45,
+            47,
+            48
+        ],
+        "kill": 4,
+        "screentime": "4hr 6m"
+    },
+    {
+        "id": 25,
+        "name": "Missandei",
+        "male": 1,
+        "avatar": "/static/characters/Missandei.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Naath",
+            "Sothoryos"
+        ],
+        "nickname": [],
+        "titles": [],
+        "allegiance": [
+            "House Targaryen",
+            "Good Masters"
+        ],
+        "religion": [],
+        "culture": [
+            "Naathi"
+        ],
+        "houses": "",
+        "father": [],
+        "mother": "",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [
+            "Grey Worm"
+        ],
+        "status": "Deceased",
+        "events": [],
+        "kill": 0,
+        "screentime": "3hr 14m"
+    },
+    {
+        "id": 26,
+        "name": "Euron Greyjoy",
+        "male": 0,
+        "avatar": "/static/characters/Euron.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Pyke"
+        ],
+        "nickname": [],
+        "titles": [
+            "King of the Iron Islands",
+            "King of Salt and Rock",
+            "Son of the Sea Wind",
+            "Lord Reaper of Pyke"
+        ],
+        "allegiance": [
+            "House Greyjoy"
+        ],
+        "religion": [],
+        "culture": [
+            "Ironborn"
+        ],
+        "houses": "House Greyjoy",
+        "father": [],
+        "mother": "",
+        "children": [],
+        "siblings": [
+            "Balon Greyjoy",
+            "Aeron Greyjoy"
+        ],
+        "loversOrspouse": [
+            "Cersei Lannister"
+        ],
+        "status": "Deceased",
+        "events": [
+            40,
+            41,
+            45
+        ],
+        "kill": 3,
+        "screentime": "31m"
+    },
+    {
+        "id": 27,
+        "name": "The Night King",
+        "male": 0,
+        "avatar": "/static/characters/TheNightKing.jpg",
+        "dateofBirth": "c. 10000 BC",
+        "Age": "~10000",
+        "origin": [],
+        "nickname": [],
+        "titles": [],
+        "allegiance": [
+            "Whith Walkers",
+            "First Men (as a human)"
+        ],
+        "religion": [],
+        "culture": [
+            "Whith Walkers",
+            "First Men (as a human)"
+        ],
+        "houses": "",
+        "father": [],
+        "mother": "",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [],
+        "status": "Deceased",
+        "events": [
+            31,
+            44
+        ],
+        "kill": 2,
+        "screentime": "16m"
+    },
+    {
+        "id": 28,
+        "name": "Grey Worm",
+        "male": 0,
+        "avatar": "/static/characters/Grey.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Summer Isles"
+        ],
+        "nickname": [
+            "Ser Worm"
+        ],
+        "titles": [
+            "Commander of th Unsullied",
+            "Master of War"
+        ],
+        "allegiance": [
+            "Unsullied",
+            "House Targaryen"
+        ],
+        "religion": [],
+        "culture": [
+            "Summer Islander"
+        ],
+        "houses": "",
+        "father": [],
+        "mother": "",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [
+            "Missandei"
+        ],
+        "status": "Alive",
+        "events": [
+            29,
+            35,
+            40,
+            41,
+            45,
+            48
+        ],
+        "kill": 2,
+        "screentime": "1hr 51m"
+    },
+    {
+        "id": 29,
+        "name": "Olenna Tyrell",
+        "male": 1,
+        "avatar": "/static/characters/Olenna.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "The Arbor"
+        ],
+        "nickname": [
+            "Olenna Redwyne",
+            "The Queen of Thorns"
+        ],
+        "titles": [],
+        "allegiance": [
+            "House Tyrell",
+            "House Redwyne",
+            "House Targaryen"
+        ],
+        "religion": [],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Redwyne",
+        "father": [],
+        "mother": "",
+        "children": [
+            "Mace Tyrell"
+        ],
+        "siblings": [
+            "Viola Redwyne"
+        ],
+        "loversOrspouse": [
+            "Luthor Tyrell"
+        ],
+        "status": "Decreased",
+        "events": [
+            17,
+            38,
+            42
+        ],
+        "kill": 0,
+        "screentime": "1hr 19m"
+    },
+    {
+        "id": 30,
+        "name": "Ellaria Sand ",
+        "male": 1,
+        "avatar": "/static/characters/Ellaria.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Hellholt"
+        ],
+        "nickname": [],
+        "titles": [],
+        "allegiance": [
+            "House Uller",
+            "House Targaryen",
+            "House Martell"
+        ],
+        "religion": [],
+        "culture": [
+            "Domishmen"
+        ],
+        "houses": "House Uller",
+        "father": [],
+        "mother": "",
+        "children": [
+            "Tyene Sand",
+            "Elia Sand",
+            "Obella Sand",
+            "Dorea Sand",
+            "Loreza Sand"
+        ],
+        "siblings": [
+            "null"
+        ],
+        "loversOrspouse": [
+            "Oberyn Martell"
+        ],
+        "status": "Deceased",
+        "events": [
+            22,
+            26,
+            28,
+            40
+        ],
+        "kill": 2,
+        "screentime": "46m"
+    },
+    {
+        "id": 31,
+        "name": "Brienne of Tarth",
+        "male": 1,
+        "avatar": "/static/characters/Brienne.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Evenfall Hall"
+        ],
+        "nickname": [
+            "Brienne the Beauty",
+            "Lady Brienne"
+        ],
+        "titles": [
+            "Ser",
+            "Lord Commander of the Kingsguard"
+        ],
+        "allegiance": [
+            "House Tarth",
+            "Kingsguard",
+            "House Stark",
+            "Catelyn Stark",
+            "Kingsguard"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Tarth",
+        "father": [
+            "Selwyn Tarth"
+        ],
+        "mother": "",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [
+            "Jaime Lannister"
+        ],
+        "status": "Alive",
+        "events": [
+            22,
+            26,
+            28,
+            40
+        ],
+        "kill": 5,
+        "screentime": "2hr 57m"
+    },
+    {
+        "id": 32,
+        "name": "Podrick Payne",
+        "male": 0,
+        "avatar": "/static/characters/Podrick.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [],
+        "nickname": [
+            "Pod"
+        ],
+        "titles": [
+            "Ser"
+        ],
+        "allegiance": [
+            "House Payne",
+            "Kingsguard",
+            "Brienne of Tarth",
+            "House Stark",
+            "House Lannister"
+        ],
+        "religion": [],
+        "culture": [],
+        "houses": "House Payne",
+        "father": [],
+        "mother": "",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [],
+        "status": "Alive",
+        "events": [],
+        "kill": 5,
+        "screentime": "2hr 57m"
+    },
+    {
+        "id": 33,
+        "name": "Samwell Tarly",
+        "male": 0,
+        "avatar": "/static/characters/Samwell.png",
+        "dateofBirth": "280 AC",
+        "Age": "25",
+        "origin": [
+            "Horn Hill"
+        ],
+        "nickname": [
+            "Samwell Tarly",
+            "Sam",
+            "Ser Piggy"
+        ],
+        "titles": [
+            "Grand Maester"
+        ],
+        "allegiance": [
+            "Order of Maesters",
+            "King of the Andals and the First Men",
+            "Night's Watch",
+            "House Tarly"
+        ],
+        "religion": [
+            "Old Gods of the Forest",
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Tarly",
+        "father": [
+            "Randyll Tarly"
+        ],
+        "mother": "Melessa Florent",
+        "children": [
+            "Sam (adoptive)"
+        ],
+        "siblings": [
+            "Talla Tarly",
+            "Dickon Tarly"
+        ],
+        "loversOrspouse": [
+            "Gilly"
+        ],
+        "status": "Alive",
+        "events": [
+            48
+        ],
+        "kill": 2,
+        "screentime": "3hr 40m"
+    },
+    {
+        "id": 34,
+        "name": "Gilly",
+        "male": 1,
+        "avatar": "/static/characters/Gilly.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Craster's Keep"
+        ],
+        "nickname": [],
+        "titles": [],
+        "allegiance": [],
+        "religion": [],
+        "culture": [
+            "Free Folk"
+        ],
+        "houses": "",
+        "father": [
+            "Craster"
+        ],
+        "mother": "",
+        "children": [
+            "Sam"
+        ],
+        "siblings": [
+            "Morag",
+            " Sissy",
+            " Sam",
+            " Craster's last son",
+            " Craster's other wives"
+        ],
+        "loversOrspouse": [
+            "Craster",
+            " Samwell Tarly"
+        ],
+        "status": "Alive",
+        "events": [],
+        "kill": 0,
+        "screentime": "1hr 24m"
+    },
+    {
+        "id": 35,
+        "name": "Gendry Baratheon",
+        "male": 0,
+        "avatar": "/static/characters/Gendry.jpg",
+        "dateofBirth": "282 AC",
+        "Age": "23",
+        "origin": [
+            "Flea Bottom",
+            " King's Landing"
+        ],
+        "nickname": [
+            "Clovis"
+        ],
+        "titles": [
+            "Lord of Storm's End",
+            " Lord Paramount of the Stormlands",
+            " Warden of the South"
+        ],
+        "allegiance": [
+            "House Baratheon",
+            " King of the Andals and the First Men",
+            " House Targaryen",
+            " Tobho Mott"
+        ],
+        "religion": [],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Baratheon",
+        "father": [
+            "Robert Baratheon"
+        ],
+        "mother": "",
+        "children": [],
+        "siblings": [
+            "Unnamed Baratheon",
+            " Barra"
+        ],
+        "loversOrspouse": [
+            "Arya Stark"
+        ],
+        "status": "Alive",
+        "events": [
+            48
+        ],
+        "kill": 2,
+        "screentime": "3hr 33m"
+    },
+    {
+        "id": 36,
+        "name": "Petyr Baelish",
+        "male": 0,
+        "avatar": "/static/characters/Littlefinger.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Unnamed castle"
+        ],
+        "nickname": [
+            "Littlefinger"
+        ],
+        "titles": [
+            "Lord Protector of the Vale",
+            " Lord of Harrenhal",
+            " Master of Coin"
+        ],
+        "allegiance": [
+            "House Baelish",
+            " House Stark",
+            " House Arryn",
+            " House Baratheon of King's Landing",
+            " House Tully"
+        ],
+        "religion": [],
+        "culture": [
+            "Andals"
+        ],
+        "houses": "House Baelish",
+        "father": [
+            "Baelish"
+        ],
+        "mother": "",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [
+            "Lysa Arryn"
+        ],
+        "status": "Deceased",
+        "events": [
+            3,
+            8,
+            17,
+            34
+        ],
+        "kill": 2,
+        "screentime": "3hr 33m"
+    },
+    {
+        "id": 37,
+        "name": "Sandor Clegane",
+        "male": 0,
+        "avatar": "/static/characters/Sandor.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Clegane's Keep"
+        ],
+        "nickname": [
+            "The Hound Dog"
+        ],
+        "titles": [],
+        "allegiance": [
+            "House Clegane",
+            " House Baratheon of King's Landing",
+            " Kingsguard",
+            " Ray's congregation. Brotherhood Without Banners"
+        ],
+        "religion": [],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Clegane",
+        "father": [
+            "Unnamed father"
+        ],
+        "mother": "",
+        "children": [],
+        "siblings": [
+            "Gregor Clegane",
+            " Unnamed sister"
+        ],
+        "loversOrspouse": [],
+        "status": "Deceased",
+        "events": [],
+        "kill": 13,
+        "screentime": "3hr 21m"
+    },
+    {
+        "id": 38,
+        "name": "Melisandre",
+        "male": 1,
+        "avatar": "/static/characters/Melisandre.jpg",
+        "dateofBirth": "~100 BC",
+        "Age": "~400",
+        "origin": [
+            "Asshai"
+        ],
+        "nickname": [
+            "Lady Melisandre",
+            " The Red Woman"
+        ],
+        "titles": [],
+        "allegiance": [
+            "R'hllor-the Lord of Light",
+            " Jon Snow",
+            " Daenerys Targaryen",
+            " Stannis Baratheon"
+        ],
+        "religion": [
+            "R'hllor-the Lord of Light"
+        ],
+        "culture": [
+            "Asshai'i"
+        ],
+        "houses": "",
+        "father": [],
+        "mother": "",
+        "children": [],
+        "siblings": [],
+        "loversOrspouse": [
+            "Stannis Baratheon"
+        ],
+        "status": "Deceased",
+        "events": [],
+        "kill": 3,
+        "screentime": "1hr 52m"
+    },
+    {
+        "id": 39,
+        "name": "Ramsay Bolton",
+        "male": 0,
+        "avatar": "/static/characters/Ramsay.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "birthplace: Mill along the Weeping Water",
+            " raised: The Dreadfort"
+        ],
+        "nickname": [
+            "Ramsay Snow",
+            " Lord Snow",
+            " The Bastard of Bolton"
+        ],
+        "titles": [
+            "Lord of the Dreadfort",
+            " Lord of Winterfell",
+            " Lord Paramount of the North",
+            " Warden of the North",
+            " Castellan of the Dreadfort"
+        ],
+        "allegiance": [
+            "House Bolton"
+        ],
+        "religion": [
+            "Old Gods of the Forest"
+        ],
+        "culture": [
+            "Northmen"
+        ],
+        "houses": "House Bolton",
+        "father": [
+            "Roose Bolton"
+        ],
+        "mother": "Miller's wife",
+        "children": [],
+        "siblings": [
+            "Domeric Bolton",
+            " Newborn Bolton"
+        ],
+        "loversOrspouse": [
+            "Myranda",
+            " Violet",
+            " Tansy",
+            " Kyra"
+        ],
+        "status": "Deceased",
+        "events": [
+            4,
+            34,
+            47
+        ],
+        "kill": 9,
+        "screentime": "1hr 44m"
+    },
+    {
+        "id": 40,
+        "name": "Catelyn Stark",
+        "male": 1,
+        "avatar": "/static/characters/Catelyn.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Riverrun"
+        ],
+        "nickname": [
+            "Catelyn Tully",
+            " Cat"
+        ],
+        "titles": [],
+        "allegiance": [
+            "House Stark",
+            " House Tully"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Tully",
+        "father": [
+            "Hoster Tully"
+        ],
+        "mother": "Minisa Tully",
+        "children": [
+            "Robb Stark",
+            " Sansa Stark",
+            " Arya Stark",
+            " Bran Stark",
+            " Rickon Stark"
+        ],
+        "siblings": [
+            "Lysa Arryn",
+            " Edmure Tully"
+        ],
+        "loversOrspouse": [
+            "Eddard Stark"
+        ],
+        "status": "Deceased",
+        "events": [
+            5,
+            7
+        ],
+        "kill": 1,
+        "screentime": "2hr 34m"
+    },
+    {
+        "id": 41,
+        "name": "Eddard Stark",
+        "male": 0,
+        "avatar": "/static/characters/Eddard.jpg",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "birthplace: winterFell",
+            " trained: The Eyrie"
+        ],
+        "nickname": [
+            "Ned Stark"
+        ],
+        "titles": [
+            "Lord of Winterfell",
+            " Lord Paramount of the North",
+            " Warden of the North",
+            " Hand of the King",
+            " Lord Regent",
+            " Protector of the Realm"
+        ],
+        "allegiance": [
+            "House Stark",
+            " House Baratheon of King's Landing"
+        ],
+        "religion": [
+            "Old Gods of the Forest"
+        ],
+        "culture": [
+            "Northmen"
+        ],
+        "houses": "House Stark",
+        "father": [
+            "Rickard Stark"
+        ],
+        "mother": "",
+        "children": [
+            "Robb Stark",
+            " Sansa Stark",
+            " Arya Stark",
+            " Bran Stark",
+            " Rickon Stark",
+            " Jon Snow"
+        ],
+        "siblings": [
+            "Brandon Stark",
+            " Lyanna Stark",
+            " Benjen Stark"
+        ],
+        "loversOrspouse": [
+            "Catelyn Tully"
+        ],
+        "status": "Deceased",
+        "events": [
+            6,
+            0,
+            8,
+            10
+        ],
+        "kill": 2,
+        "screentime": "2hr 34m"
+    },
+    {
+        "id": 42,
+        "name": "Robb Stark",
+        "male": 0,
+        "avatar": "/static/characters/Robb.jpg",
+        "dateofBirth": "281 AC",
+        "Age": "19",
+        "origin": [
+            "birthplace: Riverrun",
+            " raised: Winterfell"
+        ],
+        "nickname": [
+            "The Young Walf"
+        ],
+        "titles": [
+            "King in the North",
+            " Lord of Winterfell"
+        ],
+        "allegiance": [
+            "House Stark"
+        ],
+        "religion": [
+            "Old Gods of the Forest",
+            " Faith of the Seven"
+        ],
+        "culture": [
+            "Northmen",
+            " Andal"
+        ],
+        "houses": "House Stark",
+        "father": [
+            "Eddaard Stark"
+        ],
+        "mother": "Catelyn Stark",
+        "children": [
+            "Unborn child"
+        ],
+        "siblings": [
+            "Sansa Stark",
+            " Arya Stark",
+            " Bran Stark",
+            " Rickon Stark",
+            " Jon Snow"
+        ],
+        "loversOrspouse": [
+            "Talisa Stark"
+        ],
+        "status": "Deceased",
+        "events": [
+            13,
+            15,
+            16
+        ],
+        "kill": 2,
+        "screentime": "2hr 8m"
+    },
+    {
+        "id": 43,
+        "name": "Stannis Baratheon",
+        "male": 0,
+        "avatar": "/static/characters/Stannis.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Storm's End"
+        ],
+        "nickname": [
+            "Warrior of Light",
+            " Son of Fire"
+        ],
+        "titles": [
+            "King of the Andals and the First Men",
+            " Lord of the Seven Kingdoms",
+            " Protector of the Realm",
+            " Lord of Dragonstone",
+            " Ser",
+            " Lord of Storm's End",
+            " Lord Paramount of the Stormlands",
+            " Master of Ships"
+        ],
+        "allegiance": [
+            "House Baratheon of Dragonstone",
+            " House Baratheon of Storm's End"
+        ],
+        "religion": [
+            "R'hllor-the Lord of Light",
+            " Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Baratheon",
+        "father": [
+            "Steffon Baratheon"
+        ],
+        "mother": "Cassana Baratheon",
+        "children": [
+            "Shireen Baratheon",
+            " Petyr Baratheon",
+            " Tommard Baratheon",
+            " Edric Baratheon"
+        ],
+        "siblings": [
+            "Robert Baratheon",
+            " Renly Baratheon"
+        ],
+        "loversOrspouse": [
+            "Melisandre"
+        ],
+        "status": "Deceased",
+        "events": [
+            14,
+            24,
+            39,
+            47
+        ],
+        "kill": 2,
+        "screentime": "1hr 45m"
+    },
+    {
+        "id": 44,
+        "name": "Mace Tyrell",
+        "male": 0,
+        "avatar": "/static/characters/Mace.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Highgarden"
+        ],
+        "nickname": [
+            "The Fat Flower"
+        ],
+        "titles": [
+            "Lord of Highgarden",
+            " Lord Paramount of th Reach",
+            " Warden of the South",
+            " Master of Ships",
+            " Master of Coin",
+            " Hand of the King"
+        ],
+        "allegiance": [
+            "House Tyrell"
+        ],
+        "religion": [],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Tyrell",
+        "father": [
+            "Luthor Tyrell"
+        ],
+        "mother": "Olenna Tyrell",
+        "children": [
+            "Loras Tyrell",
+            " Margaery Tyrell"
+        ],
+        "siblings": [],
+        "loversOrspouse": [
+            "Alerie Tyrell"
+        ],
+        "status": "Deceased",
+        "events": [
+            14,
+            18,
+            38
+        ],
+        "kill": 0,
+        "screentime": "1hr 4m"
+    },
+    {
+        "id": 45,
+        "name": "Randyll Tarly",
+        "male": 0,
+        "avatar": "/static/characters/Randyll.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "Horn Hill"
+        ],
+        "nickname": [],
+        "titles": [
+            "Lord of Hom Hill"
+        ],
+        "allegiance": [
+            "House Tarly",
+            " House Lannister",
+            " House Tyrell"
+        ],
+        "religion": [
+            "Faith of the Seven"
+        ],
+        "culture": [
+            "Andal"
+        ],
+        "houses": "House Tarly",
+        "father": [],
+        "mother": "",
+        "children": [
+            "Samwell Tarly",
+            " Talla Tarly",
+            " Dickon Tarly"
+        ],
+        "siblings": [],
+        "loversOrspouse": [
+            "Melessa Tarly"
+        ],
+        "status": "Deceased",
+        "events": [
+            42,
+            43
+        ],
+        "kill": 0,
+        "screentime": "19m"
+    },
+    {
+        "id": 46,
+        "name": "Roose Bolton",
+        "male": 0,
+        "avatar": "/static/characters/Roose.png",
+        "dateofBirth": "",
+        "Age": "",
+        "origin": [
+            "The Dreadfort"
+        ],
+        "nickname": [],
+        "titles": [
+            "Lord of the Dreadfort",
+            " Lord of Winterfell",
+            " Lord Paramount of the North",
+            " Warden of the North"
+        ],
+        "allegiance": [
+            "House Bolton",
+            " House Stark"
+        ],
+        "religion": [
+            "Old Gods of the Forest"
+        ],
+        "culture": [
+            "Northmen"
+        ],
+        "houses": "House Bolton",
+        "father": [],
+        "mother": "",
+        "children": [
+            "Domeric Bolton",
+            " Unnamed Son",
+            " Ramsay Bolton"
+        ],
+        "siblings": [],
+        "loversOrspouse": [
+            "Unknown wife",
+            " Walda Frey"
+        ],
+        "status": "Deceased",
+        "events": [
+            4,
+            15,
+            16,
+            47
+        ],
+        "kill": 1,
+        "screentime": "54m"
+    }
+]
