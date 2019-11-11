@@ -5,7 +5,8 @@ const families = [
     words: 'Winter is coming',
     allegiance: [4, 10],
     vassals: [1, 9, 12],
-    img: '/static/houses/Stark.webp'
+    img: '/static/houses/Stark.webp',
+    members: ['Jon Snow', 'Sansa Stark', 'Arya Stark', 'Bran Stark', 'Benjen Stark', 'Catelyn Stark', 'Eddard Stark']
   },
   {
     ID: 1,
@@ -13,7 +14,8 @@ const families = [
     words: 'Family, Duty, Honor',
     allegiance: [0, 6, 10],
     vassals: [],
-    img: '/static/houses/Tully.webp'
+    img: '/static/houses/Tully.webp',
+    members: ['Edmure Tully']
   },
   {
     ID: 2,
@@ -21,7 +23,8 @@ const families = [
     words: 'Hear Me Roar!',
     allegiance: [4, 10],
     vassals: [],
-    img: '/static/houses/Lannister.webp'
+    img: '/static/houses/Lannister.webp',
+    members: ['Cersei Lannister', 'Jaime Lannister', 'Tyrion Lannister']
   },
   {
     ID: 3,
@@ -29,7 +32,8 @@ const families = [
     words: 'Growing Strong',
     allegiance: [4, 10],
     vassals: [8, 11],
-    img: '/static/houses/Tyrell.webp'
+    img: '/static/houses/Tyrell.webp',
+    members: ['Olenna Tyrell', 'Mace Tyrell']
   },
   {
     ID: 4,
@@ -37,7 +41,8 @@ const families = [
     words: 'Fire and Blood',
     allegiance: [],
     vassals: [0, 1, 2, 7, 9, 10],
-    img: '/static/houses/Targaryen.webp'
+    img: '/static/houses/Targaryen.webp',
+    members: ['Daenerys Targaryen', 'Rhaegar Targaryen']
   },
   {
     ID: 5,
@@ -85,7 +90,8 @@ const families = [
     words: 'Ours is the Fury',
     allegiance: [],
     vassals: [0, 1, 2, 3, 5, 6, 7, 9],
-    img: '/static/houses/Baratheon.webp'
+    img: '/static/houses/Baratheon.webp',
+    members: ['Joffrey Baratheon', 'Myrcella Baratheon', 'Tommen Baratheon', 'Gendry Baratheon', 'Stannis Baratheon']
   },
   {
     ID: 11,
