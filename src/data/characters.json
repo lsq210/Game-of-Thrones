@@ -1030,7 +1030,7 @@
         "name": "Daenerys Targaryen",
         "male": 1,
         "avatar": "/static/characters/Daenerys.jpg",
-        "dateofBirth": "Summer of 282 AC",
+        "dateofBirth": "282 AC",
         "Age": "23",
         "origin": [
             "birthplace: Dragonstone",
@@ -1852,7 +1852,7 @@
         "name": "Melisandre",
         "male": 1,
         "avatar": "/static/characters/Melisandre.jpg",
-        "dateofBirth": "~100 BC",
+        "dateofBirth": "~100BC",
         "Age": "~400",
         "origin": [
             "Asshai"
