@@ -1,7 +1,6 @@
 import Events from './Events'
 import Families from './Families'
 import Characters from './Characters'
-import Statistics from './Statistics'
 import ThreeDControl from './ThreeDControl'
 import About from './About'
 
@@ -10,16 +9,14 @@ export default {
     ...Events.computed,
     ...Families.computed,
     ...Characters.computed,
-    ...Statistics.computed,
-    ...ThreeDControl.computed
+    ...ThreeDControl.computed,
     ...About.computed
   },
   watch: {
     ...Events.watch,
     ...Families.watch,
     ...Characters.watch,
-    ...Statistics.watch,
-    ...ThreeDControl.watch
+    ...ThreeDControl.watch,
     ...About.watch
   },
   methods: {
@@ -34,8 +31,7 @@ export default {
     ...Events.methods,
     ...Families.methods,
     ...Characters.methods,
-    ...Statistics.methods,
-    ...ThreeDControl.methods
+    ...ThreeDControl.methods,
     ...About.methods
   }
 }

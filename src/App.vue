@@ -32,8 +32,7 @@ export default {
     Families,
     Events,
     Characters,
-    ThreeDControl
-    Characters,
+    ThreeDControl,
     About
   },
   data () {
