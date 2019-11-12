@@ -3,6 +3,7 @@ import Families from './Families'
 import Characters from './Characters'
 import Statistics from './Statistics'
 import ThreeDControl from './ThreeDControl'
+import About from './About'
 
 export default {
   computed: {
@@ -11,6 +12,7 @@ export default {
     ...Characters.computed,
     ...Statistics.computed,
     ...ThreeDControl.computed
+    ...About.computed
   },
   watch: {
     ...Events.watch,
@@ -18,6 +20,7 @@ export default {
     ...Characters.watch,
     ...Statistics.watch,
     ...ThreeDControl.watch
+    ...About.watch
   },
   methods: {
     enterEvents: Events.enter,
@@ -26,12 +29,13 @@ export default {
     leaveFamilies: Families.leave,
     enterCharacters: Characters.enter,
     leaveCharacters: Characters.leave,
-    enterStatistics: Statistics.enter,
-    leaveStatistics: Statistics.leave,
+    enterAbout: About.enter,
+    leaveAbout: About.leave,
     ...Events.methods,
     ...Families.methods,
     ...Characters.methods,
     ...Statistics.methods,
     ...ThreeDControl.methods
+    ...About.methods
   }
 }

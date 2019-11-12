@@ -11,6 +11,7 @@
     <families/>
     <events/>
     <characters/>
+    <about/>
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import Families from '@/components/Families'
 import Events from '@/components/Events'
 import Characters from '@/components/Characters'
 import ThreeDControl from '@/components/ThreeDControl'
+import About from '@/components/About'
 
 export default {
   name: 'App',
@@ -31,6 +33,8 @@ export default {
     Events,
     Characters,
     ThreeDControl
+    Characters,
+    About
   },
   data () {
     return {

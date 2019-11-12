@@ -105,7 +105,6 @@ export default {
       height: 100px;
     }
     .character-name {
-      // margin-top: 10px;
       line-height: 20px;
       color: #f7deab;
       font-weight: bold;
@@ -116,5 +115,4 @@ export default {
     }
   }
 }
-
 </style>
