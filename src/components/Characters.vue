@@ -11,32 +11,6 @@
         @click="selectCharacter(character.id)"/>
         <div class="character-name"><span>{{ character.name }}</span></div>
     </div>
-    <div class="about-wrapper" v-if="charactersState">
-    <div class="contributor">
-      <span class="title">contributors:</span>
-      <br/>
-      <img class="avatar" :src="'/static/characters/Arya.jpg'"/>
-      <a class="web" href="https://github.com/lsq210/">&nbsp;&nbsp;SHIQI LUO&nbsp;&nbsp;</a>
-      <span class="words">"What do we say to the god of dead?"</span><br/>
-      <img class="avatar" :src="'/static/ao.jpg'"/>
-      <a class="web" href="https://github.com/Mosuyun">&nbsp;&nbsp;YONGXUAN GUO&nbsp;&nbsp;</a>
-      <span class="words">"Not today."</span><br/>
-      <img class="avatar" :src="'/static/characters/Davos.jpg'"/>
-      <a class="web" href="https://github.com/YBstory">&nbsp;&nbsp;YIBO ZHOU&nbsp;&nbsp;</a>
-      <span class="words">"You know nothing."</span><br/>
-      <img class="avatar" :src="'/static/characters/TheNightKing.jpg'"/>
-      <a class="web" href="https://github.com/Rurambar">&nbsp;&nbsp;BAOXIN TENG&nbsp;&nbsp;</a>
-      <span class="words">"You know nothing."</span><br/>
-      <div class="re">
-      <span class="title">Reference:</span>
-      <br/>
-      <a class="web" href="https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki/">Data Source&nbsp;&nbsp;</a>
-      <a class="web" href="https://sketchfab.com/">Models&nbsp;&nbsp;</a>
-      <a class="web" href="https://www.mapbox.com/">Map&nbsp;&nbsp;</a>
-      <a class="web" href="https://www.vizofthrones.com/">Inspired by&nbsp;&nbsp;</a>
-      </div>
-    </div>
-  </div>
   </div>
 </template>
 
@@ -131,7 +105,6 @@ export default {
       height: 100px;
     }
     .character-name {
-      // margin-top: 10px;
       line-height: 20px;
       color: #f7deab;
       font-weight: bold;
@@ -142,50 +115,4 @@ export default {
     }
   }
 }
-.about-wrapper {
-  position: fixed;
-  display: flex;
-  top: 25vh;
-  left: 60vh;
-  height: 50vh;
-  width: 70vh;
-  border: 5px solid #d8ba7e;
-  border-radius: 25px;
-  background-image:url('/static/about3.jpg');
-  .contributor {
-    position: absolute;
-    top: 1vh;
-    left: 5vh;
-    line-height: 3;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    .avatar {
-      vertical-align: middle;
-      width: 4vh;
-      height: 4vh;
-      border-radius: 50%;
-    }
-    .web {
-      text-decoration: none;
-      color: black;
-    }
-    .web:hover {
-      // background-color: #f4ff49e8;
-      color: #2f6acc;
-    }
-    .title {
-      font-size:3vh;
-      font-weight: bold;
-      font-style: italic;
-    }
-    .re {
-      line-height: 2;
-      font-size: 2vh;
-    }
-    .words {
-      font-style: italic;
-      color: #7d2020;
-    }
-  }
-}
-
 </style>
