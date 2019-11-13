@@ -6,7 +6,7 @@
       <img class="avatar" :src="'/static/characters/Arya.jpg'"/>
       <a class="web" href="https://github.com/lsq210/">&nbsp;&nbsp;SHIQI LUO&nbsp;&nbsp;</a>
       <span class="words">"What do we say to the god of dead?"</span><br/>
-      <img class="avatar" :src="'/static/ao.jpg'"/>
+      <img class="avatar" :src="'/static/img/ao.jpg'"/>
       <a class="web" href="https://github.com/Mosuyun">&nbsp;&nbsp;YONGXUAN GUO&nbsp;&nbsp;</a>
       <span class="words">"Not today."</span><br/>
       <img class="avatar" :src="'/static/characters/Davos.jpg'"/>
@@ -54,7 +54,7 @@ export default {
   width: 72vh;
   border-radius: 25px;
   font-weight: bold;
-  background-image:url('/static/about3.jpg');
+  background-image:url('/static/img/about3.jpg');
   .contributor {
     position: absolute;
     top: 1vh;
