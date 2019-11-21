@@ -12,8 +12,14 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-	width: 5px;
-	height: 5px;
+  width: 5px;
+  height: 0;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 0;
+	background-color: rgba(0,0,0,0.2);
 }
 
 .vue-slider-dot {

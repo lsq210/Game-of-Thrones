@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img
+    <img v-if="logoState"
     src="@/assets/logo.png"
     class="logo"
     :style="{top: logoTop + 'px'}"
@@ -11,6 +11,7 @@
     <families/>
     <events/>
     <characters/>
+    <visualization/>
     <about/>
   </div>
 </template>
@@ -21,23 +22,38 @@ import NavBar from '@/components/NavBar'
 import Families from '@/components/Families'
 import Events from '@/components/Events'
 import Characters from '@/components/Characters'
-import ThreeDControl from '@/components/ThreeDControl'
+import Visualization from '@/components/Visualization'
 import About from '@/components/About'
+import ThreeDControl from '@/components/ThreeDControl'
+import { mapState } from 'vuex'
 
 export default {
   name: 'App',
   components: {
     MapComponent,
     NavBar,
+    ThreeDControl,
     Families,
     Events,
     Characters,
-    ThreeDControl,
+    Visualization,
     About
   },
   data () {
     return {
       logoTop: -80
+    }
+  },
+  computed: {
+    ...mapState({
+      navName: 'navName'
+    }),
+    logoState () {
+      if (this.navName === 'Visualization') {
+        return false
+      } else {
+        return true
+      }
     }
   },
   mounted () {

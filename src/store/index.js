@@ -15,6 +15,9 @@ const store = new Vuex.Store({
       selectedEvents: [],
       center: null
     },
+    visualization: {
+      selectedChart: null
+    },
     threelayer: {
       visible: false,
       center: null

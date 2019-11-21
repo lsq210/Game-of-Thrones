@@ -33,9 +33,13 @@ export default {
           img: '/static/events/RedWedding.webp'
         },
         {
-          title: 'About',
+          title: 'Visualization',
           img: '/static/wars/ConquestOfDorne.webp'
         }
+        // {
+        //   title: 'About',
+        //   img: '/static/wars/ConquestOfDorne.webp'
+        // }
       ]
     }
   },
@@ -50,6 +54,8 @@ export default {
         case 'Characters':
           return false
         case 'Events':
+          return false
+        case 'Visualization':
           return false
         case 'About':
           return false
@@ -91,7 +97,7 @@ $nav-height: 100px;
     filter: drop-shadow(2px 4px 6px black);
     display: flex;
     .nav-item {
-      margin: 12px 30px;
+      // margin: 12px 30px;
       cursor: pointer;
       display: flex;
       flex-direction: column;
@@ -107,8 +113,9 @@ $nav-height: 100px;
         margin-right: 40px;
       }
       .nav-img {
-        width: $nav-height - 46px;
-        height: $nav-height - 40px;
+        margin: 12px 30px 0 30px;
+        width: 62px;
+        height: 62px;
         border-radius: 8px;
       }
       .nav-title {
