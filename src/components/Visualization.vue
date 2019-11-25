@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="chart-container">
-      <iframe id="show-chart" frameborder="0" scrolling="no" style="background-color:transparent; position：absolute;
+      <iframe id="show-chart" frameborder="0" scrolling="yes" style="background-color:transparent; position：absolute;
       width: 100%; height:100%; top: 0;left:0;bottom:0;" v-bind:src="activeChart.href"></iframe>
     </div>
   </div>
@@ -22,79 +22,15 @@
 
 <script>
 import { mapState } from 'vuex'
+import chartNav from '../data/visualization.js'
 export default {
   data () {
     return {
       activeChart: {
-        name: 'Bar',
-        href: 'http://127.0.0.1:5500/game-of-thrones-master/bubble-character/index.html'
+        name: 'Matrix',
+        href: 'http://127.0.0.1:5500/game-of-thrones-master/matrix/index.html'
       },
-      chartNav: [
-        {
-          name: 'Bar',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/region-percent/'
-        },
-        {
-          name: 'Scatter',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/duration-gender-percent/'
-        },
-        {
-          name: 'HeatMap',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/matrix/'
-        },
-        {
-          name: 'Scenes',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/scenes-character/'
-        },
-        {
-          name: 'ScreenTime',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/duration-character/'
-        },
-        {
-          name: 'Percent',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/region-percent/'
-        },
-        {
-          name: 'Gender',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/duration-gender-season/'
-        },
-        {
-          name: 'Wordcount',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/wordcount-gender-episode/'
-        },
-        {
-          name: 'Relations Force',
-          href: 'http://127.0.0.1:5500/game-of-thrones-master/relations-force/index.html'
-        },
-        {
-          name: 'Relations Circle',
-          href: 'http://127.0.0.1:5500/game-of-thrones-master/relations-circle/index.html'
-        },
-        {
-          name: 'Sequences',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/opening-seq-matrix/'
-        },
-        {
-          name: 'Prediction',
-          href: 'http://127.0.0.1:5500/game-of-thrones-master/episode-character-scatter/'
-        },
-        {
-          name: 'Locations',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/opening-locations-force/'
-        },
-        {
-          name: 'Characters',
-          href: 'https://jeffreylancaster.github.io/game-of-thrones/relations-circle/'
-        },
-        {
-          name: 'Characters',
-          href: 'http://127.0.0.1:5500/game-of-thrones-master/bubble-character/index.html'
-        },
-        {
-          name: 'Characters',
-          href: 'http://127.0.0.1:5500/game-of-thrones-master/character-arcs/index.html'
-        }
-      ]
+      chartNav
     }
   },
   computed: {
