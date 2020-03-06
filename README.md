@@ -2,10 +2,10 @@
 
 > Winter is coming!
 
-![Families](https://lsq210.github.io/photo-album/GOT/family.jpg)
-![Characters](https://lsq210.github.io/photo-album/GOT/jonsnow.jpg)
-![Events](https://lsq210.github.io/photo-album/GOT/events.jpg)
-![Winterfell](https://lsq210.github.io/photo-album/GOT/winterfell.jpg)
+![Families](https://lsq210.github.io/photo-album/readme/GOT/family.jpg)
+![Characters](https://lsq210.github.io/photo-album/readme/GOT/jonsnow.jpg)
+![Events](https://lsq210.github.io/photo-album/readme/GOT/events.jpg)
+![Winterfell](https://lsq210.github.io/photo-album/readme/GOT/winterfell.jpg)
 
 ## Build Setup
 
