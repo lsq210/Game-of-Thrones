@@ -1,6 +1,6 @@
 # game-of-thrones
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > Winter is coming!
@@ -37,9 +37,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Mosuyun"><img src="https://avatars1.githubusercontent.com/u/54047796?v=4" width="100px;" alt=""/><br /><sub><b>Mosuyun</b></sub></a><br /><a href="https://github.com/lsq210/Game-of-Thrones/commits?author=Mosuyun" title="Code">💻</a> <a href="#design-Mosuyun" title="Design">🎨</a></td>
-    <td align="center"><a href="https://github.com/Rurambar"><img src="https://avatars2.githubusercontent.com/u/44767543?v=4" width="100px;" alt=""/><br /><sub><b>Rurambar</b></sub></a><br /><a href="https://github.com/lsq210/Game-of-Thrones/commits?author=Rurambar" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/YBstory"><img src="https://avatars1.githubusercontent.com/u/56808977?v=4" width="100px;" alt=""/><br /><sub><b>YBstory</b></sub></a><br /><a href="#talk-YBstory" title="Talks">📢</a></td>
+    <td align="center"><a href="https://github.com/Mosuyun"><img src="https://avatars1.githubusercontent.com/u/54047796?v=4" width="100px;" alt=""/><br /><sub><b>Mosuyun</b></sub></a><br /><a href="https://github.com/lsq210/Game-of-Thrones/commits?author=Mosuyun" title="Code">💻</a> <a href="#data-Mosuyun" title="Data">🔣</a> <a href="#design-Mosuyun" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/Rurambar"><img src="https://avatars2.githubusercontent.com/u/44767543?v=4" width="100px;" alt=""/><br /><sub><b>Rurambar</b></sub></a><br /><a href="https://github.com/lsq210/Game-of-Thrones/commits?author=Rurambar" title="Code">💻</a> <a href="#data-Rurambar" title="Data">🔣</a></td>
+    <td align="center"><a href="https://github.com/YBstory"><img src="https://avatars1.githubusercontent.com/u/56808977?v=4" width="100px;" alt=""/><br /><sub><b>YBstory</b></sub></a><br /><a href="#data-YBstory" title="Data">🔣</a> <a href="#talk-YBstory" title="Talks">📢</a></td>
+    <td align="center"><a href="https://home.cs-tao.cc/"><img src="https://avatars3.githubusercontent.com/u/22360632?v=4" width="100px;" alt=""/><br /><sub><b>CS-Tao</b></sub></a><br /><a href="#ideas-CS-Tao" title="Ideas">🤔</a></td>
   </tr>
 </table>
 
