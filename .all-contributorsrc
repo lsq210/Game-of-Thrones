@@ -11,7 +11,29 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/44767543?v=4",
       "profile": "https://github.com/Rurambar",
       "contributions": [
-        "code"
+        "code",
+        "data"
+       ]
+    }
+    {
+      "login": "Mosuyun",
+      "name": "Mosuyun",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/54047796?v=4",
+      "profile": "https://github.com/Mosuyun",
+      "contributions": [
+        "data"
+        "code",
+        "design",
+       ]
+     }
+     {
+      "login": "YBstory",
+      "name": "YBstory",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/56808977?v=4",
+      "profile": "https://github.com/YBstory",
+      "contributions": [
+        "data",
+        "talk"
       ]
     }
   ],
