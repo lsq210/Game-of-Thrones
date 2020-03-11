@@ -11,8 +11,19 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/54047796?v=4",
       "profile": "https://github.com/Mosuyun",
       "contributions": [
+        "data"
         "code",
-        "design"
+        "design",
+       ]
+     }
+     {
+      "login": "YBstory",
+      "name": "YBstory",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/56808977?v=4",
+      "profile": "https://github.com/YBstory",
+      "contributions": [
+        "data",
+        "talk"
       ]
     }
   ],
