@@ -1,16 +1,16 @@
 import { mapState } from 'vuex'
 import get3DLayer from '@/utils/get3DLayer'
-import threeDModels from '@/data/threeDModels'
+import threeDModels from '@/data/threeDModels.json'
 
 export default {
   computed: {
     ...mapState({
       threelayer: 'threelayer'
     }),
-    flyModelCenter () {
+    flyModelCenter: function () {
       return this.threelayer.center
     },
-    threeLayerVisible () {
+    threeLayerVisible: function () {
       return this.threelayer.visible
     }
   },

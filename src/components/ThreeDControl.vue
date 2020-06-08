@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import threeDModels from '@/data/threeDModels'
+import threeDModels from '@/data/threeDModels.json'
 export default {
   data () {
     return {
@@ -51,6 +51,8 @@ export default {
     width: 30px;
     border-radius: 4px;
     background-color: #ffffff;
+    cursor: pointer;
+    padding: 4px;
   }
   .models {
     position: fixed;

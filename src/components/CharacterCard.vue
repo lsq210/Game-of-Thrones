@@ -128,7 +128,7 @@
     </div>
   </div>
   <div class="character-video" v-if="videoState()">
-    <iframe :src="characters[characterId].video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="300px" width="400px"> </iframe>
+    <iframe :src="`${characters[characterId].video}&danmaku=0`" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="300px" width="400px"> </iframe>
   </div>
 </div>
 </template>

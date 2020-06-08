@@ -4,12 +4,12 @@
       <div class="family-card">
         <div class="family-info-show">
           <img class="close-button" src="@/assets/icons-close.png" height="32" width="32" v-on:click="familyClose"/>
-          <img class='family-info-img' :src="family.img"/>
-          <span class='family-name'>{{family.name}}</span>
+          <img class="family-info-img" :src="family.img"/>
+          <span class="family-name">{{family.name}}</span>
         </div>
         <div class="family-info">
           <span class="family-info-words">{{family.words}}</span>
-          <div class='allegiance-card' v-if="allegianceState">
+          <div class="allegiance-card" v-if="allegianceState">
             <span class="allegiance">Allegiance</span>
             <div
               v-for="index in family.allegiance"
@@ -18,27 +18,27 @@
               <span class="family-allegiance-name" @click="changeFamilyData(Families[index])">{{Families[index].name}}</span>
             </div>
           </div>
-          <div class='vassals-card' v-if="vassalsState">
-            <span class='vassals'>Vassals</span>
+          <div class="vassals-card" v-if="vassalsState">
+            <span class="vassals">Vassals</span>
             <div
               v-for="index in family.vassals"
               :key="'family-'+index"
               class="vassals-info">
-              <span class='family-vassals-name' @click="changeFamilyData(Families[index])">{{Families[index].name}}</span>
+              <span class="family-vassals-name" @click="changeFamilyData(Families[index])">{{Families[index].name}}</span>
             </div>
           </div>
           <div class='characters-card'>
-            <span class='characters'>Members</span>
+            <span class="characters">Members</span>
             <div
               v-for="(member,index) in family.members"
               :key="'family-'+index"
               class="members-info">
-              <span class='member-name'>{{member}}</span>
+              <span class="member-name">{{member}}</span>
               </div>
           </div>
-          <div class='videocard'>
-            <span class='videoname'>Introduction video</span>
-            <iframe class='video'  :src="family.video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+          <div class="videocard">
+            <span class="videoname">Introduction video</span>
+            <iframe class="video"  :src="`${family.video}&danmaku=0`" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import Families from '@/data/families'
+import Families from '@/data/families.json'
 
 export default {
   data () {

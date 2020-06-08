@@ -55,6 +55,17 @@ export default {
   border-radius: 25px;
   font-weight: bold;
   background-image:url('/static/img/about3.jpg');
+  .github {
+    position: absolute;
+    top: 1vh;
+    left: 5vh;
+    line-height: 3;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    .web {
+      text-decoration: none;
+      color: black;
+    }
+  }
   .contributor {
     position: absolute;
     top: 1vh;
