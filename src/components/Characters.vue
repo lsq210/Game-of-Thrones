@@ -27,7 +27,8 @@ export default {
       stage: true,
       Characters,
       Events,
-      selectedCharacterEvents: []
+      selectedCharacterEvents: [],
+      videoState: false
     }
   },
   components: {
@@ -49,6 +50,7 @@ export default {
     tempInfo: function (id) {
       this.stage = true
       this.tempID = id
+      this.$store.commit('showVideo', false)
     },
     restoreInfo: function (id) {
       if (this.stage) {
