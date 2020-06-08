@@ -1,0 +1,58 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Rurambar",
+      "name": "Rurambar",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/44767543?v=4",
+      "profile": "https://github.com/Rurambar",
+      "contributions": [
+        "code",
+        "data"
+       ]
+    }
+    {
+      "login": "Mosuyun",
+      "name": "Mosuyun",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/54047796?v=4",
+      "profile": "https://github.com/Mosuyun",
+      "contributions": [
+        "data"
+        "code",
+        "design",
+       ]
+     }
+     {
+      "login": "YBstory",
+      "name": "YBstory",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/56808977?v=4",
+      "profile": "https://github.com/YBstory",
+      "contributions": [
+        "data",
+        "talk"
+      ]
+    }
+    {
+      "login": "CS-Tao",
+      "name": "CS-Tao",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/22360632?v=4",
+      "profile": "https://home.cs-tao.cc/",
+      "contributions": [
+        "ideas"
+      ]
+    }
+    {
+
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Game-of-Thrones",
+  "projectOwner": "lsq210",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

@@ -1,0 +1,1487 @@
+[
+  {
+    "id": 0,
+    "name": "Winter Is Coming",
+    "source_season": 1,
+    "source_episode": 1,
+    "description": "Three rangers of the Night's Watch discovers a number of wildling corpses dismembered and arranged in a strange, ritualistic fashion on the ground. One sees the dead wildling girl who is now walking with blue eyes.",
+    "img": "/static/events/Winter Is Coming.jpg",
+    "place": "Beyond the Wall",
+    "position": [
+      18.8,
+      35.34
+    ],
+    "beginTime": 298,
+    "endTime": 298,
+    "families": [],
+    "organizations": [
+      "Night's Watch"
+    ],
+    "characters": [
+      "Ser Waymar Royce",
+      " Will",
+      " ared"
+    ],
+    "death": []
+  },
+  {
+    "id": 1,
+    "name": "Daenerys Wed Drogo",
+    "source_season": 1,
+    "source_episode": 1,
+    "description": "Viserys has arranged to wed his sister Daenerys to Khal Drogo, the warlord of a Dothraki khalasar of forty thousand warriors. In return, Drogo will give Viserys the army he needs to reclaim the Iron Throne.  Danerys got some gifts, such as three dragon eggs and  a selection of books.",
+    "img": "/static/events/Daenerys Wed Drogo.jpg",
+    "place": "Pentos",
+    "position": [
+      31.12,
+      4.65
+    ],
+    "beginTime": 298,
+    "endTime": 298,
+    "families": [
+      "Targaryen",
+      "  Mormont"
+    ],
+    "organizations": [
+      "Dothraki"
+    ],
+    "characters": [
+      "Viserys",
+      " Daenerys",
+      " Khal Drogo",
+      " Illyrio Mopatis",
+      " Jorah Mormont"
+    ],
+    "death": [
+      "Several people"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bran Breaks The Queen's Secret",
+    "source_season": 1,
+    "source_episode": 1,
+    "description": "King Robert and the Lannisters arrive at Winterfell. Eddard and Robert go hunting, leaving the castle largely empty. Bran indulges in some climbing but, while climbing a broken tower, he hears someone moaning. He peers through a window and finds the queen and her brother engaged in a sexual act. Jaime looks out the window to make sure nobody else is watching and pushes Bran out of the window.",
+    "img": "/static/events/Bran Breaks The Queen's Secret.jpg",
+    "place": "Winterfell",
+    "position": [
+      14.54,
+      26.58
+    ],
+    "beginTime": 298,
+    "endTime": 298,
+    "families": [
+      "Stark",
+      " Lannister",
+      " Baratheon"
+    ],
+    "organizations": [],
+    "characters": [
+      "Bran",
+      " Cersei",
+      " Jaime"
+    ],
+    "death": []
+  },
+  {
+    "id": 3,
+    "name": "Assassination of Jon Arryn",
+    "source_season": 1,
+    "source_episode": 1,
+    "description": "The assassination of Jon Arryn was a secret plot orchestrated by Petyr Baelish in an attempt to throw the Seven Kingdoms into a state of chaos from which he could personally benefit. It took place just prior to the events of the series and has far reaching consequences in Westeros.",
+    "img": "/static/events/Assassination of Jon Arryn.jpg",
+    "place": "Red Keep, King's Landing, the Crownlands",
+    "position": [
+      19.030552498136814,
+      4.3416919015657385
+    ],
+    "beginTime": 298,
+    "endTime": 298,
+    "families": [
+      "House Baelish",
+      " House Arryn"
+    ],
+    "organizations": [],
+    "characters": [
+      "Petyr Baelish"
+    ],
+    "death": [
+      "Jon Arryn"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Assassination at Winterfell",
+    "source_season": 6,
+    "source_episode": 9,
+    "description": "The assassination at Winterfell is an event during the War of the Five Kings, in which Roose Bolton, the Lord of Winterfell and Warden of the North, is betrayed and murdered by his own son, Ramsay Bolton.",
+    "img": "/static/events/Assassination at Winterfell.jpg",
+    "place": "Winterfell, the North",
+    "position": [
+      14.542365659089342,
+      26.541643634608064
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Bolton",
+      " House Bolton"
+    ],
+    "organizations": [],
+    "characters": [
+      "Roose Bolton",
+      " Ramsay Bolton"
+    ],
+    "death": [
+      "Roose Bolton",
+      " Walda Bolton"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Tyrion Is Caught By Catelyn",
+    "source_season": 1,
+    "source_episode": 4,
+    "description": "At the Crossroads Inn, Catelyn and Ser Rodrik Cassel, traveling in secret to Winterfell. When Tyrion Lannister and Yoren arrive, Catelyn tells the stunned inn that Tyrion tried to murder her son Bran twice and that she asks their help in bringing him to the king's justice. Then Tyrion finds himself surrounded by half a dozen men with swords, and in Catelyn's custody.",
+    "img": "/static/events/Tyrion Is Caught By Catelyn.jpg",
+    "place": "Crossroads Inn",
+    "position": [
+      17.33,
+      9.82
+    ],
+    "beginTime": 298,
+    "endTime": 298,
+    "families": [
+      "Stark",
+      " Lannister"
+    ],
+    "organizations": [],
+    "characters": [
+      "Catelyn",
+      " Rodrik Cassel",
+      " Tyrion",
+      " Yoren"
+    ],
+    "death": []
+  },
+  {
+    "id": 6,
+    "name": "Skirmish at Littlefinger's brothel",
+    "source_season": 1,
+    "source_episode": 5,
+    "description": "The skirmish at Littlefinger's brothel was an ambush on Eddard Stark and his small retinue, led by Ser Jaime Lannister to demand the release of Tyrion Lannister from Stark captivity.",
+    "img": "/static/events/Skirmish at Littlefinger's brothel.jpg",
+    "place": "Outside Littlefinger's brothel, King's Landing, the Crownlands",
+    "position": [
+      19.417918409267855,
+      4.298086775296085
+    ],
+    "beginTime": 298,
+    "endTime": 298,
+    "families": [
+      "House Stark",
+      " House Lannister"
+    ],
+    "organizations": [],
+    "characters": [
+      "Eddard Stark",
+      " Jory Cassel",
+      " Jaime Lannister"
+    ],
+    "death": [
+      "Jory Cassel",
+      " Wyl",
+      " Heward"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "First Trial by Combat of Tyrion Lannister",
+    "source_season": 1,
+    "source_episode": 6,
+    "description": "The First Trial by Combat of Tyrion Lannister is a key event in the build-up to the War of the Five Kings. Tyrion is taken prisoner by Lady Catelyn Stark and her sister Lysa Arryn, who accuse him of the attempted murder of Bran Stark and the murder of Jon Arryn. Tyrion is ultimately acquitted after a trial by combat in which Bronn champions for him. In retaliation for Tyrion's kidnapping, his father Tywin Lannister invades the Riverlands, effectively triggering war with the Starks and Tullys.",
+    "img": "/static/events/First Trial by Combat of Tyrion Lannister.jpg",
+    "place": "The Eyrie, The Vale of Arryn",
+    "position": [
+      19.966844264860214,
+      11.925859848885423
+    ],
+    "beginTime": 298,
+    "endTime": 298,
+    "families": [
+      "House Arryn",
+      " House Stark",
+      " House Lannister"
+    ],
+    "organizations": [],
+    "characters": [
+      "Lysa Arryn",
+      " Robin Arryn",
+      " Catelyn Stark",
+      " Tyrion Lannister"
+    ],
+    "death": [
+      "Vardis Egen"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Massacre in the Red Keep",
+    "source_season": 1,
+    "source_episode": 7,
+    "description": "The massacre in the Red Keep was the result of Lord Eddard Stark's failed attempt to place King Joffrey Baratheon and his family under arrest to ensure the coronation of Robert Baratheon's true heir, his brother Stannis.\nAlongside the attacks against the smallfolk of the Riverlands carried out by House Lannister, this was one of the key events that ignited the War of the Five Kings.",
+    "img": "/static/events/Massacre in the Red Keep.jpg",
+    "place": "The Red Keep, King's Landing, the Crownlands",
+    "position": [
+      19.030552498136814,
+      4.3416919015657385
+    ],
+    "beginTime": 298,
+    "endTime": 298,
+    "families": [
+      "House Stark",
+      " Iron Throne",
+      " House Lannister",
+      " House Clegane",
+      " House Baelish",
+      " Kingsguard",
+      " City Watch"
+    ],
+    "organizations": [],
+    "characters": [
+      "Eddard Stark",
+      " Protector of the Realm",
+      " Joffrey I Baratheon",
+      " Cersei Lannister",
+      " Petyr Baelish",
+      " Janos Slynt"
+    ],
+    "death": [
+      "Vayon Poole",
+      " Septa Mordane",
+      " Varly",
+      " Syrio Forel"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Raid by the Gods Eye",
+    "source_season": 1,
+    "source_episode": 7,
+    "description": "The raid by the Gods Eye is a minor engagement in the War of the Five Kings. It is an attack against the Night's Watch by forces of House Lannister under the command of Ser Amory Lorch.",
+    "img": "/static/events/Raid by the Gods Eye.jpg",
+    "place": "Unidenfied holdfast by the Gods Eye, the Riverlands",
+    "position": [
+      14.945451699479833,
+      10.09550066661268
+    ],
+    "beginTime": 299,
+    "endTime": 299,
+    "families": [
+      "Night's Watch",
+      " House Lannister",
+      " City Watch"
+    ],
+    "organizations": [],
+    "characters": [
+      "Yoren",
+      " Amory Lorch"
+    ],
+    "death": [
+      "Yoren"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Execution of Eddard Stark",
+    "source_season": 1,
+    "source_episode": 9,
+    "description": "The Execution of Eddard Stark is a pivotal event in the nascent conflict caused by the death of Robert Baratheon, paving the way for its transformation into a full-fledged civil war.",
+    "img": "/static/events/Execution of Eddard Stark.jpg",
+    "place": "Great Sept of Baelor, King's Landing, The Crownlands",
+    "position": [
+      18.63154608814051,
+      4.11727465661167
+    ],
+    "beginTime": 298,
+    "endTime": 298,
+    "families": [
+      "House Lannister",
+      " House Baratheon of King's Landing",
+      " House Stark"
+    ],
+    "organizations": [],
+    "characters": [
+      "Cersei Lannister",
+      " Joffrey I Baratheon",
+      " Eddard Stark"
+    ],
+    "death": [
+      "Eddard Stark"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Massacre in King's Landing",
+    "source_season": 2,
+    "source_episode": 1,
+    "description": "The massre in King's Landing was an event during the War of the Five Kings. ting on King Joffrey's orders, the City Watch of King's Landing led by Commander Janos Slynt trks down and murders several of the bastard offspring of the late King Robert Baratheon.",
+    "img": "/static/events/Massacre in the Red Keep.jpg",
+    "place": "King's Landing, the Crownlands",
+    "position": [
+      19.089246872862304,
+      3.7340308098384867
+    ],
+    "beginTime": 299,
+    "endTime": 299,
+    "families": [
+      "House Baratheon of King's Landing",
+      " City Watch of King's Landing",
+      " Smallfolk of King's Landing"
+    ],
+    "organizations": [],
+    "characters": [
+      "Joffrey Baratheon",
+      " Janos Slynt"
+    ],
+    "death": []
+  },
+  {
+    "id": 12,
+    "name": "Riot of King's Landing",
+    "source_season": 2,
+    "source_episode": 6,
+    "description": "The Riot of King's Landing was an event during the War of the Five Kings. After seeing off Princess Myrcella Baratheon at the docks on a ship bound for Dorne, the royal procession including King Joffrey is subjected to the jeers of the starving crowds of the capital city, culminating in Joffrey foolishly ordering his outnumbered personal guard to execute the entire crowd, sparking off a city-wide riot.",
+    "img": "/static/events/Riot of King's Landing.jpg",
+    "place": "King's Landing, the Crownlands",
+    "position": [
+      19.089246872862304,
+      3.7340308098384867
+    ],
+    "beginTime": 299,
+    "endTime": 299,
+    "families": [
+      "Iron Throne",
+      " House Lannister",
+      " Kingsguard",
+      " City Watch",
+      " Rioting Smallfolk in King's Landing"
+    ],
+    "organizations": [],
+    "characters": [
+      "Joffrey Baratheon",
+      " Tyrion Lannister"
+    ],
+    "death": []
+  },
+  {
+    "id": 13,
+    "name": "Surrender of the Crag",
+    "source_season": 2,
+    "source_episode": 7,
+    "description": "The Surrender of the Crag is an event in the War of the Five Kings. The army of House Stark in the Westerlands maintains its camp after the victory at the Battle of the Yellow Fork while King Robb Stark travels to the Crag with a small force to negotiate their surrender and take on supplies.",
+    "img": "/static/events/Surrender of the Crag.jpg",
+    "place": "The Crag, the Westerlands",
+    "position": [
+      8.33442945934965,
+      8.944613465423302
+    ],
+    "beginTime": 299,
+    "endTime": 299,
+    "families": [
+      "House Stark",
+      " House Westerling"
+    ],
+    "organizations": [],
+    "characters": [
+      "Robb Stark",
+      " Westerling"
+    ],
+    "death": []
+  },
+  {
+    "id": 14,
+    "name": "Battle of the Blackwater",
+    "source_season": 2,
+    "source_episode": 9,
+    "description": "The battle was an attempt by Stannis Baratheon, brother of the late King Robert Baratheon, to take King's Landing, the capital of the Seven Kingdoms, and to seize the Iron Throne from King Joffrey Baratheon. It required a naval assault and an attack on the city gates by land. Tyrion Lannister, acting Hand of the King, led the defense of the city. He successfully destroyed a large portion of Stannis's fleet through the use of wildfire, but was unable to prevent Stannis's army from landing and gaining the walls of the city. However, late-arriving reinforcements under Lord Tywin Lannister, Lord Mace Tyrell, and Ser Loras Tyrell defeated Stannis's army, resulting in a decisive Lannister-Tyrell victory in King Joffrey's name.",
+    "img": "/static/events/Battle of the Blackwater.jpg",
+    "place": "King's Landing and the mouth of the Blackwater Rush, the Crownlands",
+    "position": [
+      18.043497066010815,
+      3.666665431379741
+    ],
+    "beginTime": 299,
+    "endTime": 299,
+    "families": [
+      "Iron Throne",
+      " Kingsguard",
+      " City Watch",
+      " House Stokeworth",
+      " House Lannister",
+      " House Tyrell",
+      " House Baratheon of Dragonstone",
+      " House Velaryon",
+      " House Seaworth",
+      " House Florent"
+    ],
+    "organizations": [],
+    "characters": [
+      "Joffrey I Baratheon",
+      " Tyrion Lannister",
+      " Bronn",
+      " Hallyne",
+      " Tywin Lannister",
+      " Mace Tyrell",
+      " Loras Tyrell",
+      " Stannis I Baratheon",
+      " Davos Seaworth",
+      " Imry Florent",
+      " Salladhor Saan"
+    ],
+    "death": [
+      "Mandon Moorem",
+      " Matthos Seaworth"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Liberation of Harrenhal",
+    "source_season": 3,
+    "source_episode": 1,
+    "description": "The Liberation of Harrenhal is an aborted military engagement in the War of the Five Kings.",
+    "img": "/static/events/Liberation of Harrenhal.jpg",
+    "place": "Harrenhal, the Riverlands",
+    "position": [
+      16.888417455701784,
+      8.425410412434317
+    ],
+    "beginTime": 300,
+    "endTime": 300,
+    "families": [
+      "House Stark",
+      " House Bolton",
+      " House Karstark",
+      " House Lannister",
+      " House Clegane"
+    ],
+    "organizations": [],
+    "characters": [
+      "Robb Stark",
+      "  Roose Bolton",
+      " Rickard Karstark",
+      " Gregor Clegane"
+    ],
+    "death": [
+      "Jaremy\nMallister"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Red Wedding",
+    "source_season": 3,
+    "source_episode": 9,
+    "description": "The Red Wedding was a massacre that happened during the War of the Five Kings arranged by Lord Walder Frey as revenge against King Robb Stark for breaking the marriage pact between House Stark and House Frey. During the massacre, King Robb, his wife, Queen Talisa, his mother, Lady Catelyn, most of his bannermen and men-at-arms (~15,000 men) are murdered following the marriage feast and bedding of Edmure Tully, Robb's uncle, and Roslin Frey.Unbeknownst to most, however, is the fact that the true mastermind of the Red Wedding is Tywin Lannister, who conspired with Frey and Lord Roose Bolton to betray the Northern army in return for clemency and rewards. The breaking of the marriage pact was merely a cover for the massacre.",
+    "img": "/static/events/Red Wedding.jpg",
+    "place": "The Twins, the Riverlands",
+    "position": [
+      13.1692138476524,
+      14.527277084111233
+    ],
+    "beginTime": 300,
+    "endTime": 300,
+    "families": [
+      "House Stark",
+      " House Forrester",
+      " House Manderly",
+      " House Tully",
+      " House Frey",
+      " House Bolton",
+      " House Whitehill"
+    ],
+    "organizations": [],
+    "characters": [
+      "Robb Stark",
+      "Brynden Tully",
+      "Tywin Lannister",
+      "Roose Bolton",
+      "Walder Frey"
+    ],
+    "death": [
+      "Robb Stark",
+      "Talisa",
+      "Catelyn\nStark",
+      "Grey Wind",
+      " Wendel\nManderly",
+      " Gregor\nForrester",
+      " Joyeuse\nErenford\nStark"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Purple Wedding",
+    "source_season": 4,
+    "source_episode": 2,
+    "description": "The Purple Wedding was an event in the War of the Five Kings that lead to the death of King Joffrey Baratheon at the wedding feast to his new queen, Margaery Tyrell. Mere hours after their wedding ceremony in the Great Sept of Baelor, King Joffrey is poisoned during the wedding feast. Joffrey's uncle, Tyrion Lannister, is arrested for the murder, and Sansa Stark is accused of being his accomplice, though the actual orchestrators are Lord Petyr Baelish and Lady Olenna Tyrell.",
+    "img": "/static/events/Purple Wedding.jpg",
+    "place": "King's Landing, Westeros",
+    "position": [
+      19.06693156750606,
+      3.9888874825237366
+    ],
+    "beginTime": 301,
+    "endTime": 301,
+    "families": [
+      "House Baratheon",
+      " House Baelish House Tyrell"
+    ],
+    "organizations": [],
+    "characters": [
+      "Joffrey I Baratheon",
+      "Petyr Baelish",
+      "Olenna Tyrell"
+    ],
+    "death": [
+      "Joffrey Baratheon",
+      "Dontos Hollard"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Court trial of Tyrion Lannister",
+    "source_season": 4,
+    "source_episode": 6,
+    "description": "The court trial of Tyrion Lannister was a major turning point during the War of the Five Kings, in which Tyrion Lannister was tried for the assassination of King Joffrey Baratheon at his wedding feast.\n\nIt quickly becomes apparent that the spectacle is nothing more than a mere show trial. Tyrion observes that the presiding judge, his father, and his main accuser, Cersei, have wanted him dead for longer than anyone and that another of the judges, Mace Tyrell, will go along with whatever Tywin says.\n\nAll the witnesses against Tyrion are either his enemies or have otherwise been bribed or cajoled by his sister or father into testifying. Most give circumstantial, exaggerated, and sometimes outright false evidence, and Tyrion is not permitted to cross-examine them. It is also pretty apparent that Tyrion has no chance of acquittal.\n\nUltimately, Tyrion snaps at the injustice, insulting the entire court in the process. With his loyalty to his father (and to a lesser extent House Lannister) shattered, Tyrion decides to place his fate in the hands of the Seven, demanding a trial by combat, a decision that would have dire consequences.",
+    "img": "/static/events/Court trial of Tyrion Lannister.jpg",
+    "place": "Red Keep, King's Landing, the Crownlands",
+    "position": [
+      19.030552498136814,
+      4.3416919015657385
+    ],
+    "beginTime": 301,
+    "endTime": 301,
+    "families": [
+      "Iron Throne",
+      " Tyrion Lannister"
+    ],
+    "organizations": [],
+    "characters": [
+      "Regent",
+      " Cersei Lannister",
+      " Tywin Lannister",
+      " Mace Tyrell",
+      " Oberyn Martell",
+      " Tyrion\nLannister"
+    ],
+    "death": []
+  },
+  {
+    "id": 19,
+    "name": "Second trial by combat of Tyrion Lannister",
+    "source_season": 4,
+    "source_episode": 7,
+    "description": "The second trial by combat of Tyrion Lannister is an event in the War of the Five Kings. In response to the biased trial that Tyrion Lannister is put on for the assassination of King Joffrey Baratheon, he demands trial by combat in a final attempt to stay alive and a free man.",
+    "img": "/static/events/Second trial by combat of Tyrion Lannister.jpg",
+    "place": "Red Keep, King's Landing, the Crownlands",
+    "position": [
+      19.030552498136814,
+      4.3416919015657385
+    ],
+    "beginTime": 301,
+    "endTime": 301,
+    "families": [
+      "Iron Throne",
+      " Tyrion Lannister",
+      " House Martell"
+    ],
+    "organizations": [],
+    "characters": [
+      "Tywin Lannister",
+      " Cersei Lannister",
+      " Tyrion Lannister"
+    ],
+    "death": []
+  },
+  {
+    "id": 20,
+    "name": "Surrender of Moat Cailin",
+    "source_season": 4,
+    "source_episode": 8,
+    "description": "The Surrender of Moat Cailin is an event during the War of the Five Kings. It marks the end of the ironborn occupation of Moat Cailin, an ancient stronghold on the Neck that guards the entrance into the North.",
+    "img": "/static/events/Surrender of Moat Cailin.jpg",
+    "place": "Moat Cailin, the Neck, the North",
+    "position": [
+      14.819779989188163,
+      20.217239100312653
+    ],
+    "beginTime": 301,
+    "endTime": 301,
+    "families": [
+      "House Bolton",
+      " House Greyjoy"
+    ],
+    "organizations": [],
+    "characters": [
+      "Ralf Kenning",
+      " Adrack Humble"
+    ],
+    "death": []
+  },
+  {
+    "id": 21,
+    "name": "Assassination at the Tower of the Hand",
+    "source_season": 4,
+    "source_episode": 10,
+    "description": "The assassination at the Tower of the Hand is an event in the War of the Five Kings. It is set in motion by the liberation of Tyrion Lannister by his brother, Jaime Lannister, which ultimately leads to the assassination of their father, Tywin Lannister, Hand of the King and Protector of the Realm.",
+    "img": "/static/events/Assassination at the Tower of the Hand.jpg",
+    "place": "Tower of the Hand, Red Keep, King's Landing, Crownlands",
+    "position": [
+      19.030552498136814,
+      4.3416919015657385
+    ],
+    "beginTime": 301,
+    "endTime": 301,
+    "families": [
+      "House Lannister"
+    ],
+    "organizations": [],
+    "characters": [
+      "Tywin Lannister",
+      " Shae",
+      " Tyrion Lannister"
+    ],
+    "death": [
+      "Tywin Lannister",
+      " Shae"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Confrontation in the Water Gardens",
+    "source_season": 5,
+    "source_episode": 2,
+    "description": "The confrontation in the Water Gardens takes place in the Water Gardens of Dorne during the course of the War of the Five Kings, where the three eldest Sand Snakes attempt to capture Princess Myrcella Baratheon, following the plot of Ellaria Sand, while Ser Jaime Lannister, with Ser Bronn, try to rescue her.",
+    "img": "/static/events/Confrontation in the Water Gardens.jpg",
+    "place": "Water Gardens",
+    "position": [
+      22.416438950074053,
+      4.892057653698799
+    ],
+    "beginTime": 302,
+    "endTime": 302,
+    "families": [
+      "Iron Throne",
+      " House Lannister",
+      " Sand Snakes",
+      " House Martell"
+    ],
+    "organizations": [],
+    "characters": [
+      "Jaime Lannister",
+      " Ellaria Sand",
+      " Doran Martell"
+    ],
+    "death": []
+  },
+  {
+    "id": 23,
+    "name": "Massacre at Hardhome",
+    "source_season": 5,
+    "source_episode": 8,
+    "description": "The Massacre at Hardhome[1] is an event in the Conflict Beyond the Wall between the Night's Watch and the Free Folk against the White Walkers and their wights.",
+    "img": "/static/events/Massacre at Hardhome.jpg",
+    "place": "Hardhome, beyond the Wall",
+    "position": [
+      18.20552880829584,
+      36.060962150301705
+    ],
+    "beginTime": 302,
+    "endTime": 302,
+    "families": [],
+    "organizations": [],
+    "characters": [],
+    "death": []
+  },
+  {
+    "id": 24,
+    "name": "Massacre at Hardhome",
+    "source_season": 5,
+    "source_episode": 8,
+    "description": "The Massacre at Hardhome is an event in the Conflict Beyond the Wall between the Night's Watch and the Free Folk against the White Walkers and their wights.",
+    "img": "/static/events/Massacre at Hardhome.jpg",
+    "place": "Hardhome, beyond the Wall",
+    "position": [
+      18.20552880829584,
+      36.060962150301705
+    ],
+    "beginTime": 302,
+    "endTime": 302,
+    "families": [
+      "Free Folk",
+      " Night's Watch",
+      " House Baratheon of Dragonstone",
+      " White Walkers",
+      " Army of the dead"
+    ],
+    "organizations": [],
+    "characters": [
+      "Jon Snow",
+      " Tormund",
+      " Karsi",
+      " Loboda",
+      " Dim Dalba",
+      " Stannis Baratheon",
+      " White Walker lieutenant"
+    ],
+    "death": [
+      "Karsi",
+      " Loboda",
+      " White Walker lieutenant"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Mutiny at Castle Black",
+    "source_season": 5,
+    "source_episode": 10,
+    "description": "It involves the murder of Lord Commander Jon Snow for his decision to allow the Free Folk to cross south of the Wall into the Seven Kingdoms to avoid them falling into the hands of the White Walkers. The mutiny results in the subsequent conflict within the Night's Watch between the mutineers and Jon's loyalists.",
+    "img": "/static/events/Mutiny at Castle Black.jpg",
+    "place": "Castle Black",
+    "position": [
+      18.8,
+      35.34
+    ],
+    "beginTime": 302,
+    "endTime": 302,
+    "families": [
+      "Loyalists",
+      " Free Folk",
+      " Mutineers"
+    ],
+    "organizations": [],
+    "characters": [
+      "Jon Snow",
+      " Tormund",
+      " Alliser Thorne",
+      " Othell Yarwyck",
+      " Bowen Marsh"
+    ],
+    "death": [
+      "Jon Snow",
+      ""
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Assassination of Myrcella Baratheon",
+    "source_season": 5,
+    "source_episode": 10,
+    "description": "The Assassination of Myrcella Baratheon is an event late in the War of the Five Kings, orchestrated by Ellaria Sand and the Sand Snakes in an attempt to draw Dorne into conflict with House Baratheon of King's Landing as revenge against Cersei Lannister for her role in the death of Oberyn Martell.",
+    "img": "/static/events/Assassination of Myrcella Baratheon.jpg",
+    "place": "Summer Sea",
+    "position": [
+      30.755090397834493,
+      -15.724285845802683
+    ],
+    "beginTime": 302,
+    "endTime": 302,
+    "families": [
+      "House Baratheon of King's Landing",
+      " Sand Snakes"
+    ],
+    "organizations": [],
+    "characters": [
+      "Ellaria Sand"
+    ],
+    "death": [
+      "Myrcella Baratheon"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Mutiny at Castle Black",
+    "source_season": 5,
+    "source_episode": 10,
+    "description": "The Mutiny at Castle Black is an event that occurs during the Conflict Beyond the Wall. It involves the murder of Lord Commander Jon Snow for his decision to allow the Free Folk to cross south of the Wall into the Seven Kingdoms to avoid them falling into the hands of the White Walkers. The mutiny results in the subsequent conflict within the Night's Watch between the mutineers and Jon's loyalists.",
+    "img": "/static/events/Mutiny at Castle Black.jpg",
+    "place": "Castle Black",
+    "position": [
+      18.8,
+      35.34
+    ],
+    "beginTime": 302,
+    "endTime": 302,
+    "families": [
+      "Loyalists",
+      " Free Folk",
+      " Mutineers"
+    ],
+    "organizations": [],
+    "characters": [
+      "Jon Snow",
+      " Tormund",
+      " Alliser Thorne",
+      " Othell Yarwyck",
+      " Bowen Marsh"
+    ],
+    "death": [
+      "Jon Snow",
+      " Alliser Thorne",
+      " Othell Yarwyck",
+      " Bowen Marsh"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Coup in Dorne",
+    "source_season": 6,
+    "source_episode": 1,
+    "description": "The Coup in Dorne is an event that takes place during the course of the War of the Five Kings, in which Prince Doran Martell and his heir, Trystane Martell, are betrayed and murdered by Ellaria Sand and the Sand Snakes in order for them to seize power in Dorne so that they may avenge Doran's younger brother, Oberyn Martell, leading to their overthrown of House Martell and setting the stage for Dorne entering the conflict against House Lannister.",
+    "img": "/static/events/Coup in Dorne.jpg",
+    "place": "Water Gardens, Dorne, Blackwater Bay, Crownlands",
+    "position": [
+      22.416438950074053,
+      4.892057653698799
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Martell",
+      " Sand Snakes"
+    ],
+    "organizations": [],
+    "characters": [
+      "Doran Martell",
+      " Ellaria Sand"
+    ],
+    "death": [
+      "Doran Martell",
+      " Trystane Martell",
+      " Areo Hotah",
+      " Caleotte"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Assassination of Balon Greyjoy",
+    "source_season": 6,
+    "source_episode": 2,
+    "description": "The assassination of Balon Greyjoy is an event during the War of the Five Kings which sees the death of Balon Greyjoy, King of the Iron Islands, at the hands of his own younger brother, Euron Greyjoy.",
+    "img": "/static/events/Assassination of Balon Greyjoy.jpg",
+    "place": "Pyke, Pyke, Kingdom of the Iron Islands",
+    "position": [
+      7.5279797016779355,
+      11.042655616864636
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "Salt Throne",
+      " Euron Greyjoy"
+    ],
+    "organizations": [],
+    "characters": [
+      "Balon Greyjoy"
+    ],
+    "death": [
+      "Balon Greyjoy"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Massacre of the khalar vezhven",
+    "source_season": 6,
+    "source_episode": 4,
+    "description": "The massacre of the khalar vezhven was an event in Vaes Dothrak in Essos that took place concurrently with the Liberation of Slaver's Bay, in which Daenerys Targaryen massacred the entirety of the khalar vezhven and claimed leadership over all Dothraki from Vaes Dothrak.",
+    "img": "/static/events/Massacre of the khalar vezhven.jpg",
+    "place": "Vaes Dothrak, Dothraki Sea",
+    "position": [
+      64.90638876075121,
+      -2.034636967929842
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Targaryen",
+      " Dothraki",
+      " Khalar vezhven"
+    ],
+    "organizations": [],
+    "characters": [
+      "Daenerys Targaryen",
+      " Khalar vezhven",
+      " Moro",
+      " Forzo",
+      " Rhalko",
+      " Brozho",
+      " Qorro"
+    ],
+    "death": [
+      "Moro",
+      " Forzo",
+      " Rhalko",
+      " Brozho",
+      " Qorro"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Battle at the Cave of the Three-Eyed Raven",
+    "source_season": 6,
+    "source_episode": 5,
+    "description": "The Battle at the Cave of the Three-Eyed Raven is a battle during the Conflict Beyond the Wall. The battle is an attempt by the Night King to assassinate Prince Bran Stark and the Three-Eyed Raven, as the Raven holds all of the world's memories, and is preparing to pass them all to Bran.",
+    "img": "/static/events/Battle at the Cave of the Three-Eyed Raven.jpg",
+    "place": "Cave of the Three-Eyed Raven, Beyond the Wall",
+    "position": [
+      16.09890108803492,
+      37.64271575696843
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Stark"
+    ],
+    "organizations": [],
+    "characters": [
+      "Three-Eyed Raven",
+      " Brandon Stark",
+      " Night King"
+    ],
+    "death": [
+      "Three-Eyed Raven",
+      " Leaf",
+      " Hodor",
+      " Summer"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Kingsmoot",
+    "source_season": 6,
+    "source_episode": 5,
+    "description": "The Kingsmoot is an ironborn custom and part of the traditions which they call the Old Way. Unlike regular lordships or the kings of the mainland, in past centuries the King of the Iron Islands was not a hereditary monarchy, but an elective kingship: all the lords and ship captains of the Iron Islands would gather at an assembly known as a Kingsmoot to hold an election for a new king from among their own numbers.",
+    "img": "/static/events/Kingsmoot.jpg",
+    "place": "Iron Islands, Westeros",
+    "position": [
+      6.565415153661945,
+      11.825353037069334
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "Euron Greyjoy",
+      " Yara Greyjoy"
+    ],
+    "organizations": [],
+    "characters": [],
+    "death": []
+  },
+  {
+    "id": 33,
+    "name": "Second Siege of Riverrun",
+    "source_season": 6,
+    "source_episode": 7,
+    "description": "The Second Siege of Riverrun is a siege during the War of the Five Kings. Granted to House Frey after the downfall of House Tully at the Red Wedding, Riverrun was eventually recaptured by Ser Brynden Tully \"the Blackfish\" and an assembled force of Tully loyalists. House Frey launched an attempt to retake the castle which was met with failure until reinforcements of House Lannister arrived from the south. This army group, commanded by Ser Jaime Lannister in the name of King Tommen I, successfully took back Riverrun with the only casualty being that of the Blackfish himself.",
+    "img": "/static/events/Second Siege of Riverrun.jpg",
+    "place": "Riverrun, the Riverlands",
+    "position": [
+      13.297444342269557,
+      9.489717790595307
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Tully",
+      " Iron Throne",
+      " House Lannister",
+      " House Freyn"
+    ],
+    "organizations": [],
+    "characters": [
+      "Brynden Tully",
+      " Jaime Lannister",
+      " Bronn of the Blackwater",
+      " Lothar Frey",
+      " Walder Rivers"
+    ],
+    "death": [
+      "Brynden Tully"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Battle of the Bastards",
+    "source_season": 6,
+    "source_episode": 9,
+    "description": "The Battle of the Bastards is a battle late in the War of the Five Kings in which Jon Snow and Sansa Stark retake Winterfell from Lord Ramsay Bolton, the Warden of the North, and restore House Stark as the ruling house of the North.Fought just outside of Winterfell, the Stark-led makeshift force of Free Folk and other minor Northern houses is on the verge of defeat, when the knights of the Vale led by House Arryn arrive in time to smash through the Bolton infantry on the rear. The battle ultimately culminates in Ramsay's death, the extinction of House Bolton and the restoration of House Stark as the rulers of the North.",
+    "img": "/static/events/Battle of the Bastards.jpg",
+    "place": "Winterfell, the North",
+    "position": [
+      14.423846948015324,
+      26.679529191594867
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Stark"
+    ],
+    "organizations": [],
+    "characters": [
+      "Jon Snow",
+      " Tormund",
+      " Lyanna Mormont",
+      " Davos Seaworth",
+      " Sansa Stark",
+      " Petyr Baelish",
+      " Yohn Royce",
+      " Ramsay Bolton",
+      " Harald Karstark",
+      " Jon Umber"
+    ],
+    "death": [
+      " Harald Karstark",
+      "Jon Umber",
+      "Rickon Stark",
+      "Ramsay Bolton",
+      ""
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Second Siege of Meereen",
+    "source_season": 6,
+    "source_episode": 9,
+    "description": "The Second Siege of Meereen is a siege during the Liberation of Slaver's Bay. Following Daenerys Targaryen's capture of Meereen and emergence as its queen, the Good and Wise Masters of Astapor and Yunkai engage in a fight to support the Great Masters to retake the city and reinstall slavery in the last city that has abolished it.",
+    "img": "/static/events/Second Siege of Meereen.jpg",
+    "place": "Meereen, Slaver's Bay",
+    "position": [
+      67.14519455367957,
+      -9.55670431727384
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Targaryen",
+      " Second Sons",
+      " Slaver Alliance"
+    ],
+    "organizations": [],
+    "characters": [
+      "Daenerys I Targaryen",
+      "Tyrion Lannister",
+      " Grey Worm",
+      "Daario Naharis",
+      " Razdal mo\nEraz",
+      " Yezzan zo Qaggaz",
+      " Belicho Paenymion"
+    ],
+    "death": [
+      "Razdal mo Eraz",
+      " Belicho Paenymion"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Destruction of the Great Sept of Baelor",
+    "source_season": 6,
+    "source_episode": 10,
+    "description": "The destruction of the Great Sept of Baelor was an event that occurred in King's Landing late in the War of the Five Kings. In order to evade her trial and get revenge on her recent enemies, Queen Cersei Lannister has the Great Sept of Baelor destroyed by wildfire shortly after the trial of Ser Loras Tyrell. ",
+    "img": "/static/events/Destruction of the Great Sept of Baelor.jpg",
+    "place": "King's Landing,the Crownlands, Westeros",
+    "position": [
+      19.04956715096236,
+      4.365313790298231
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Lannister",
+      " Kingsguard",
+      " Faith Militant",
+      " House Lannister",
+      " House Tyrell",
+      " Iron Throne"
+    ],
+    "organizations": [],
+    "characters": [
+      "Cersei Lannister",
+      "Qyburn"
+    ],
+    "death": [
+      "High Septon",
+      "Lancel",
+      "Loras",
+      "Boake",
+      "Septons",
+      "Margaery Tyrell",
+      "Mace Tyrell",
+      "Kevan Lannister",
+      "Pycelle",
+      "Tommen I Baratheon"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Assassinations at the Twins",
+    "source_season": 6,
+    "source_episode": 10,
+    "description": "The assassinations at the Twins is one of the closing events of the War of the Five Kings, where former Faceless Man prodigy Arya Stark brutally murders Lord Walder Frey, the Lord of the Crossing, Lord of Riverrun, and Lord Paramount of the Trident, and most, if not all, of the male line of House Frey for their role in the Red Wedding. The event ultimately results in further chaos in the already war-ridden Riverlands.",
+    "img": "/static/events/Assassinations at the Twins.jpg",
+    "place": "The Twins, the Riverlands",
+    "position": [
+      13.1692138476524,
+      14.527277084111233
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Frey",
+      " House Stark"
+    ],
+    "organizations": [],
+    "characters": [
+      "Walder Frey",
+      " Arya Stark"
+    ],
+    "death": [
+      "Lord Walder Frey",
+      " Lothar Frey",
+      " Walder Rivers"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Standoff at the Great Sept of Baelor",
+    "source_season": 6,
+    "source_episode": 10,
+    "description": "The standoff at the Great Sept of Baelor is an unsuccessful attempt by House Tyrell and House Lannister to crack down on the Faith Militant. The plan was meant to force the release of Margaery Tyrell from imprisonment with the threat of military force. Although the army of House Tyrell is significantly stronger than the Faith Militant, the assault was called off when King Tommen Baratheon supported the Faith. This was a significant blow to the then two most powerful houses in Westeros.",
+    "img": "/static/events/Standoff at the Great Sept of Baelor.jpg",
+    "place": "Great Sept of Baelor, King's Landing",
+    "position": [
+      18.650638481636435,
+      4.22724818722088
+    ],
+    "beginTime": 303,
+    "endTime": 303,
+    "families": [
+      "House Tyrell",
+      " House Lannister",
+      " Faith Militant",
+      " Iron Throne",
+      " Kingsguard"
+    ],
+    "organizations": [],
+    "characters": [
+      "Mace Tyrell",
+      " Olenna Tyrell",
+      " Jaime Lannister",
+      " High Septon",
+      " Tommen I Baratheon"
+    ],
+    "death": []
+  },
+  {
+    "id": 39,
+    "name": "Abandonment of Dragonstone",
+    "source_season": 7,
+    "source_episode": 1,
+    "description": "The Abandonment of Dragonstone was an event during the War of the Five Kings, leading into the first action of Daenerys Targaryen's war for Westeros when she landed on Dragonstone.",
+    "img": "/static/events/Abandonment of Dragonstone.jpg",
+    "place": "Dragonstone island",
+    "position": [
+      24.35752075997675,
+      7.030762880514871
+    ],
+    "beginTime": 301,
+    "endTime": 304,
+    "families": [
+      "House Baratheon of Dragonstone",
+      " House Targaryen"
+    ],
+    "organizations": [],
+    "characters": [
+      "Stannis Baratheon",
+      " Daenerys Targaryen"
+    ],
+    "death": []
+  },
+  {
+    "id": 40,
+    "name": "Assault on the Targaryen Fleet",
+    "source_season": 7,
+    "source_episode": 2,
+    "description": "The assault on the Targaryen Fleet is an engagement fought during Daenerys Targaryen's war for Westeros where the Iron Fleet, commanded by Euron Greyjoy, the King of the Iron Islands, attacks a portion of the Targaryen fleet under the command of his niece, Yara Greyjoy, herself an ally of Daenerys Targaryen.\n\nKing Euron sought to capture Ellaria Sand and the Sand Snakes as gifts for Cersei Lannister, whom he seeks to marry to solidify an alliance. Previously, they assassinated her daughter, Myrcella Baratheon, who herself was innocent of any crimes. Nonetheless, Ellaria and the Sand Snakes sought vengeance for the abuses that the Lannisters had committed against Dorne for decades, and killed Myrcella to start a war with Cersei.\n\nAdditionally, he sought the deaths of his niece Yara and nephew Theon, who both oppose Euron after he murdered their father and his brother, Balon Greyjoy, and won over the Ironborn at the subsequent Kingsmoot, seizing the Salt Throne of the Iron Islands for himself.",
+    "img": "/static/events/Assault on the Targaryen Fleet.jpg",
+    "place": "Blackwater Bay",
+    "position": [
+      22.372902802280606,
+      5.077606912623011
+    ],
+    "beginTime": 304,
+    "endTime": 304,
+    "families": [
+      "Salt Throne",
+      " House Greyjoy",
+      " Dorne"
+    ],
+    "organizations": [],
+    "characters": [
+      "Euron Greyjoy",
+      " Yara Greyjoy",
+      " Theon Greyjoy",
+      " Harrag",
+      " Ellaria Sand"
+    ],
+    "death": []
+  },
+  {
+    "id": 41,
+    "name": "Fall of Casterly Rock",
+    "source_season": 7,
+    "source_episode": 3,
+    "description": "The Fall of Casterly Rock is an engagement in Daenerys Targaryen's war for Westeros in which the Unsullied army of House Targaryen attacked Casterly Rock, the seat of House Lannister, who traditionally rule the Westerlands.",
+    "img": "/static/events/Fall of Casterly Rock.jpg",
+    "place": "Casterly Rock",
+    "position": [
+      7.3791749056946685,
+      5.115997842213702
+    ],
+    "beginTime": 304,
+    "endTime": 304,
+    "families": [
+      "Iron Throne",
+      " House Greyjoy",
+      " House Targaryen"
+    ],
+    "organizations": [],
+    "characters": [
+      "Jaime Lannister",
+      " Euron Greyjoy",
+      " Tyrion Lannister",
+      " Grey Worm"
+    ],
+    "death": []
+  },
+  {
+    "id": 42,
+    "name": "Sack of Highgarden",
+    "source_season": 7,
+    "source_episode": 3,
+    "description": "The Sack of Highgarden is an engagement during Daenerys Targaryen's war for Westeros. With the backing of House Tarly, bannermen of House Tyrell, Ser Jaime Lannister leads a Lannister host to the Reach, the region ruled by the Tyrells, and sacks their seat of power, Highgarden.",
+    "img": "/static/events/Sack of Highgarden.jpg",
+    "place": "Highgarden",
+    "position": [
+      10.749910214191289,
+      -2.848081451537851
+    ],
+    "beginTime": 304,
+    "endTime": 304,
+    "families": [
+      "Iron Throne",
+      " House Tarly",
+      " House Tyrell"
+    ],
+    "organizations": [],
+    "characters": [
+      "Jaime Lannister",
+      " Bronn",
+      " Randyll Tarly",
+      " Dickon Tarly",
+      " Olenna Tyrell"
+    ],
+    "death": [
+      "Olenna Tyrell"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Battle of the Goldroad",
+    "source_season": 7,
+    "source_episode": 4,
+    "description": "The Battle of the Goldroad[1] is an engagement in Daenerys Targaryen's war for Westeros in which Daenerys Targaryen's Dothraki horde ambushed the combined Lannister-Tarly field army and supply train as it was returning east to King's Landing after successfully sacking Highgarden. It was the first time that Daenerys used her dragons in battle in Westeros, riding Drogon in combat.",
+    "img": "/static/events/Battle of the Goldroad.jpg",
+    "place": "Crossing of the Goldroad over the Blackwater Rush, northern border of the Reach",
+    "position": [
+      21.29475477936103,
+      37.14186279142939
+    ],
+    "beginTime": 304,
+    "endTime": 304,
+    "families": [
+      "Iron Throne",
+      " House Tarly",
+      " House Targaryen"
+    ],
+    "organizations": [],
+    "characters": [
+      "Jaime Lannister",
+      " Randyll Tarly",
+      " Bronn"
+    ],
+    "death": [
+      "Randyll Tarly",
+      " Dickon Tarly"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Breaching of the Wall",
+    "source_season": 7,
+    "source_episode": 7,
+    "description": "The Breaching of the Wall is the event that marks the closing of the Conflict Beyond the Wall and the beginning of the dreaded Great War. After amassing a massive army of the dead beyond the Wall for over two decades, the Night King leads the White Walkers and his army of wights to the Wall. There, the Night King, mounting the wight dragon Viserion, attacks a portion of the Wall at Eastwatch-by-the-Sea, melting it down and creating a breach allowing the White Walkers and the wights to cross into the Seven Kingdoms and spread their magic, marking the return of the Long Night in the world.",
+    "img": "/static/events/Breaching of the Wall.jpg",
+    "place": "Eastwatch-by-the-Sea, the Wall, the Gift",
+    "position": [
+      20.758890016225422,
+      34.681335690401724
+    ],
+    "beginTime": 304,
+    "endTime": 304,
+    "families": [
+      "Night's Watch",
+      " Free Folk",
+      " Brotherhood Without Banners"
+    ],
+    "organizations": [],
+    "characters": [
+      "Cotter Pyke",
+      " Tormund",
+      " Beric Dondarrion",
+      " Night King"
+    ],
+    "death": []
+  },
+  {
+    "id": 45,
+    "name": "Dragonpit Summit",
+    "source_season": 7,
+    "source_episode": 7,
+    "description": "The Dragonpit Summit[1] was a parley of the major monarchs of Westeros in King's Landing to discuss the future of the Seven Kingdoms after Daenerys Targaryen's war for Westeros comes to a stalemate and an armistice proposed by Lord Tyrion Lannister is agreed upon.\n\nIn the past, \"Great Councils\" have been convened to discuss the future of the realm when the line of succession of the monarchy and inheritance of the Iron Throne is unclear.\n\nCersei Lannister holds the crown after the collapse of the Baratheon dynasty, claiming it by right of conquest. Daenerys Targaryen claims the Iron Throne on the basis that it belongs to the once royal House Targaryen, which was overthrown by House Baratheon in the war known as Robert's Rebellion.\n\nJon Snow, who is said to be a bastard of House Stark, rules the Kingdom of the North as the King in the North, though he has become an ally of Daenerys Targaryen. He seeks to use the gathering to provide proof of the existence of the Night King and the White Walkers through a captured wight and rally the Iron Throne to his cause.\n\nEuron Greyjoy sits on the Salt Throne, the throne of the Kingdom of the Iron Islands, as the King of the Iron Islands, though he has since allied with the now royal House Lannister. His hold of the Salt Throne is disputed by his niece and nephew, Yara and Theon, the former who is now a prisoner of Euron, and both of whom are allies of Daenerys Targaryen.",
+    "img": "/static/events/Dragonpit Summit.jpg",
+    "place": "Dragonpit, King's Landing, the Crownlands",
+    "position": [
+      19.295059562548403,
+      4.1253377600621235
+    ],
+    "beginTime": 304,
+    "endTime": 304,
+    "families": [
+      "House Targaryen",
+      " House Stark",
+      " House Greyjoy",
+      " House Lannister",
+      " House Greyjoy"
+    ],
+    "organizations": [],
+    "characters": [
+      "Daenerys I",
+      " Jon Snow",
+      " Theon Greyjoy",
+      " Cersei I",
+      " Euron Greyjoy"
+    ],
+    "death": []
+  },
+  {
+    "id": 46,
+    "name": "Trial of Petyr Baelish",
+    "source_season": 7,
+    "source_episode": 7,
+    "description": "The Trial of Petyr Baelish was the event that marked the closing of the War of the Five Kings. It is held in the great hall of Winterfell by Lady of Winterfell Sansa Stark, with Arya Stark and Bran Stark, against Petyr Baelish, the nominal Lord of Harrenhal and the Lord Protector of the Vale. It is witnessed by the Maester Wolkan, Lord Yohn Royce and multiple Stark and Arryn men.",
+    "img": "/static/events/Trial of Petyr Baelish.jpg",
+    "place": "Winterfell",
+    "position": [
+      14.49584982528475,
+      27.010380257686435
+    ],
+    "beginTime": 304,
+    "endTime": 304,
+    "families": [
+      "The North",
+      " House Royce",
+      " House Baelish"
+    ],
+    "organizations": [],
+    "characters": [
+      "Sansa Stark"
+    ],
+    "death": [
+      "Petyr Baelish"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Battle of Winterfell (War of the Five Kings)",
+    "source_season": 8,
+    "source_episode": 3,
+    "description": "The Battle of Winterfell is a battle late in the War of the Five Kings, in which King Stannis Baratheon attempts to take Winterfell from Lord Roose Bolton, the Lannister-backed Warden of the North.\nFought just outside of Winterfell, the brief battle ends in a decisive victory for House Bolton, and the swift defeat of the weakened Baratheon army marks the end of the campaign to take the Iron Throne led by King Stannis, who perishes after the battle. However, Roose Bolton's hold on the North is severely weakened by the escape of Sansa Stark during the battle.",
+    "img": "/static/events/Battle of Winterfell (War of the Five Kings).jpg",
+    "place": "Winterfell",
+    "position": [
+      14.49584982528475,
+      27.010380257686435
+    ],
+    "beginTime": 302,
+    "endTime": 302,
+    "families": [
+      "House Bolton",
+      " House Baratheon of Dragonstone"
+    ],
+    "organizations": [],
+    "characters": [
+      "Roose Bolton",
+      " Ramsay Bolton",
+      " Stannis Baratheon"
+    ],
+    "death": [
+      "Stannis Baratheon"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Great Council of 305 AC",
+    "source_season": 8,
+    "source_episode": 6,
+    "description": "The Great Council of 305 AC took place following the assassination of Queen Daenerys Targaryen, and was originally convened to decide the fates of Tyrion Lannister and Jon Snow: Tyrion had committed treason against Daenerys just prior to her death by freeing his brother, who was Daenerys's captive; and Jon Snow performed the assassination itself to prevent further carnage when Daenerys laid waste to the surrendered city of King's Landing. With no monarch to render a verdict, the council was made up of the heads of each surviving great house of Westeros, along with other key players from the Battle of King's Landing. After some deliberation, Bran Stark was chosen as king, and it fell to him to pass judgement on the two accused. It was the first formal election of an absolute monarch in the history of Westeros (although different methods of deciding succession had been debated by other Great Councils in the past), and saw the reorganization of the Seven Kingdoms into an elective monarchy.",
+    "img": "/static/events/Great Council of 305 AC.jpg",
+    "place": "Dragonpit,King's Landing, the Crownlands",
+    "position": [
+      19.433847442193837,
+      5.250245467398656
+    ],
+    "beginTime": 305,
+    "endTime": 305,
+    "families": [
+      "The Great Council",
+      "House Arryn",
+      "House Royce",
+      "House Baratheon",
+      "House Seaworth",
+      "House Tarth",
+      "House Greyjoy",
+      "House Lannister",
+      "House Stark",
+      "House Tarly",
+      "House Tully",
+      "House Martell"
+    ],
+    "organizations": [],
+    "characters": [
+      "Yara Greyjoy",
+      "Martell",
+      "Sansa Stark",
+      "Arya Stark",
+      "Bran Stark",
+      "Edmure Tully",
+      "Tyrion Lannister",
+      "Gendry Baratheon",
+      "Robin Arryn",
+      "Yohn Royce",
+      "Davos Seaworth",
+      "Brienne of Tarth",
+      "Samwell Tarly",
+      "Une"
+    ],
+    "death": []
+  }
+]
