@@ -5,7 +5,7 @@
     <div class="basicinfo">
       <img class="avatar" :src="characters[characterId].avatar"/>
       <div class="nameand">
-      <span v-if="characters[characterId].video != ''"><img class="gender" :src="'/static/icon/play.png'" @click="showVideo()"/></span>
+      <span v-if="characters[characterId].video != ''"><img class="player" :src="'/static/icon/play.png'" @click="showVideo()"/></span>
       <span class="name">{{characters[characterId].name}}</span><br/>
       <div style="text-align:left;padding:7px 0 10px 0;">
       <span v-if="characters[characterId].male!=null">Gender: <img class="gender" :src="'/static/icon/nan.png'" v-if="characters[characterId].male === 0"/>
@@ -230,6 +230,9 @@ export default {
       .gender {
         vertical-align: middle;
       }
+      .player {
+        cursor: pointer;
+      }
     }
   }
   .info {
@@ -266,6 +269,6 @@ export default {
 .character-video {
   position: fixed;
   right: 50px;
-  top: 50px;
+  top: 60px;
 }
 </style>
