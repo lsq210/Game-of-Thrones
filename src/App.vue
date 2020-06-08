@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img
-    src="@/assets/logo.png"
+    src="static/img/logo.png"
     class="logo"
     :style="{top: logoTop + 'px'}"
     @click="returnHome"/>

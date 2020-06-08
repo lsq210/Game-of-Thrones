@@ -3,7 +3,7 @@
   <div class="family-info-wrapper" v-if="familyState">
       <div class="family-card">
         <div class="family-info-show">
-          <img class="close-button" src="@/assets/icons-close.png" height="32" width="32" v-on:click="familyClose"/>
+          <img class="close-button" src="/static/img/icons-close.png" height="32" width="32" v-on:click="familyClose"/>
           <img class="family-info-img" :src="family.img"/>
           <span class="family-name">{{family.name}}</span>
         </div>
@@ -61,18 +61,11 @@ export default {
     allegianceState: Boolean,
     vassalsState: Boolean
   },
-  watch: {
-    familyState: function () {
-      console.log('aaaaa', this.familyState)
-    }
-  },
   methods: {
     familyClose: function () {
-      console.log('close')
       this.$emit('close')
     },
     changeFamilyData: function (newfamily) {
-      console.log(newfamily)
       this.$emit('showFamily', newfamily)
     },
     changeFamilyVideo: function () {
@@ -185,9 +178,9 @@ export default {
           line-height:15px;
           color: #11274b;
           font-weight: bold;
-        font-family: 'Times New Roman', Times, serif;
-        font-style: italic;
-                font-size: 120%;
+          font-family: 'Times New Roman', Times, serif;
+          font-style: italic;
+          font-size: 120%;
 
         }
         }

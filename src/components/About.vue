@@ -3,16 +3,16 @@
     <div class="contributor">
       <span class="title">contributors:</span>
       <br/>
-      <img class="avatar" :src="'/static/characters/Arya.jpg'"/>
+      <img class="avatar" src="/static/characters/Arya.jpg"/>
       <a class="web" href="https://github.com/lsq210/">&nbsp;&nbsp;SHIQI LUO&nbsp;&nbsp;</a>
       <span class="words">"What do we say to the god of dead?"</span><br/>
-      <img class="avatar" :src="'/static/img/ao.jpg'"/>
+      <img class="avatar" src="/static/img/ao.jpg"/>
       <a class="web" href="https://github.com/Mosuyun">&nbsp;&nbsp;YONGXUAN GUO&nbsp;&nbsp;</a>
       <span class="words">"Not today."</span><br/>
-      <img class="avatar" :src="'/static/characters/Davos.jpg'"/>
+      <img class="avatar" src="/static/characters/Davos.jpg"/>
       <a class="web" href="https://github.com/YBstory">&nbsp;&nbsp;YIBO ZHOU&nbsp;&nbsp;</a>
       <span class="words">"You know nothing."</span><br/>
-      <img class="avatar" :src="'/static/characters/TheNightKing.jpg'"/>
+      <img class="avatar" src="/static/characters/TheNightKing.jpg"/>
       <a class="web" href="https://github.com/Rurambar">&nbsp;&nbsp;BAOXIN TENG&nbsp;&nbsp;</a>
       <span class="words">"You know nothing."</span><br/>
       <div class="re">

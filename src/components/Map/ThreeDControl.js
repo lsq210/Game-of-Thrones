@@ -17,7 +17,6 @@ export default {
   watch: {
     threeLayerVisible: function () {
       if (this.threeLayerVisible) {
-        console.log('three')
         this.addCityModels()
       } else {
         if (this.map.getLayer('3d-model')) {

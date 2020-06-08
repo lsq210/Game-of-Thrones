@@ -407,9 +407,7 @@
         ],
         "loversOrspouse": [],
         "status": "Alive",
-        "events": [
-            null
-        ],
+        "events": [],
         "kill": 2,
         "screentime": "1hr 6m",
         "video": ""
@@ -492,9 +490,7 @@
         ],
         "loversOrspouse": [],
         "status": "Deceased",
-        "events": [
-            null
-        ],
+        "events": [],
         "kill": 0,
         "screentime": "26m",
         "video": ""

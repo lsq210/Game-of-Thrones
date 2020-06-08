@@ -195,7 +195,7 @@ export default {
   border: 5px solid #d8ba7e;
   border-radius: 25px;
   background-color: #f7deab;
-  opacity: 90%;
+  opacity: 0.9;
   .line {
     color: #525685;
   }

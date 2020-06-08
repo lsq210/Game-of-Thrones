@@ -63,7 +63,6 @@ export default {
       for (let eventId in selectedCharacter.events) {
         this.selectedCharacterEvents.push(Events[eventId])
       }
-      console.log('changeCharacter', this.selectedCharacterEvents)
       this.$store.commit('changeCharacter', this.selectedCharacterEvents)
     }
   }
