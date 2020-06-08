@@ -5,6 +5,7 @@
     <div class="basicinfo">
       <img class="avatar" :src="characters[characterId].avatar"/>
       <div class="nameand">
+      <span v-if="characters[characterId].video != ''"><img class="gender" :src="'/static/icon/play.png'" @click="showVideo()"/></span>
       <span class="name">{{characters[characterId].name}}</span><br/>
       <div style="text-align:left;padding:7px 0 10px 0;">
       <span v-if="characters[characterId].male!=null">Gender: <img class="gender" :src="'/static/icon/nan.png'" v-if="characters[characterId].male === 0"/>
@@ -126,8 +127,8 @@
       </div>
     </div>
   </div>
-  <div class="character-video">
-    <iframe :src="characters[characterId].video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+  <div class="character-video" v-if="videoState()">
+    <iframe :src="characters[characterId].video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="300px" width="400px"> </iframe>
   </div>
 </div>
 </template>
@@ -151,6 +152,14 @@ export default {
     cardState: {
       default: false,
       type: Boolean
+    }
+  },
+  methods: {
+    showVideo: function () {
+      this.$store.commit('showVideo', true)
+    },
+    videoState: function () {
+      return this.$store.state.videoState
     }
   },
   computed: {
@@ -256,7 +265,7 @@ export default {
 }
 .character-video {
   position: fixed;
-  right: 10px;
-  top: 100px;
+  right: 50px;
+  top: 50px;
 }
 </style>

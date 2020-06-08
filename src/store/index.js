@@ -6,6 +6,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     navName: null,
+    videoState: false,
     families: {
     },
     charaters: {
@@ -32,6 +33,9 @@ const store = new Vuex.Store({
     },
     changeCharacter (state, selectedEvents) {
       state.charaters.selectedEvents = selectedEvents
+    },
+    showVideo (state, videoState) {
+      state.videoState = videoState
     },
     changeThreeLayer (state, visible) {
       state.threelayer.visible = visible
