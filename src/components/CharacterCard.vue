@@ -1,6 +1,7 @@
 <template>
+<div>
   <div class="CharacterCard" v-if="cardState">
-  <!--头像，姓名，生日，状态-->
+    <!--头像，姓名，生日，状态-->
     <div class="basicinfo">
       <img class="avatar" :src="characters[characterId].avatar"/>
       <div class="nameand">
@@ -16,7 +17,7 @@
       </div>
     </div>
       <hr class="line">
-  <!--可滚动区域-->
+    <!--可滚动区域-->
       <div class="info">
     <!--杀人和屏幕时间-->
       <div class="killAndTime">
@@ -125,6 +126,10 @@
       </div>
     </div>
   </div>
+  <div class="character-video">
+    <iframe :src="characters[characterId].video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+  </div>
+</div>
 </template>
 
 <script>
@@ -249,5 +254,9 @@ export default {
     }
   }
 }
-
+.character-video {
+  position: fixed;
+  right: 10px;
+  top: 100px;
+}
 </style>

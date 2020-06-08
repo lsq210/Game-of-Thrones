@@ -35,6 +35,7 @@
               <span class='member-name'>{{member}}</span>
               </div>
           </div>
+          <iframe src="//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
         </div>
       </div>
   </div>
