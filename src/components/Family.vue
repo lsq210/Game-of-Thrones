@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div class="family-info-wrapper" v-if="familyState">
       <div class="family-card">
@@ -35,7 +36,10 @@
               <span class='member-name'>{{member}}</span>
               </div>
           </div>
-          <iframe src="//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+          <div class='videocard'>
+            <span class='videoname'>Introduction video</span>
+            <iframe class='video'  :src="family.video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+          </div>
         </div>
       </div>
   </div>
@@ -70,6 +74,9 @@ export default {
     changeFamilyData: function (newfamily) {
       console.log(newfamily)
       this.$emit('showFamily', newfamily)
+    },
+    changeFamilyVideo: function () {
+      document.getElementById('video')
     }
   }
 }
@@ -243,8 +250,31 @@ export default {
         font-family: 'Times New Roman', Times, serif;
         font-style: italic;
         font-size: 100%;
-                    color: #11274b;
+        color: #11274b;
         }
+      }
+      .videocard{
+                border: #CCCC66;
+        border-width: 3px;
+        border-top-style:dotted;
+        top:-10px;
+
+      }
+      .videoname{
+                  position: relative;
+          left: -85px;
+          top: 20px;
+          margin-top: 6px;
+          line-height: 20px;
+          color: black;
+          font-weight: bold;
+          align-items: flex-start;
+
+      }
+      .video{
+        position: relative;
+        left:-50px;
+        top:40px;
       }
     }
   }

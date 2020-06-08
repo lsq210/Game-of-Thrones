@@ -6,7 +6,8 @@ const families = [
     allegiance: [4, 10],
     vassals: [1, 9, 12],
     img: '/static/houses/Stark.webp',
-    members: ['Jon Snow', 'Sansa Stark', 'Arya Stark', 'Bran Stark', 'Benjen Stark', 'Catelyn Stark', 'Eddard Stark']
+    members: ['Jon Snow', 'Sansa Stark', 'Arya Stark', 'Bran Stark', 'Benjen Stark', 'Catelyn Stark', 'Eddard Stark'],
+    video: '//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=2'
   },
   {
     ID: 1,
@@ -15,7 +16,8 @@ const families = [
     allegiance: [0, 6, 10],
     vassals: [],
     img: '/static/houses/Tully.webp',
-    members: ['Edmure Tully']
+    members: ['Edmure Tully'],
+    video: '//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=6'
   },
   {
     ID: 2,
@@ -24,7 +26,8 @@ const families = [
     allegiance: [4, 10],
     vassals: [],
     img: '/static/houses/Lannister.webp',
-    members: ['Cersei Lannister', 'Jaime Lannister', 'Tyrion Lannister']
+    members: ['Cersei Lannister', 'Jaime Lannister', 'Tyrion Lannister'],
+    video: '//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=3'
   },
   {
     ID: 3,
@@ -33,7 +36,9 @@ const families = [
     allegiance: [4, 10],
     vassals: [8, 11],
     img: '/static/houses/Tyrell.webp',
-    members: ['Olenna Tyrell', 'Mace Tyrell']
+    members: ['Olenna Tyrell', 'Mace Tyrell'],
+    video: '//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=7'
+
   },
   {
     ID: 4,
@@ -42,7 +47,8 @@ const families = [
     allegiance: [],
     vassals: [0, 1, 2, 7, 9, 10],
     img: '/static/houses/Targaryen.webp',
-    members: ['Daenerys Targaryen', 'Rhaegar Targaryen']
+    members: ['Daenerys Targaryen', 'Rhaegar Targaryen'],
+    video: '//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=1'
   },
   {
     ID: 5,
@@ -66,7 +72,8 @@ const families = [
     words: 'We Do Not Sow',
     allegiance: [4, 10],
     vassals: [],
-    img: '/static/houses/Greyjoy.webp'
+    img: '/static/houses/Greyjoy.webp',
+    video: '//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=9'
   },
   {
     ID: 8,
@@ -82,7 +89,9 @@ const families = [
     words: 'As High As Honor',
     allegiance: [0, 10],
     vassals: [],
-    img: '/static/houses/Arryn.webp'
+    img: '/static/houses/Arryn.webp',
+    video: '//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=5'
+
   },
   {
     ID: 10,
@@ -91,7 +100,9 @@ const families = [
     allegiance: [],
     vassals: [0, 1, 2, 3, 5, 6, 7, 9],
     img: '/static/houses/Baratheon.webp',
-    members: ['Joffrey Baratheon', 'Myrcella Baratheon', 'Tommen Baratheon', 'Gendry Baratheon', 'Stannis Baratheon']
+    members: ['Joffrey Baratheon', 'Myrcella Baratheon', 'Tommen Baratheon', 'Gendry Baratheon', 'Stannis Baratheon'],
+    video: '//player.bilibili.com/player.html?aid=19805477&bvid=BV1WW41177Cz&cid=32298122&page=4'
+
   },
   {
     ID: 11,
